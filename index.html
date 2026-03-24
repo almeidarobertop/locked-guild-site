@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locked Guild - Ourobra</title>
+
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b0f;color:#eaeaea}
+a{color:#b266ff;text-decoration:none}a:hover{color:#fff;text-shadow:0 0 8px #b266ff}
+
+header{text-align:center;padding:40px 20px;background:linear-gradient(180deg,#1a0033,#0b0b0f);border-bottom:2px solid #7b2cff}
+header img{width:140px;animation:glow 2s infinite alternate}
+@keyframes glow{from{filter:drop-shadow(0 0 5px #7b2cff)}to{filter:drop-shadow(0 0 20px #b266ff)}}
+h1{margin:10px 0 5px;font-size:2.5rem;color:#b266ff}.world{color:#aaa}
+
+nav{position:sticky;top:0;z-index:1000;background:#140024;border-bottom:2px solid #7b2cff}
+.nav-container{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
+.nav-left,.nav-right{display:flex;gap:20px;align-items:center}
+nav a{cursor:pointer;font-weight:bold;display:flex;align-items:center;gap:6px}
+nav img{width:18px}
+
+section{padding:40px 20px;max-width:1100px;margin:auto}
+h2{color:#b266ff;border-bottom:1px solid #7b2cff;padding-bottom:5px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;margin-top:10px;background:#7b2cff;color:#fff;border-radius:6px}
+.btn:hover{background:#9d4dff;box-shadow:0 0 15px #7b2cff}
+.btn img{width: 32px;height: auto;}
+
+/* HOUSES CAROUSEL IMPROVED */
+.houses-scroll{display:flex;gap:20px;overflow-x:auto;padding:20px 0;scrollbar-width:thin;scrollbar-color:#7b2cff #140024}
+
+/* custom scrollbar (webkit) */
+.houses-scroll::-webkit-scrollbar{height:8px}
+.houses-scroll::-webkit-scrollbar-track{background:#140024;border-radius:10px}
+.houses-scroll::-webkit-scrollbar-thumb{background:linear-gradient(90deg,#7b2cff,#b266ff);border-radius:10px}
+.houses-scroll::-webkit-scrollbar-thumb:hover{background:#b266ff}
+
+.house-card{min-width:300px;max-width:300px;background:#140024;border:1px solid #7b2cff;border-radius:12px;padding:12px;flex-shrink:0;transition:.3s}
+
+.house-card:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 0 20px #7b2cff}
+
+.house-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+
+.house-card p{font-size:14px;margin-top:10px;color:#ccc;line-height:1.4}
+
+.house-card{min-width:300px;background:#140024;border:1px solid #7b2cff;border-radius:10px;padding:10px}
+.house-card img{width:100%;border-radius:6px}
+.house-card p{font-size:14px;margin-top:8px;color:#ccc}
+#houses p {color: #aaa;margin-top: 10px;}
+
+/* MEMBERS */
+.table{width:100%;border-collapse:collapse;margin-top:20px}
+.table th,.table td{padding:8px;border-bottom:1px solid #333;text-align:left}
+.table th{color:#b266ff}
+.online{color:#00ff88}
+.offline{color:#888}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:6px;transition:.3s;cursor:pointer}
+.gallery img:hover{transform:scale(1.05);box-shadow:0 0 20px #7b2cff}
+
+#lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center}
+#lightbox img{max-width:90%;max-height:90%}
+
+/* TOP 5 highlight */
+.top5{background:rgba(123,44,255,0.15);box-shadow:0 0 10px #7b2cff}
+
+/* filters */
+select{background:#140024;color:#fff;border:1px solid #7b2cff;padding:6px;border-radius:5px}
+
+.counter{margin-top:10px;color:#aaa}
+
+footer{text-align:center;padding:20px;border-top:1px solid #7b2cff;color:#777}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+</style>
+</head>
+<body>
+
+<div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img"></div>
+<canvas id="bg"></canvas>
+
+<header>
+<img src="src/logo.png">
+<h1>LOCKED</h1>
+<div class="world">Mundo atual: Ourobra</div>
+</header>
+
+<nav>
+<div class="nav-container">
+<a onclick="go('#join')">Junte-se</a>
+<a onclick="go('#houses')">Houses</a>
+<a onclick="go('#members')">Membros</a>
+<a onclick="go('#screenshots')">Screenshots</a>
+<a href="https://discord.gg/kJwVQxgw" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">Discord</a>
+<a href="https://chat.whatsapp.com/DGPhqUNVK7r0K5hZEarukf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">Whatsapp</a>
+</div>
+</nav>
+
+<section id="join">
+<h2>Junte-se a nós</h2>
+<p>A guild Locked foi fundada em Relembra em 2017 e segue ativa até hoje.</p>
+<a class="btn" href="https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=Locked" target="_blank">
+<img src="https://static.tibia.com/images/mmorpg/version_10/logo_tibia.webp">tibia.com
+</a>
+</section>
+
+<section id="houses">
+<h2>Nossas Houses</h2>
+<p>Com camas, NPC de banco, stash, food e refil completo.</p>
+<div class="houses-scroll">
+<div class="house-card">
+<img src="src/edron.png">
+<p>Sky Lane, Guild 2 - Edron</p>
+</div>
+<div class="house-card">
+<img src="src/darashia.png">
+<p>Darashia 2, Flat 11 - cortesia de <a href="https://www.tibia.com/community/?subtopic=characters&name=Dike+Arrois" target="_blank">Dike Arrois</a></p>
+</div>
+<div class="house-card">
+<img src="src/porthope.png">
+<p>Haggler's Hangout 6 - cortesia de <a href="https://www.tibia.com/community/?subtopic=characters&name=Potayto" target="_blank">Potayto</a></p>
+</div>
+</div>
+</section>
+
+<section id="members">
+<h2>Membros da Guild</h2>
+
+<div style="margin-top:15px;display:flex;gap:15px;flex-wrap:wrap">
+  <select id="sortLevel">
+    <option value="">Ordenar por Level</option>
+    <option value="desc">Maior → Menor</option>
+    <option value="asc">Menor → Maior</option>
+  </select>
+
+  <select id="filterVoc">
+    <option value="">Filtrar por Vocação</option>
+    <option value="Knight">Knight</option>
+    <option value="Paladin">Paladin</option>
+    <option value="Sorcerer">Sorcerer</option>
+    <option value="Druid">Druid</option>
+  </select>
+</div>
+
+<div class="counter" id="memberCount"></div>
+
+<table class="table" id="membersTable">
+<thead>
+<tr><th>Nome</th><th>Level</th><th>Vocação</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+
+<section id="screenshots">
+<h2>Screenshots</h2>
+<div class="gallery" id="gallery"></div>
+</section>
+
+<footer>© 2026 Locked Guild</footer>
+
+<script>
+function go(id){document.querySelector(id).scrollIntoView({behavior:'smooth'})}
+
+function openImg(src){
+document.getElementById('lightbox-img').src=src
+document.getElementById('lightbox').style.display='flex'
+}
+
+// screenshots auto
+let i=1
+const gallery=document.getElementById('gallery')
+function loadNext(){
+let img=new Image()
+img.src=`src/screenshots/${i}.png`
+img.onload=function(){img.onclick=()=>openImg(img.src);gallery.appendChild(img);i++;loadNext()}
+}
+loadNext()
+
+// load members
+let membersData = [];
+
+function renderTable(data){
+  const tbody = document.querySelector('#membersTable tbody');
+  const counter = document.getElementById('memberCount');
+  tbody.innerHTML = '';
+
+  counter.innerText = "Total: " + data.length + " membros";
+
+  data.forEach((m, index)=>{
+    let row = `<tr class="${index < 5 ? 'top5' : ''}">
+      <td><a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">${m.name}</a></td>
+      <td>${m.level}</td>
+      <td>${m.vocation}</td>
+    </tr>`;
+    tbody.innerHTML += row;
+  });
+}
+
+fetch('src/data/members.json')
+.then(res=>res.json())
+.then(data=>{
+  membersData = data.map(m=>({
+    ...m,
+    level: parseInt(m.level)
+  }));
+
+  membersData.sort((a,b)=>b.level - a.level);
+  renderTable(membersData);
+});
+
+document.getElementById('sortLevel').addEventListener('change', applyFilters);
+document.getElementById('filterVoc').addEventListener('change', applyFilters);
+
+function applyFilters(){
+  let filtered = [...membersData];
+
+  const sort = document.getElementById('sortLevel').value;
+  const voc = document.getElementById('filterVoc').value;
+
+  if(voc){
+    filtered = filtered.filter(m => m.vocation.includes(voc));
+  }
+
+  if(sort === 'asc'){
+    filtered.sort((a,b)=>a.level - b.level);
+  } else if(sort === 'desc'){
+    filtered.sort((a,b)=>b.level - a.level);
+  }
+
+  renderTable(filtered);
+}
+
+// particles
+const canvas=document.getElementById('bg')
+const ctx=canvas.getContext('2d')
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+let particles=[]
+for(let i=0;i<60;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2})
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#7b2cff';particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();p.y+=0.3;if(p.y>canvas.height)p.y=0})}
+setInterval(draw,30)
+</script>
+
+</body>
+</html>

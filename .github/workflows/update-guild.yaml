@@ -1,0 +1,43 @@
+name: Update Guild Members
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install cheerio
+
+      - name: Run scraper
+        run: node src/scripts/scrape.js
+
+      - name: Commit & push if changed
+        run: |
+          git config --global user.name "locked-bot"
+          git config --global user.email "bot@lockedguild.com"
+
+          git add src/data/members.json
+
+          if git diff --staged --quiet; then
+            echo "No changes"
+          else
+            git commit -m "update members"
+            git push
+          fi

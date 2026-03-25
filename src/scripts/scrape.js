@@ -1,9 +1,6 @@
 const fs = require("fs");
 const cheerio = require("cheerio");
 
-const fetch = (...args) =>
-  import("node-fetch").then(({ default: fetch }) => fetch(...args));
-
 const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=Locked";
 
 (async () => {
@@ -44,6 +41,6 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
 
   } catch (err) {
     console.error("Erro no scraping:", err);
-    process.exit(1); // força erro visível no Actions
+    process.exit(1);
   }
 })();

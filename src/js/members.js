@@ -72,6 +72,30 @@ function debounce(fn, delay = 300) {
   };
 }
 
+function saveState() {
+  const state = {
+    sort: document.getElementById('sortLevel').value,
+    voc: document.getElementById('filterVoc').value,
+    search: searchInput.value,
+    showAll
+  };
+
+  localStorage.setItem('guildFilters', JSON.stringify(state));
+}
+
+function loadState() {
+  const saved = localStorage.getItem('guildFilters');
+
+  if (!saved) return;
+
+  const state = JSON.parse(saved);
+
+  document.getElementById('sortLevel').value = state.sort || '';
+  document.getElementById('filterVoc').value = state.voc || '';
+  searchInput.value = state.search || '';
+  showAll = state.showAll || false;
+}
+
 function renderTable(data) {
   const tbody = document.querySelector('#membersTable tbody');
   const counter = document.getElementById('memberCount');
@@ -119,6 +143,8 @@ fetch('src/data/members.json')
     membersData.sort((a, b) => b.level - a.level);
     renderTable(membersData);
     tableWrapper.classList.add('collapsed');
+    loadState();
+    applyFilters();
   });
 
 document.getElementById('sortLevel').addEventListener('change', applyFilters);

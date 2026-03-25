@@ -4,7 +4,7 @@
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
     "level": 463,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Dike Arrois",
@@ -32,7 +32,7 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 792,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Zycken",
@@ -137,7 +137,7 @@
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
     "level": 856,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Vitinho Cepowisks",
@@ -287,6 +287,13 @@
     "status": "offline"
   },
   {
+    "name": "Florzinha Love",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 800,
+    "status": "offline"
+  },
+  {
     "name": "Isakiinn",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
@@ -297,14 +304,14 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 239,
-    "status": "online"
+    "level": 243,
+    "status": "offline"
   },
   {
     "name": "Loshh",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 543,
+    "level": 544,
     "status": "offline"
   },
   {

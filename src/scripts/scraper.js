@@ -14,8 +14,14 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
       }
     });
 
+    console.log("STATUS:", res.status);
+    console.log("HEADERS:", Object.fromEntries(res.headers.entries()));
+
     const html = await res.text();
 
+    console.log("HTML PREVIEW:");
+    console.log(html.substring(0, 2000));
+    
     if (!html.includes("Guild Members")) {
       throw new Error("Página bloqueada ou HTML inesperado");
     }

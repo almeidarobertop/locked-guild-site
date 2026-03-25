@@ -1,0 +1,345 @@
+[
+  {
+    "name": "Potayto",
+    "rank": "Overlord",
+    "vocation": "Master Sorcerer",
+    "level": 463,
+    "status": "online"
+  },
+  {
+    "name": "Dike Arrois",
+    "rank": "Field Marshal",
+    "vocation": "Elite Knight",
+    "level": 922,
+    "status": "offline"
+  },
+  {
+    "name": "Indio Grilo Machucado",
+    "rank": "Field Marshal",
+    "vocation": "Elite Knight",
+    "level": 920,
+    "status": "offline"
+  },
+  {
+    "name": "Lexus Shoter",
+    "rank": "Field Marshal",
+    "vocation": "Royal Paladin",
+    "level": 749,
+    "status": "offline"
+  },
+  {
+    "name": "Protetor Carinhoso",
+    "rank": "Field Marshal",
+    "vocation": "Elite Knight",
+    "level": 792,
+    "status": "online"
+  },
+  {
+    "name": "Zycken",
+    "rank": "Field Marshal",
+    "vocation": "Royal Paladin",
+    "level": 1291,
+    "status": "offline"
+  },
+  {
+    "name": "Emahyak",
+    "rank": "Combat Sustainer",
+    "vocation": "Master Sorcerer",
+    "level": 120,
+    "status": "offline"
+  },
+  {
+    "name": "Lexus Heals",
+    "rank": "Combat Sustainer",
+    "vocation": "Elder Druid",
+    "level": 61,
+    "status": "offline"
+  },
+  {
+    "name": "Locked Forever",
+    "rank": "Combat Sustainer",
+    "vocation": "Elite Knight",
+    "level": 145,
+    "status": "offline"
+  },
+  {
+    "name": "Mimosa com Narguet",
+    "rank": "Combat Sustainer",
+    "vocation": "Elder Druid",
+    "level": 95,
+    "status": "offline"
+  },
+  {
+    "name": "Mokiie",
+    "rank": "Combat Sustainer",
+    "vocation": "Master Sorcerer",
+    "level": 130,
+    "status": "offline"
+  },
+  {
+    "name": "Potayto Sio",
+    "rank": "Combat Sustainer",
+    "vocation": "Elder Druid",
+    "level": 282,
+    "status": "offline"
+  },
+  {
+    "name": "Xitao do Xororo",
+    "rank": "Combat Sustainer",
+    "vocation": "Elder Druid",
+    "level": 29,
+    "status": "offline"
+  },
+  {
+    "name": "Big Bugalu",
+    "rank": "Apex Guardian",
+    "vocation": "Royal Paladin",
+    "level": 702,
+    "status": "offline"
+  },
+  {
+    "name": "Claudio Bojanha dois",
+    "rank": "Apex Guardian",
+    "vocation": "Royal Paladin",
+    "level": 689,
+    "status": "offline"
+  },
+  {
+    "name": "Hokage Clarinha",
+    "rank": "Apex Guardian",
+    "vocation": "Elite Knight",
+    "level": 658,
+    "status": "offline"
+  },
+  {
+    "name": "Luna Nightwitch",
+    "rank": "Apex Guardian",
+    "vocation": "Elite Knight",
+    "level": 676,
+    "status": "offline"
+  },
+  {
+    "name": "Seven Madlife",
+    "rank": "Apex Guardian",
+    "vocation": "Master Sorcerer",
+    "level": 653,
+    "status": "offline"
+  },
+  {
+    "name": "Sir Alonta",
+    "rank": "Apex Guardian",
+    "vocation": "Elite Knight",
+    "level": 764,
+    "status": "offline"
+  },
+  {
+    "name": "Skillo da Selva",
+    "rank": "Apex Guardian",
+    "vocation": "Elder Druid",
+    "level": 856,
+    "status": "online"
+  },
+  {
+    "name": "Vitinho Cepowisks",
+    "rank": "Apex Guardian",
+    "vocation": "Elder Druid",
+    "level": 759,
+    "status": "offline"
+  },
+  {
+    "name": "Asgore Fullagado",
+    "rank": "Primal Summoner",
+    "vocation": "Paladin",
+    "level": 201,
+    "status": "offline"
+  },
+  {
+    "name": "Biscoito Babado",
+    "rank": "Primal Summoner",
+    "vocation": "Master Sorcerer",
+    "level": 362,
+    "status": "offline"
+  },
+  {
+    "name": "Daveigavt",
+    "rank": "Primal Summoner",
+    "vocation": "Royal Paladin",
+    "level": 452,
+    "status": "offline"
+  },
+  {
+    "name": "Is Maik",
+    "rank": "Primal Summoner",
+    "vocation": "Elite Knight",
+    "level": 318,
+    "status": "offline"
+  },
+  {
+    "name": "Kow Hife",
+    "rank": "Primal Summoner",
+    "vocation": "Elder Druid",
+    "level": 353,
+    "status": "offline"
+  },
+  {
+    "name": "Mage Kiro",
+    "rank": "Primal Summoner",
+    "vocation": "Master Sorcerer",
+    "level": 526,
+    "status": "offline"
+  },
+  {
+    "name": "Pods Cre",
+    "rank": "Primal Summoner",
+    "vocation": "Royal Paladin",
+    "level": 400,
+    "status": "offline"
+  },
+  {
+    "name": "Severo Snappee",
+    "rank": "Primal Summoner",
+    "vocation": "Master Sorcerer",
+    "level": 336,
+    "status": "offline"
+  },
+  {
+    "name": "Vinks",
+    "rank": "Primal Summoner",
+    "vocation": "Elite Knight",
+    "level": 374,
+    "status": "offline"
+  },
+  {
+    "name": "Witch Nobeta",
+    "rank": "Primal Summoner",
+    "vocation": "Exalted Monk",
+    "level": 308,
+    "status": "offline"
+  },
+  {
+    "name": "Amiane Keny",
+    "rank": "Rising Sentinel",
+    "vocation": "Royal Paladin",
+    "level": 150,
+    "status": "offline"
+  },
+  {
+    "name": "Asgore Lessus",
+    "rank": "Rising Sentinel",
+    "vocation": "None",
+    "level": 2,
+    "status": "offline"
+  },
+  {
+    "name": "Cadu Uzabunnda",
+    "rank": "Rising Sentinel",
+    "vocation": "Elite Knight",
+    "level": 56,
+    "status": "offline"
+  },
+  {
+    "name": "Dike Fibrado",
+    "rank": "Rising Sentinel",
+    "vocation": "Elite Knight",
+    "level": 38,
+    "status": "offline"
+  },
+  {
+    "name": "Doule Lana",
+    "rank": "Rising Sentinel",
+    "vocation": "Elite Knight",
+    "level": 54,
+    "status": "offline"
+  },
+  {
+    "name": "Valeu tamojunto",
+    "rank": "Rising Sentinel",
+    "vocation": "Elite Knight",
+    "level": 163,
+    "status": "offline"
+  },
+  {
+    "name": "Walord Canelinha",
+    "rank": "Rising Sentinel",
+    "vocation": "Druid",
+    "level": 32,
+    "status": "offline"
+  },
+  {
+    "name": "Bombaschick",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 212,
+    "status": "offline"
+  },
+  {
+    "name": "Derekaunn",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 206,
+    "status": "offline"
+  },
+  {
+    "name": "Deyvcabelinho",
+    "rank": "Provisional Soul",
+    "vocation": "Master Sorcerer",
+    "level": 102,
+    "status": "offline"
+  },
+  {
+    "name": "Isakiinn",
+    "rank": "Provisional Soul",
+    "vocation": "Master Sorcerer",
+    "level": 101,
+    "status": "offline"
+  },
+  {
+    "name": "Liocrismar Junior",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 239,
+    "status": "online"
+  },
+  {
+    "name": "Loshh",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 543,
+    "status": "offline"
+  },
+  {
+    "name": "Lukinha Modtanker",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 414,
+    "status": "offline"
+  },
+  {
+    "name": "Mago Morais",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 226,
+    "status": "offline"
+  },
+  {
+    "name": "Nonota",
+    "rank": "Provisional Soul",
+    "vocation": "Monk",
+    "level": 15,
+    "status": "offline"
+  },
+  {
+    "name": "Scorpion Reborn",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 1063,
+    "status": "offline"
+  },
+  {
+    "name": "Xandzudo",
+    "rank": "Provisional Soul",
+    "vocation": "Exalted Monk",
+    "level": 326,
+    "status": "offline"
+  }
+]

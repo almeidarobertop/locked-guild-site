@@ -21,7 +21,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 24
-    
+
+      - name: Install dependencies
+        run: npm init -y && npm install cheerio@1
+  
       - name: Run scraper
         run: node src/scripts/scrape.js
 

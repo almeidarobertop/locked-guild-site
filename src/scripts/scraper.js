@@ -6,52 +6,42 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
 (async () => {
   try {
     const res = await fetch(URL, {
-      headers: { "User-Agent": "Mozilla/5.0" }
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "Accept": "text/html",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Cache-Control": "no-cache"
+      }
     });
 
     const html = await res.text();
+
+    if (!html.includes("Guild Members")) {
+      throw new Error("Página bloqueada ou HTML inesperado");
+    }
+
     const $ = cheerio.load(html);
 
     const members = [];
 
-    let targetTable = null;
-
-    $("table.TableContent").each((i, table) => {
-      const headerText = $(table).find("tr.LabelH").text();
-
-      if (headerText.includes("Vocation") && headerText.includes("Level")) {
-        targetTable = table;
-      }
+    const rows = $("table.TableContent tr").filter((i, el) => {
+      return $(el).find("td").length === 6;
     });
 
-    if (!targetTable) {
-      throw new Error("Tabela de membros não encontrada");
-    }
+    rows.each((i, el) => {
+      const cols = $(el).find("td");
+      const nameCell = $(cols[1]);
 
-    $(targetTable)
-      .find("tr")
-      .not(".LabelH")
-      .each((i, el) => {
-        const cols = $(el).find("td");
-
-        if (cols.length === 6) {
-          const nameCell = $(cols[1]);
-
-          members.push({
-            rank: $(cols[0]).text().trim(),
-
-            name: nameCell.find("a").text().trim(),
-
-            vocation: $(cols[2]).text().trim(),
-
-            level: parseInt($(cols[3]).text().trim()),
-
-            status: $(cols[5]).text().toLowerCase().includes("online")
-              ? "online"
-              : "offline"
-          });
-        }
+      members.push({
+        rank: $(cols[0]).text().trim(),
+        name: nameCell.find("a").text().trim(),
+        vocation: $(cols[2]).text().trim(),
+        level: parseInt($(cols[3]).text().trim()),
+        status: $(cols[5]).text().toLowerCase().includes("online")
+          ? "online"
+          : "offline"
       });
+    });
 
     fs.mkdirSync("./src/data", { recursive: true });
 
@@ -63,7 +53,7 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
     console.log("Members updated:", members.length);
 
     if (members.length === 0) {
-      throw new Error("Nenhum membro encontrado — parsing falhou");
+      throw new Error("Nenhum membro encontrado após parsing");
     }
 
   } catch (err) {

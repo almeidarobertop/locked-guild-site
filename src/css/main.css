@@ -237,6 +237,29 @@ select {
   margin-top: 20px;
 }
 
+.table.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+}
+
+.table.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.table tbody tr {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.table tbody tr.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease;
+}
+
 .table th,
 .table td {
   padding: 8px;

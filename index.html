@@ -118,6 +118,17 @@
     <h2>Membros da Guild</h2>
 
     <div class="filters">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar membro..."
+          class="search-input"
+          autocomplete="off"
+        />
+        <div id="autocompleteList" class="autocomplete-list"></div>
+      </div>
+
       <select id="sortLevel">
         <option value="">Ordenar por Level</option>
         <option value="desc">Maior → Menor</option>

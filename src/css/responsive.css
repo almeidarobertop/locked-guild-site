@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .filters {
+    flex-direction: row;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .house-card {
+    min-width: 300px;
+  }
+}

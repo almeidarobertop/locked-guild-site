@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  scrape:
+  scraper:
     runs-on: ubuntu-latest
 
     steps:

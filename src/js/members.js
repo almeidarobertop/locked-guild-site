@@ -1,7 +1,35 @@
 let membersData = [],
   showAll = false;
 const MAX_VISIBLE = 50,
-  tableWrapper = document.getElementById('tableWrapper');
+  tableWrapper = document.getElementById('tableWrapper'),
+  searchInput = document.getElementById('searchInput'),
+  autocompleteList = document.getElementById('autocompleteList');
+
+function updateAutocomplete() {
+  const search = searchInput.value.toLowerCase();
+
+  autocompleteList.innerHTML = '';
+
+  if (!search) return;
+
+  const matches = membersData
+    .filter(m => m.name.toLowerCase().includes(search))
+    .slice(0, 5);
+
+  matches.forEach(m => {
+    const item = document.createElement('div');
+    item.className = 'autocomplete-item';
+    item.textContent = m.name;
+
+    item.onclick = () => {
+      searchInput.value = m.name;
+      autocompleteList.innerHTML = '';
+      applyFilters();
+    };
+
+    autocompleteList.appendChild(item);
+  });
+}
 
 function renderToggleButton(total) {
   let btn = document.getElementById('toggleMembers');
@@ -33,6 +61,14 @@ function renderToggleButton(total) {
     tableWrapper.classList.toggle('collapsed', !showAll);
 
     applyFilters();
+  };
+}
+
+function debounce(fn, delay = 300) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
   };
 }
 
@@ -98,9 +134,16 @@ function applyFilters() {
 
     const sort = document.getElementById('sortLevel').value;
     const voc = document.getElementById('filterVoc').value;
+    const search = searchInput.value.toLowerCase();
 
     if (voc) {
       filtered = filtered.filter(m => m.vocation.includes(voc));
+    }
+
+    if (search) {
+      filtered = filtered.filter(m =>
+        m.name.toLowerCase().includes(search)
+      );
     }
 
     if (sort === 'asc') {
@@ -118,5 +161,21 @@ function applyFilters() {
       table.classList.remove('fade-in');
     }, 300);
 
-  }, 200);
+    saveState();
+
+  }, 150);
 }
+
+searchInput.addEventListener(
+  'input',
+  debounce(() => {
+    applyFilters();
+    updateAutocomplete();
+  }, 200)
+);
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.search-container')) {
+    autocompleteList.innerHTML = '';
+  }
+});

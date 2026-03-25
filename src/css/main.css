@@ -36,7 +36,6 @@ a:hover {
   text-shadow: 0 0 8px #b266ff;
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 40px 20px;
@@ -68,7 +67,6 @@ h1 {
   color: #aaa;
 }
 
-/* NAV */
 nav {
   position: sticky;
   top: 0;
@@ -108,7 +106,6 @@ nav img {
   width: 18px;
 }
 
-/* HAMBURGER */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -123,7 +120,6 @@ nav img {
   transition: 0.3s;
 }
 
-/* SECTIONS */
 section {
   padding: 40px 20px;
   max-width: 1100px;
@@ -136,7 +132,6 @@ h2 {
   padding-bottom: 5px;
 }
 
-/* BUTTON */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -157,7 +152,6 @@ h2 {
   width: 32px;
 }
 
-/* HOUSES */
 .houses-scroll {
   display: flex;
   gap: 20px;
@@ -167,7 +161,6 @@ h2 {
   scrollbar-color:#7b2cff #140024
 }
 
-/* custom scrollbar (webkit) */
 .houses-scroll::-webkit-scrollbar{height:8px}
 .houses-scroll::-webkit-scrollbar-track{background:#140024;border-radius:10px}
 .houses-scroll::-webkit-scrollbar-thumb{background:linear-gradient(90deg,#7b2cff,#b266ff);border-radius:10px}
@@ -215,12 +208,46 @@ h2 {
   color: #ccc;
 }
 
-/* MEMBERS */
 .filters {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
+}
+
+.search-input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #7b2cff;
+  background: #140024;
+  color: #fff;
+  width: 200px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #140024;
+  border: 1px solid #7b2cff;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.autocomplete-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background: #7b2cff;
 }
 
 select {
@@ -311,7 +338,6 @@ select {
   color: #aaa;
 }
 
-/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -326,7 +352,6 @@ select {
   cursor: pointer;
 }
 
-/* LIGHTBOX */
 #lightbox {
   position: fixed;
   top: 0;
@@ -344,7 +369,6 @@ select {
   max-height: 90%;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -352,7 +376,6 @@ footer {
   color: #777;
 }
 
-/* CANVAS */
 canvas {
   position: fixed;
   top: 0;

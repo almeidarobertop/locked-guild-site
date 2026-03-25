@@ -1,6 +1,9 @@
 const fs = require("fs");
 const cheerio = require("cheerio");
 
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
+
 const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=Locked";
 
 (async () => {
@@ -30,11 +33,17 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
       }
     });
 
-    fs.writeFileSync("./src/data/members.json", JSON.stringify(members, null, 2));
+    fs.mkdirSync("./src/data", { recursive: true });
+
+    fs.writeFileSync(
+      "./src/data/members.json",
+      JSON.stringify(members, null, 2)
+    );
 
     console.log("Members updated:", members.length);
 
   } catch (err) {
     console.error("Erro no scraping:", err);
+    process.exit(1); // força erro visível no Actions
   }
 })();

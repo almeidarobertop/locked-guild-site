@@ -26,7 +26,7 @@ jobs:
         run: npm init -y && npm install
   
       - name: Run scraper
-        run: node src/scripts/scrape.js
+        run: node src/scripts/scraper.js
 
       - name: Commit & push if changed
         run: |

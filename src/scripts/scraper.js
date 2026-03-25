@@ -6,9 +6,7 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
 (async () => {
   try {
     const res = await fetch(URL, {
-      headers: {
-        "User-Agent": "Mozilla/5.0"
-      }
+      headers: { "User-Agent": "Mozilla/5.0" }
     });
 
     const html = await res.text();
@@ -16,16 +14,31 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
 
     const members = [];
 
-    $("table.TableContent tr").slice(1).each((i, el) => {
+    const table = $("div.Text")
+      .filter((i, el) => $(el).text().includes("Guild Members"))
+      .closest(".TableContainer")
+      .find("table.TableContent");
+
+    const rows = table.find("tr").not(".LabelH");
+
+    rows.each((i, el) => {
       const cols = $(el).find("td");
 
-      if (cols.length >= 5) {
+      if (cols.length === 6) {
+        const nameCell = $(cols[1]);
+
         members.push({
-          name: $(cols[0]).text().trim(),
-          rank: $(cols[1]).text().trim(),
+          rank: $(cols[0]).text().trim(),
+
+          name: nameCell.find("a").text().trim(),
+
           vocation: $(cols[2]).text().trim(),
+
           level: parseInt($(cols[3]).text().trim()),
-          status: $(cols[4]).text().trim()
+
+          status: $(cols[5]).text().includes("online")
+            ? "online"
+            : "offline"
         });
       }
     });
@@ -38,6 +51,10 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
     );
 
     console.log("Members updated:", members.length);
+
+    if (members.length === 0) {
+      throw new Error("Nenhum membro encontrado — parsing falhou");
+    }
 
   } catch (err) {
     console.error("Erro no scraping:", err);

@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: 24
     
-      - name: Install dependencies
-        run: npm install cheerio
-
       - name: Run scraper
         run: node src/scripts/scrape.js
 

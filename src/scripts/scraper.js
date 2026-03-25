@@ -14,34 +14,44 @@ const URL = "https://www.tibia.com/community/?subtopic=guilds&page=view&GuildNam
 
     const members = [];
 
-    const table = $("div.Text")
-      .filter((i, el) => $(el).text().includes("Guild Members"))
-      .closest(".TableContainer")
-      .find("table.TableContent");
+    let targetTable = null;
 
-    const rows = table.find("tr").not(".LabelH");
+    $("table.TableContent").each((i, table) => {
+      const headerText = $(table).find("tr.LabelH").text();
 
-    rows.each((i, el) => {
-      const cols = $(el).find("td");
-
-      if (cols.length === 6) {
-        const nameCell = $(cols[1]);
-
-        members.push({
-          rank: $(cols[0]).text().trim(),
-
-          name: nameCell.find("a").text().trim(),
-
-          vocation: $(cols[2]).text().trim(),
-
-          level: parseInt($(cols[3]).text().trim()),
-
-          status: $(cols[5]).text().includes("online")
-            ? "online"
-            : "offline"
-        });
+      if (headerText.includes("Vocation") && headerText.includes("Level")) {
+        targetTable = table;
       }
     });
+
+    if (!targetTable) {
+      throw new Error("Tabela de membros não encontrada");
+    }
+
+    $(targetTable)
+      .find("tr")
+      .not(".LabelH")
+      .each((i, el) => {
+        const cols = $(el).find("td");
+
+        if (cols.length === 6) {
+          const nameCell = $(cols[1]);
+
+          members.push({
+            rank: $(cols[0]).text().trim(),
+
+            name: nameCell.find("a").text().trim(),
+
+            vocation: $(cols[2]).text().trim(),
+
+            level: parseInt($(cols[3]).text().trim()),
+
+            status: $(cols[5]).text().toLowerCase().includes("online")
+              ? "online"
+              : "offline"
+          });
+        }
+      });
 
     fs.mkdirSync("./src/data", { recursive: true });
 

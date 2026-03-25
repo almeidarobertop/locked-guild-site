@@ -23,7 +23,7 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm init -y && npm install cheerio@1
+        run: npm init -y && npm install
   
       - name: Run scraper
         run: node src/scripts/scrape.js

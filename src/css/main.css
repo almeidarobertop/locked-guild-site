@@ -364,14 +364,20 @@ select {
 }
 
 .table tbody tr {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.table tbody tr.animating {
   opacity: 0;
   transform: translateY(10px);
 }
 
 .table tbody tr.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.4s ease;
+  transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background 0.3s ease;
 }
 
 .table th,
@@ -403,6 +409,12 @@ select {
   max-height: 800px;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.table-wrapper:not(.collapsed) {
+  max-height: none;
+  mask-image: none;
+  -webkit-mask-image: none;
 }
 
 #toggleMembers::after {

@@ -104,6 +104,14 @@ function getRankDisplay(index) {
   return index + 1;
 }
 
+function getVocationIcon(vocation) {
+  if (vocation.includes("Knight")) return "🛡️";
+  if (vocation.includes("Paladin")) return "🏹";
+  if (vocation.includes("Sorcerer")) return "🔥";
+  if (vocation.includes("Druid")) return "🌿";
+  return "⚔️";
+}
+
 function renderTable(data) {
   const tbody = document.querySelector('#membersTable tbody');
   const counter = document.getElementById('memberCount');
@@ -129,7 +137,7 @@ function renderTable(data) {
         </a>
       </td>
       <td>${m.level}</td>
-      <td>${m.vocation}</td>
+      <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
     `;
 
     tbody.appendChild(row);

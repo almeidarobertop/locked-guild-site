@@ -1,4 +1,4 @@
-name: Update Guild Members
+name: Locked Guild Update
 
 on:
   schedule:
@@ -24,9 +24,11 @@ jobs:
 
       - name: Install dependencies
         run: npm init -y && npm install
-  
       - name: Run scraper
         run: node src/scripts/scraper.js
+
+      - name: Generate gallery
+        run: node src/scripts/generate-gallery.js
 
       - name: Commit & push if changed
         run: |
@@ -34,6 +36,7 @@ jobs:
           git config --global user.email "bot@lockedguild.com"
 
           git add src/data/members.json
+          git add src/data/gallery.json
 
           if git diff --staged --quiet; then
             echo "No changes"

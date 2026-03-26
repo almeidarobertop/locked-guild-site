@@ -11,6 +11,8 @@ body {
   font-family: Arial, sans-serif;
   background: #0b0b0f;
   color: #eaeaea;
+  position: relative;
+  z-index: 0;
 }
 
 ::-webkit-scrollbar {
@@ -350,6 +352,19 @@ select {
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.gallery img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7b2cff;
 }
 
 #lightbox {
@@ -362,11 +377,15 @@ select {
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
 }
 
 #lightbox img {
   max-width: 90%;
   max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 30px #7b2cff;
 }
 
 footer {

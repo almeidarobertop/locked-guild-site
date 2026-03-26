@@ -106,10 +106,27 @@ nav {
 }
 
 nav a {
+  position: relative;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #b266ff;
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav img {

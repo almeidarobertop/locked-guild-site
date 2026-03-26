@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const mediaPath = './src/media';
+const mediaPath = './src/screenshots';
 const outputPath = './src/data/gallery.json';
 
 function formatName(fileName) {

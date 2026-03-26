@@ -15,6 +15,10 @@ body {
   z-index: 0;
 }
 
+strong {
+  color: #9d4dff;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

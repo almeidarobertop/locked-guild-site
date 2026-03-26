@@ -415,9 +415,59 @@ select {
   transform: rotate(180deg);
 }
 
-.top5 {
-  background: rgba(123, 44, 255, 0.15);
-  box-shadow: 0 0 10px #7b2cff;
+.top-1 {
+  background: rgba(123, 44, 255, 0.6);
+  box-shadow: 0 0 20px #7b2cff;
+  position: relative;
+}
+
+.top-1::after {
+  content: "👑";
+  position: absolute;
+  right: 10px;
+}
+
+.top-2 {
+  background: rgba(123, 44, 255, 0.5);
+  box-shadow: 0 0 15px #7b2cff;
+}
+
+.top-3 {
+  background: rgba(123, 44, 255, 0.4);
+}
+
+.top-4 {
+  background: rgba(123, 44, 255, 0.3);
+}
+
+.top-5 {
+  background: rgba(123, 44, 255, 0.2);
+}
+
+.top-1 td:first-child {
+  border-left: 4px solid #b266ff;
+}
+
+.top-2 td:first-child {
+  border-left: 4px solid #9d4dff;
+}
+
+.top-3 td:first-child {
+  border-left: 4px solid #7b2cff;
+}
+
+.medal {
+  display: inline-block;
+  animation: float 2s infinite ease-in-out;
+}
+
+.gold { filter: drop-shadow(0 0 6px gold); }
+.silver { filter: drop-shadow(0 0 6px silver); }
+.bronze { filter: drop-shadow(0 0 6px #cd7f32); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
 .counter {

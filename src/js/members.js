@@ -96,6 +96,22 @@ function loadState() {
   showAll = state.showAll || false;
 }
 
+function getRankDisplay(index) {
+  if (index === 0) return '<span class="medal gold">🥇</span>';
+  if (index === 1) return '<span class="medal silver">🥈</span>';
+  if (index === 2) return '<span class="medal bronze">🥉</span>';
+
+  return index + 1;
+}
+
+function getVocationIcon(vocation) {
+  if (vocation.includes("Knight")) return "🛡️";
+  if (vocation.includes("Paladin")) return "🏹";
+  if (vocation.includes("Sorcerer")) return "🔥";
+  if (vocation.includes("Druid")) return "🌿";
+  return "⚔️";
+}
+
 function renderTable(data) {
   const tbody = document.querySelector('#membersTable tbody');
   const counter = document.getElementById('memberCount');
@@ -109,17 +125,19 @@ function renderTable(data) {
   visibleData.forEach((m, index) => {
     const row = document.createElement('tr');
 
-    if (index < 5) row.classList.add('top5');
+    if (index < 5) {
+      row.classList.add(`top-${index + 1}`);
+    }
 
     row.innerHTML = `
-      <td>${index + 1}</td>
+      <td>${getRankDisplay(index)}</td>
       <td>
         <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
           ${m.name}
         </a>
       </td>
       <td>${m.level}</td>
-      <td>${m.vocation}</td>
+      <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
     `;
 
     tbody.appendChild(row);

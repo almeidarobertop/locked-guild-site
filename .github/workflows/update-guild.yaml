@@ -1,4 +1,4 @@
-name: Update Guild Members
+name: Locked Guild Update
 
 on:
   schedule:

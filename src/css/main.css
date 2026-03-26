@@ -350,6 +350,19 @@ select {
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.gallery img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7b2cff;
 }
 
 #lightbox {

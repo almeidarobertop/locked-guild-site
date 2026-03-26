@@ -96,6 +96,14 @@ function loadState() {
   showAll = state.showAll || false;
 }
 
+function getRankDisplay(index) {
+  if (index === 0) return '<span class="medal gold">🥇</span>';
+  if (index === 1) return '<span class="medal silver">🥈</span>';
+  if (index === 2) return '<span class="medal bronze">🥉</span>';
+
+  return index + 1;
+}
+
 function renderTable(data) {
   const tbody = document.querySelector('#membersTable tbody');
   const counter = document.getElementById('memberCount');
@@ -114,7 +122,7 @@ function renderTable(data) {
     }
 
     row.innerHTML = `
-      <td>${index + 1}</td>
+      <td>${getRankDisplay(index)}</td>
       <td>
         <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
           ${m.name}

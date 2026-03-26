@@ -325,7 +325,7 @@ h2 {
   border-radius: 6px;
   max-height: 200px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 800;
 }
 
 .autocomplete-item {

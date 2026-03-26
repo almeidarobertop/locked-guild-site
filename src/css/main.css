@@ -158,6 +158,60 @@ h2 {
   width: 32px;
 }
 
+.join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+
+  background: linear-gradient(135deg, #7b2cff, #b266ff);
+  border-radius: 8px;
+
+  font-weight: bold;
+  font-size: 16px;
+
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px #7b2cff; }
+  50% { box-shadow: 0 0 15px #7b2cff; }
+  100% { box-shadow: 0 0 0px #7b2cff; }
+}
+
+.join-btn span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  align-items: center;
+}
+
+.join-btn small {
+  font-size: 11px;
+  color: #ddd;
+  opacity: 0.8;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #7b2cff;
+}
+
+.join-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.join-btn:hover::before {
+  opacity: 1;
+}
+
 .houses-scroll {
   display: flex;
   gap: 20px;

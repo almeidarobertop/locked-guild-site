@@ -3,8 +3,8 @@
     "name": "Potayto",
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
-    "level": 463,
-    "status": "online"
+    "level": 464,
+    "status": "offline"
   },
   {
     "name": "Dike Arrois",
@@ -18,14 +18,14 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 921,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Lexus Shoter",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 749,
-    "status": "online"
+    "level": 750,
+    "status": "offline"
   },
   {
     "name": "Protetor Carinhoso",
@@ -102,49 +102,49 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 690,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Hokage Clarinha",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 658,
-    "status": "online"
+    "level": 659,
+    "status": "offline"
   },
   {
     "name": "Luna Nightwitch",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 677,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Seven Madlife",
     "rank": "Apex Guardian",
     "vocation": "Master Sorcerer",
     "level": 654,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Sir Alonta",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 764,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Skillo da Selva",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
     "level": 856,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Vitinho Cepowisks",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
     "level": 759,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Asgore Fullagado",
@@ -270,7 +270,7 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 418,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Bombaschick",
@@ -311,7 +311,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 243,
+    "level": 244,
     "status": "offline"
   },
   {

@@ -109,7 +109,9 @@ function renderTable(data) {
   visibleData.forEach((m, index) => {
     const row = document.createElement('tr');
 
-    if (index < 5) row.classList.add('top5');
+    if (index < 5) {
+      row.classList.add(`top-${index + 1}`);
+    }
 
     row.innerHTML = `
       <td>${index + 1}</td>

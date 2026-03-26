@@ -3,7 +3,15 @@ let membersData = [],
 const MAX_VISIBLE = 50,
   tableWrapper = document.getElementById('tableWrapper'),
   searchInput = document.getElementById('searchInput'),
-  autocompleteList = document.getElementById('autocompleteList');
+  autocompleteList = document.getElementById('autocompleteList'),
+  vocationMap = {
+    knight: "🛡️",
+    paladin: "🏹",
+    sorcerer: "🔥",
+    druid: "🌿",
+    monk: "🥋"
+  };
+
 
 function updateAutocomplete() {
   const search = searchInput.value.toLowerCase();
@@ -105,10 +113,12 @@ function getRankDisplay(index) {
 }
 
 function getVocationIcon(vocation) {
-  if (vocation.includes("Knight")) return "🛡️";
-  if (vocation.includes("Paladin")) return "🏹";
-  if (vocation.includes("Sorcerer")) return "🔥";
-  if (vocation.includes("Druid")) return "🌿";
+  const v = vocation.toLowerCase();
+
+  for (const key in vocationMap) {
+    if (v.includes(key)) return vocationMap[key];
+  }
+
   return "⚔️";
 }
 

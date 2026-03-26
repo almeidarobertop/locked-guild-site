@@ -15,6 +15,10 @@ body {
   z-index: 0;
 }
 
+section p {
+  text-align: justify;
+}
+
 strong {
   color: #9d4dff;
 }

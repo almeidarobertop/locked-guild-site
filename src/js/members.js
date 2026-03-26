@@ -1,18 +1,31 @@
 let membersData = [],
-  showAll = false;
+  showAll = false,
+  hasRendered = false;
 
 const MAX_VISIBLE = 50,
   tableWrapper = document.getElementById('tableWrapper'),
   searchInput = document.getElementById('searchInput'),
-  autocompleteList = document.getElementById('autocompleteList');
+  autocompleteList = document.getElementById('autocompleteList'),
+  tableSection = document.getElementById('members'),
+  tableObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasRendered) {
+        hasRendered = true;
+        applyFilters();
+      }
+    });
+  }, {
+    threshold: 0.2
+  }),
+  vocationMap = {
+    knight: "🛡️",
+    paladin: "🏹",
+    sorcerer: "🔥",
+    druid: "🌿",
+    monk: "🥋"
+  };
 
-const vocationMap = {
-  knight: "🛡️",
-  paladin: "🏹",
-  sorcerer: "🔥",
-  druid: "🌿",
-  monk: "🥋"
-};
+tableObserver.observe(tableSection);
 
 function getRankDisplay(index) {
   if (index === 0) return '<span class="medal gold">🥇</span>';
@@ -59,8 +72,8 @@ function renderTable(data) {
 
     tbody.appendChild(row);
 
-    // 🔥 animação segura (sem bug)
     row.classList.add('animating');
+    row.style.transitionDelay = `${index * 30}ms`;
 
     requestAnimationFrame(() => {
       row.classList.add('show');
@@ -89,7 +102,6 @@ function renderToggleButton(total) {
 
   btn.style.display = 'inline-flex';
 
-  // 🔥 estado sempre consistente
   btn.classList.toggle('active', showAll);
 
   btn.innerText = showAll
@@ -164,13 +176,14 @@ fetch('src/data/members.json')
 
     loadState();
     tableWrapper.classList.toggle('collapsed', !showAll);
-
-    applyFilters(); // 🔥 única renderização
   });
 
 document.getElementById('sortLevel').addEventListener('change', applyFilters);
 document.getElementById('filterVoc').addEventListener('change', applyFilters);
 
 searchInput.addEventListener('input', () => {
+  if (!hasRendered) {
+    hasRendered = true;
+  }
   applyFilters();
 });

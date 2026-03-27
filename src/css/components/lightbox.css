@@ -3,6 +3,7 @@
   backdrop-filter: blur(5px);
   background: var(--color-overlay-dark);
   display: none;
+  flex-direction: column;
   height: 100%;
   justify-content: center;
   left: 0;
@@ -19,4 +20,13 @@
   max-height: 90%;
   max-width: 90%;
   transition: opacity 0.2s ease;
+}
+
+#lightbox-caption {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 12px;
+  max-width: 90%;
+  opacity: 0.9;
+  text-align: center;
 }

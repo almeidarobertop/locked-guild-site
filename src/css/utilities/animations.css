@@ -1,0 +1,15 @@
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px var(--color-primary)); }
+  to { filter: drop-shadow(0 0 20px var(--color-accent)); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px var(--shadow-primary); }
+  50% { box-shadow: 0 0 15px var(--shadow-primary); }
+  100% { box-shadow: 0 0 0px var(--shadow-primary); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}

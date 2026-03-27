@@ -1,0 +1,26 @@
+.gallery {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+.gallery img {
+  border-radius: 6px;
+  cursor: pointer;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.gallery img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery img:hover {
+  box-shadow: 0 0 20px var(--shadow-primary);
+  transform: scale(1.05);
+}

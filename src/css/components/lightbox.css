@@ -1,0 +1,32 @@
+#lightbox {
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: var(--color-overlay-dark);
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  touch-action: none;
+  width: 100%;
+  z-index: 9999;
+}
+
+#lightbox img {
+  border-radius: 8px;
+  box-shadow: 0 0 30px var(--shadow-primary);
+  max-height: 90%;
+  max-width: 90%;
+  transition: opacity 0.2s ease;
+}
+
+#lightbox-caption {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 12px;
+  max-width: 90%;
+  opacity: 0.9;
+  text-align: center;
+}

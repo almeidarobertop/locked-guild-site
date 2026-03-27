@@ -1,0 +1,160 @@
+# 🔎 Visão geral do sistema
+
+```
+└── 📁Locked
+    └── 📁.github
+        └── 📁workflows
+            ├── update-guild.yaml
+    └── 📁src
+        └── 📁css
+            └── 📁base
+                ├── base.css
+                ├── reset.css
+                ├── tokens.css
+                ├── typography.css
+            └── 📁components
+                ├── buttons.css
+                ├── cards.css
+                ├── forms.css
+                ├── gallery.css
+                ├── lightbox.css
+                ├── table.css
+            └── 📁layout
+                ├── footer.css
+                ├── header.css
+                ├── nav.css
+                ├── section.css
+            └── 📁responsive
+                ├── breakpoints.css
+            └── 📁utilities
+                ├── animations.css
+                ├── effects.css
+                ├── helpers.css
+                ├── scrollbar.css
+            ├── main.css
+        └── 📁data
+            ├── gallery.json
+            ├── members.json
+        └── 📁js
+            └── 📁core
+                ├── idle.js
+                ├── observer.js
+            └── 📁modules
+                ├── gallery.js
+                ├── members.js
+                ├── navigation.js
+                ├── particles.js
+            ├── main.js
+        └── 📁screenshots
+            ├── brainhead-boss.jpeg
+            ├── yalahar-quest.jpeg
+        └── 📁scripts
+            ├── generate-gallery.js
+            ├── scraper.js
+        ├── darashia.png
+        ├── edron.png
+        ├── logo.png
+        ├── porthope.png
+    ├── CNAME
+    ├── index.html
+    ├── package.json
+    ├── README.md
+    └── STRUCTURE.MD
+```
+
+## Stack
+
+1. Frontend estático (HTML + CSS + JS puro) SPA like
+2. Dados em:
+   1. members.json
+   2. gallery.json
+3. Scripts auxiliares:
+   1. scraper.js
+   2. generate-gallery.js
+4. Automação:
+   1. GitHub Actions (update-guild.yaml)
+
+## Arquitetura implícita
+
+Static Site + Data-driven via JSON + automação externa
+
+## DevOPS
+
+1. Hospegagem em Github pages
+2. CDN via CloudFlare
+3. Domínio https://www.guildlocked.com.br
+
+## ESPECIFICAÇÃO DE REQUISITOS
+
+1. Requisitos Funcionais
+
+### RF-01 — Exibição de membros
+
+O sistema deve carregar e renderizar dados de members.json
+
+Deve exibir:
+
+- Nome
+- Level
+- Vocação
+
+Deve permitir ordenação via filtros de Lvl e Vocação
+
+### RF-02 — Galeria da guild (screeshots)
+
+O sistema deve carregar gallery.json
+
+Deve renderizar imagens com:
+
+- Título
+- Suportar expansão (lightbox)
+
+### RF-03 — Navegação entre seções
+
+Sistema SPA-like via navigation.js
+
+### RF-04 — Atualização automatizada de dados
+
+Pipeline via GitHub Actions deve:
+
+- Rodar scraper de membros (scraper.js)
+- Rodar gerador de galeria (generate-gallery.js)
+- Atualizar JSONs
+- Commitar automaticamente
+
+### RF-05 — Identidade visual da guild
+
+Uso de assets:
+
+- mapa (Darashia, Edron, Port Hope)
+- screenshots
+- logo
+
+## Requisitos Não Funcionais
+
+### RNF-01 — Zero backend
+
+Todo processamento deve ocorrer:
+
+- no cliente
+- via CI (GitHub Actions)
+
+### RNF-02 — Performance
+
+- Tempo de carregamento < 2s
+- Assets devem ser cacheáveis via Cloudflare
+
+### RNF-03 — Compatibilidade
+
+- Responsivo Mobile First
+- Funcionar em desktop + mobile
+
+### RNF-04 — Manutenibilidade
+
+- Dados separados de UI
+- Scripts reutilizáveis
+
+### RNF-05 — SEO básico
+
+- HTML indexável
+- Dados estruturados

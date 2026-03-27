@@ -1,0 +1,45 @@
+:root {
+
+  --color-bg-primary: #0b0b0f;
+  --color-bg-secondary: #140024;
+  --color-bg-gradient-start: #1a0033;
+
+  --color-primary: #7b2cff;
+  --color-primary-light: #9d4dff;
+  --color-accent: #b266ff;
+
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #aaa;
+  --color-text-muted: #777;
+
+  --color-border: #7b2cff;
+  --color-border-soft: #333;
+
+  --color-scrollbar-track: #140024;
+  --color-scrollbar-thumb: #7b2cff;
+
+  --shadow-primary: #7b2cff;
+
+  --color-primary-rgb: 123, 44, 255;
+  --color-accent-rgb: 178, 102, 255;
+
+  --color-black-rgb: 0, 0, 0;
+  --color-white-rgb: 255, 255, 255;
+
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-90: 0.9;
+
+  --color-overlay-dark: rgba(var(--color-black-rgb), var(--opacity-90));
+  --color-overlay-light: rgba(var(--color-white-rgb), var(--opacity-30));
+
+  --color-rank-1: rgba(var(--color-primary-rgb), var(--opacity-60));
+  --color-rank-2: rgba(var(--color-primary-rgb), var(--opacity-50));
+  --color-rank-3: rgba(var(--color-primary-rgb), var(--opacity-40));
+  --color-rank-4: rgba(var(--color-primary-rgb), var(--opacity-30));
+  --color-rank-5: rgba(var(--color-primary-rgb), var(--opacity-20));
+}

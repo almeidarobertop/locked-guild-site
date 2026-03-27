@@ -1,99 +1,45 @@
 let membersData = [],
-  showAll = false;
+  showAll = false,
+  hasRendered = false;
+
 const MAX_VISIBLE = 50,
   tableWrapper = document.getElementById('tableWrapper'),
   searchInput = document.getElementById('searchInput'),
-  autocompleteList = document.getElementById('autocompleteList');
+  autocompleteList = document.getElementById('autocompleteList'),
+  tableSection = document.getElementById('members'),
+  tableObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasRendered) {
+        hasRendered = true;
+        applyFilters();
+      }
+    });
+  }, {
+    threshold: 0.2
+  }),
+  vocationMap = {
+    knight: "🛡️",
+    paladin: "🏹",
+    sorcerer: "🔥",
+    druid: "🌿",
+    monk: "🥋"
+  };
 
-function updateAutocomplete() {
-  const search = searchInput.value.toLowerCase();
+tableObserver.observe(tableSection);
 
-  autocompleteList.innerHTML = '';
-
-  if (!search) return;
-
-  const matches = membersData
-    .filter(m => m.name.toLowerCase().includes(search))
-    .slice(0, 5);
-
-  matches.forEach(m => {
-    const item = document.createElement('div');
-    item.className = 'autocomplete-item';
-    item.textContent = m.name;
-
-    item.onclick = () => {
-      searchInput.value = m.name;
-      autocompleteList.innerHTML = '';
-      applyFilters();
-    };
-
-    autocompleteList.appendChild(item);
-  });
+function getRankDisplay(index) {
+  if (index === 0) return '<span class="medal gold">🥇</span>';
+  if (index === 1) return '<span class="medal silver">🥈</span>';
+  if (index === 2) return '<span class="medal bronze">🥉</span>';
+  return index + 1;
 }
 
-function renderToggleButton(total) {
-  let btn = document.getElementById('toggleMembers');
-
-  if (!btn) {
-    btn = document.createElement('button');
-    btn.id = 'toggleMembers';
-    btn.className = 'btn';
-    btn.style.marginTop = '20px';
-
-    document.getElementById('members').appendChild(btn);
+function getVocationIcon(vocation) {
+  const v = vocation.toLowerCase();
+  for (const key in vocationMap) {
+    if (v.includes(key)) return vocationMap[key];
   }
-
-  if (total <= MAX_VISIBLE) {
-    btn.style.display = 'none';
-    return;
-  }
-
-  btn.style.display = 'inline-flex';
-
-  btn.innerText = showAll
-    ? 'Mostrar menos'
-    : `Mostrar todos (${total})`;
-
-  btn.onclick = () => {
-    showAll = !showAll;
-
-    btn.classList.toggle('active', showAll);
-    tableWrapper.classList.toggle('collapsed', !showAll);
-
-    applyFilters();
-  };
-}
-
-function debounce(fn, delay = 300) {
-  let timeout;
-  return (...args) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => fn(...args), delay);
-  };
-}
-
-function saveState() {
-  const state = {
-    sort: document.getElementById('sortLevel').value,
-    voc: document.getElementById('filterVoc').value,
-    search: searchInput.value,
-    showAll
-  };
-
-  localStorage.setItem('guildFilters', JSON.stringify(state));
-}
-
-function loadState() {
-  const saved = localStorage.getItem('guildFilters');
-
-  if (!saved) return;
-
-  const state = JSON.parse(saved);
-
-  document.getElementById('sortLevel').value = state.sort || '';
-  document.getElementById('filterVoc').value = state.voc || '';
-  searchInput.value = state.search || '';
-  showAll = state.showAll || false;
+  return "⚔️";
 }
 
 function renderTable(data) {
@@ -109,27 +55,113 @@ function renderTable(data) {
   visibleData.forEach((m, index) => {
     const row = document.createElement('tr');
 
-    if (index < 5) row.classList.add('top5');
+    if (index < 5) {
+      row.classList.add(`top-${index + 1}`);
+    }
 
     row.innerHTML = `
-      <td>${index + 1}</td>
+      <td>${getRankDisplay(index)}</td>
       <td>
         <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
           ${m.name}
         </a>
       </td>
       <td>${m.level}</td>
-      <td>${m.vocation}</td>
+      <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
     `;
 
     tbody.appendChild(row);
 
-    setTimeout(() => {
+    row.classList.add('animating');
+    row.style.transitionDelay = `${index * 30}ms`;
+
+    requestAnimationFrame(() => {
       row.classList.add('show');
-    }, index * 20);
+      row.classList.remove('animating');
+    });
   });
 
   renderToggleButton(data.length);
+}
+
+function renderToggleButton(total) {
+  let btn = document.getElementById('toggleMembers');
+
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'toggleMembers';
+    btn.className = 'btn';
+    btn.style.marginTop = '20px';
+    document.getElementById('members').appendChild(btn);
+  }
+
+  if (total <= MAX_VISIBLE) {
+    btn.style.display = 'none';
+    return;
+  }
+
+  btn.style.display = 'inline-flex';
+
+  btn.classList.toggle('active', showAll);
+
+  btn.innerText = showAll
+    ? 'Mostrar menos'
+    : `Mostrar todos (${total})`;
+
+  btn.onclick = () => {
+    showAll = !showAll;
+    tableWrapper.classList.toggle('collapsed', !showAll);
+    applyFilters();
+  };
+}
+
+function applyFilters() {
+  let filtered = [...membersData];
+
+  const sort = document.getElementById('sortLevel').value;
+  const voc = document.getElementById('filterVoc').value;
+  const search = searchInput.value.toLowerCase();
+
+  if (voc) {
+    filtered = filtered.filter(m => m.vocation.includes(voc));
+  }
+
+  if (search) {
+    filtered = filtered.filter(m =>
+      m.name.toLowerCase().includes(search)
+    );
+  }
+
+  if (sort === 'asc') {
+    filtered.sort((a, b) => a.level - b.level);
+  } else if (sort === 'desc') {
+    filtered.sort((a, b) => b.level - a.level);
+  }
+
+  renderTable(filtered);
+
+  saveState();
+}
+
+function saveState() {
+  localStorage.setItem('guildFilters', JSON.stringify({
+    sort: document.getElementById('sortLevel').value,
+    voc: document.getElementById('filterVoc').value,
+    search: searchInput.value,
+    showAll
+  }));
+}
+
+function loadState() {
+  const saved = localStorage.getItem('guildFilters');
+  if (!saved) return;
+
+  const state = JSON.parse(saved);
+
+  document.getElementById('sortLevel').value = state.sort || '';
+  document.getElementById('filterVoc').value = state.voc || '';
+  searchInput.value = state.search || '';
+  showAll = state.showAll || false;
 }
 
 fetch('src/data/members.json')
@@ -141,67 +173,17 @@ fetch('src/data/members.json')
     }));
 
     membersData.sort((a, b) => b.level - a.level);
-    renderTable(membersData);
-    tableWrapper.classList.add('collapsed');
+
     loadState();
-    applyFilters();
+    tableWrapper.classList.toggle('collapsed', !showAll);
   });
 
 document.getElementById('sortLevel').addEventListener('change', applyFilters);
 document.getElementById('filterVoc').addEventListener('change', applyFilters);
 
-function applyFilters() {
-  const table = document.getElementById('membersTable');
-
-  table.classList.add('fade-out');
-
-  setTimeout(() => {
-    let filtered = [...membersData];
-
-    const sort = document.getElementById('sortLevel').value;
-    const voc = document.getElementById('filterVoc').value;
-    const search = searchInput.value.toLowerCase();
-
-    if (voc) {
-      filtered = filtered.filter(m => m.vocation.includes(voc));
-    }
-
-    if (search) {
-      filtered = filtered.filter(m =>
-        m.name.toLowerCase().includes(search)
-      );
-    }
-
-    if (sort === 'asc') {
-      filtered.sort((a, b) => a.level - b.level);
-    } else if (sort === 'desc') {
-      filtered.sort((a, b) => b.level - a.level);
-    }
-
-    renderTable(filtered);
-
-    table.classList.remove('fade-out');
-    table.classList.add('fade-in');
-
-    setTimeout(() => {
-      table.classList.remove('fade-in');
-    }, 300);
-
-    saveState();
-
-  }, 150);
-}
-
-searchInput.addEventListener(
-  'input',
-  debounce(() => {
-    applyFilters();
-    updateAutocomplete();
-  }, 200)
-);
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.search-container')) {
-    autocompleteList.innerHTML = '';
+searchInput.addEventListener('input', () => {
+  if (!hasRendered) {
+    hasRendered = true;
   }
+  applyFilters();
 });

@@ -4,6 +4,10 @@
     flex-direction: row;
   }
 
+  .nav-container {
+    justify-content: center;
+  }
+
   .hamburger {
     display: none;
   }

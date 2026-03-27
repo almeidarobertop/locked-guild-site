@@ -4,20 +4,20 @@
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
     "level": 464,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Dike Arrois",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 923,
+    "level": 924,
     "status": "offline"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 921,
+    "level": 922,
     "status": "offline"
   },
   {
@@ -109,7 +109,7 @@
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 660,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Luna Nightwitch",
@@ -200,7 +200,7 @@
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
     "level": 339,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Vinks",
@@ -270,7 +270,7 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 418,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Bombaschick",
@@ -311,14 +311,14 @@
     "name": "Javaahh",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 213,
+    "level": 215,
     "status": "offline"
   },
   {
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 246,
+    "level": 251,
     "status": "offline"
   },
   {
@@ -340,7 +340,7 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 228,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Nonota",

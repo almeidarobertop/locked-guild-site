@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0b0f;
+  color: #eaeaea;
+  position: relative;
+  z-index: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+section p {
+  text-align: justify;
+}
+
+strong {
+  color: #9d4dff;
+}

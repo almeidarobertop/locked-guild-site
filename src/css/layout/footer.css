@@ -1,0 +1,13 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #7b2cff;
+  color: #777;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

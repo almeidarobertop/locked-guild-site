@@ -1,0 +1,15 @@
+h1 {
+  margin: 10px 0 5px;
+  font-size: 2.5rem;
+  color: #b266ff;
+}
+
+h2 {
+  color: #b266ff;
+  border-bottom: 1px solid #7b2cff;
+  padding-bottom: 5px;
+}
+
+.world {
+  color: #aaa;
+}

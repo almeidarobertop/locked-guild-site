@@ -24,11 +24,14 @@ jobs:
 
       - name: Install dependencies
         run: npm init -y && npm install
-      - name: Run scraper
+      - name: Generate members data
         run: node src/scripts/scraper.js
 
       - name: Generate gallery
         run: node src/scripts/generate-gallery.js
+
+      - name: Generate sitemap
+        run: node src/scripts/sitemap.js
 
       - name: Commit & push if changed
         run: |

@@ -101,25 +101,20 @@ Deve permitir ordenação via filtros de Lvl e Vocação
 O sistema deve carregar gallery.json
 
 Deve renderizar imagens com:
-título
 
-- Deve suportar expansão (lightbox)
+- Título
+- Suportar expansão (lightbox)
 
 ### RF-03 — Navegação entre seções
 
 Sistema SPA-like via navigation.js
 
-Deve alternar entre:
-
-- Home
-- Members
-- Gallery
-
 ### RF-04 — Atualização automatizada de dados
 
 Pipeline via GitHub Actions deve:
 
-- Rodar scraper (scraper.js)
+- Rodar scraper de membros (scraper.js)
+- Rodar gerador de galeria (generate-gallery.js)
 - Atualizar JSONs
 - Commitar automaticamente
 
@@ -137,8 +132,8 @@ Uso de assets:
 
 Todo processamento deve ocorrer:
 
-- no client
-- ou via CI (GitHub Actions)
+- no cliente
+- via CI (GitHub Actions)
 
 ### RNF-02 — Performance
 
@@ -147,7 +142,7 @@ Todo processamento deve ocorrer:
 
 ### RNF-03 — Compatibilidade
 
-- Responsivo (responsive.css) Mobile First
+- Responsivo Mobile First
 - Funcionar em desktop + mobile
 
 ### RNF-04 — Manutenibilidade
@@ -162,9 +157,4 @@ Todo processamento deve ocorrer:
 
 ## Próximos passos
 
-1. Criar estrutura de variáveis para cores (design tokens), e aplicar a mudança em todos os arquivos onde continham cores hardcoded, inclusive no index.html
-2. Substituir no html a atual chamada de CSS pelos novos arquivos criados.
-3. Modernizar o CSS e alfabetizar o mesmo, seguindo os padrões de stylelint.
-4. Modernizar o JS ativando ES Modules e migrando a estrutura atual sem alterar seu funcionamento.
-5. Substituir no HTML as chamadas dos antigos JS pelos novos e mordenizar os códigos inline existentes para atender as mudanças aplicadas.
-6. Modernizar o JS aplicando as regras de ESLint e melhorando a estrutura existente para obter mais performance e atender conceitos como INP.
+1. Modernizar o JS aplicando as regras de ESLint e melhorando a estrutura existente para obter mais performance e atender conceitos como INP.

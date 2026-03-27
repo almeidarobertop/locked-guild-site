@@ -69,10 +69,10 @@
       </div>
 
       <div class="nav-menu" id="navMenu">
-        <a onclick="go('#join')">Filie-se</a>
-        <a onclick="go('#houses')">Houses</a>
-        <a onclick="go('#members')">Membros</a>
-        <a onclick="go('#screenshots')">Screenshots</a>
+        <a data-target="#join">Filie-se</a>
+        <a data-target="#houses">Houses</a>
+        <a data-target="#members">Membros</a>
+        <a data-target="#screenshots">Screenshots</a>
 
         <a href="https://discord.gg/kJwVQxgw" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
@@ -198,10 +198,7 @@
     <p>© 2026 Locked Guild</p>
   </footer>
 
-  <script src="src/js/navigation.js" defer></script>
-  <script src="src/js/gallery.js" defer></script>
-  <script src="src/js/members.js" defer></script>
-  <script src="src/js/particles.js" defer></script>
+  <script type="module" src="src/js/main.js"></script>
 
 </body>
 </html>

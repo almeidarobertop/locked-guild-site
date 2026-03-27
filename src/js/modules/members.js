@@ -31,6 +31,7 @@ export function initMembers() {
         sorcerer: '🔥',
         druid: '🌿',
         monk: '🥋',
+        'sem vocação': '⚔️',
     };
 
     const rowObserver = 'IntersectionObserver' in window
@@ -50,7 +51,12 @@ export function initMembers() {
         })
         : null;
 
+    const capitalize = (str) =>
+        str.charAt(0).toUpperCase() + str.slice(1);
+
     const getVocationIcon = (vocation) => {
+        if (!vocation) return '⚔️';
+
         const v = vocation.toLowerCase();
 
         for (const key in vocationMap) {
@@ -93,7 +99,7 @@ export function initMembers() {
                     </a>
                 </td>
                 <td>${m.level}</td>
-                <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
+                <td>${getVocationIcon(m.vocation)} ${capitalize(m.vocation)}</td>
             `;
 
                 row.classList.add('animating');
@@ -160,7 +166,9 @@ export function initMembers() {
         const search = dom.searchInput.value.toLowerCase();
 
         if (voc) {
-            filtered = filtered.filter((m) => m.vocation.includes(voc));
+            filtered = filtered.filter((m) =>
+                m.vocation.toLowerCase().includes(voc)
+            );
         }
 
         if (search) {
@@ -206,10 +214,23 @@ export function initMembers() {
     fetch('src/data/members.json')
         .then((res) => res.json())
         .then((data) => {
-            membersData = data.map((m) => ({
-                ...m,
-                level: parseInt(m.level, 10),
-            }));
+            const DEFAULT_VOCATION = 'Sem vocação';
+
+            membersData = data.map((m) => {
+                let vocation = (m.vocation || '').toLowerCase().trim();
+
+                if (!vocation || vocation === 'none') {
+                    vocation = DEFAULT_VOCATION;
+                }
+
+                return {
+                    ...m,
+                    level: parseInt(m.level, 10),
+                    vocation,
+                };
+            });
+
+            populateVocationFilter();
 
             membersData.sort((a, b) => b.level - a.level);
 
@@ -219,6 +240,28 @@ export function initMembers() {
             hasRendered = true;
             applyFilters();
         });
+
+    const populateVocationFilter = () => {
+        const select = dom.filterSelect;
+
+        select.innerHTML = '<option value="">Filtrar por Vocação</option>';
+
+        const added = new Set();
+
+        membersData.forEach((m) => {
+            const voc = m.vocation.toLowerCase();
+
+            for (const key in vocationMap) {
+                if (voc.includes(key) && !added.has(key)) {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = `${vocationMap[key]} ${capitalize(key)}`;
+                    select.appendChild(option);
+                    added.add(key);
+                }
+            }
+        });
+    };
 
     dom.sortSelect.addEventListener('change', applyFilters);
     dom.filterSelect.addEventListener('change', applyFilters);

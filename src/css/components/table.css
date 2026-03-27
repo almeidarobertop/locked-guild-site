@@ -17,8 +17,8 @@
 }
 
 .table tbody tr {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 .table tbody tr.animating {
@@ -27,6 +27,8 @@
 }
 
 .table tbody tr.show {
+  opacity: 1;
+  transform: translateY(0);
   transition:
     opacity 0.4s ease,
     transform 0.4s ease,

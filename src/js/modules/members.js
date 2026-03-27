@@ -33,6 +33,23 @@ export function initMembers() {
         monk: '🥋',
     };
 
+    const rowObserver = 'IntersectionObserver' in window
+        ? new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const row = entry.target;
+
+                row.classList.remove('animating');
+                row.classList.add('show');
+
+                observer.unobserve(row);
+            });
+        }, {
+            rootMargin: '50px',
+        })
+        : null;
+
     const getVocationIcon = (vocation) => {
         const v = vocation.toLowerCase();
 
@@ -69,23 +86,28 @@ export function initMembers() {
                 if (index < 5) row.classList.add(`top-${index + 1}`);
 
                 row.innerHTML = `
-          <td>${getRank(index)}</td>
-          <td>
-            <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
-              ${m.name}
-            </a>
-          </td>
-          <td>${m.level}</td>
-          <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
-        `;
+                <td>${getRank(index)}</td>
+                <td>
+                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
+                        ${m.name}
+                    </a>
+                </td>
+                <td>${m.level}</td>
+                <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
+            `;
+
+                row.classList.add('animating');
 
                 row.style.transitionDelay = `${Math.min(index * 10, 300)}ms`;
 
-                fragment.appendChild(row);
-
-                requestAnimationFrame(() => {
+                if (rowObserver) {
+                    rowObserver.observe(row);
+                } else {
+                    row.classList.remove('animating');
                     row.classList.add('show');
-                });
+                }
+
+                fragment.appendChild(row);
             }
 
             dom.tbody.appendChild(fragment);

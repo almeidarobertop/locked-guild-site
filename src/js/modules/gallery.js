@@ -15,6 +15,10 @@ export function initGallery() {
     let touchStartX = 0;
     let touchEndX = 0;
 
+    let isZooming = false;
+    let scale = 1;
+    let initialDistance = 0;
+
     const updateImage = () => {
         dom.lightboxImg.style.opacity = 0;
 
@@ -70,12 +74,42 @@ export function initGallery() {
     });
 
     dom.lightbox.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 1) {
+            isZooming = true;
+            return;
+        }
+
+        isZooming = false;
         touchStartX = e.changedTouches[0].screenX;
     });
 
     dom.lightbox.addEventListener('touchend', (e) => {
+        if (scale < 1.01) {
+            scale = 1;
+            initialDistance = 0;
+            dom.lightboxImg.style.transform = 'scale(1)';
+        }
+
+        if (isZooming || scale !== 1) return;
+
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
+    });
+
+    dom.lightbox.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 2) {
+            isZooming = true;
+
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (!initialDistance) initialDistance = distance;
+
+            scale = distance / initialDistance;
+
+            dom.lightboxImg.style.transform = `scale(${scale})`;
+        }
     });
 
     fetch('src/data/gallery.json')

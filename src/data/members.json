@@ -38,7 +38,7 @@
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 1292,
+    "level": 1293,
     "status": "offline"
   },
   {
@@ -102,13 +102,13 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 690,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Hokage Clarinha",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 659,
+    "level": 660,
     "status": "offline"
   },
   {
@@ -122,22 +122,22 @@
     "name": "Seven Madlife",
     "rank": "Apex Guardian",
     "vocation": "Master Sorcerer",
-    "level": 654,
+    "level": 655,
     "status": "offline"
   },
   {
     "name": "Sir Alonta",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 764,
+    "level": 765,
     "status": "offline"
   },
   {
     "name": "Skillo da Selva",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
-    "level": 856,
-    "status": "online"
+    "level": 857,
+    "status": "offline"
   },
   {
     "name": "Vitinho Cepowisks",
@@ -171,7 +171,7 @@
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 322,
+    "level": 324,
     "status": "offline"
   },
   {
@@ -199,7 +199,7 @@
     "name": "Severo Snappee",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
-    "level": 338,
+    "level": 339,
     "status": "offline"
   },
   {
@@ -261,7 +261,7 @@
   {
     "name": "Walord Canelinha",
     "rank": "Rising Sentinel",
-    "vocation": "Druid",
+    "vocation": "Elder Druid",
     "level": 32,
     "status": "offline"
   },
@@ -269,28 +269,28 @@
     "name": "Badlius",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
-    "level": 419,
-    "status": "online"
+    "level": 418,
+    "status": "offline"
   },
   {
     "name": "Bombaschick",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 212,
+    "level": 213,
     "status": "offline"
   },
   {
     "name": "Derekaunn",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 209,
-    "status": "online"
+    "level": 210,
+    "status": "offline"
   },
   {
     "name": "Deyvcabelinho",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
-    "level": 102,
+    "level": 103,
     "status": "offline"
   },
   {
@@ -318,7 +318,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 244,
+    "level": 246,
     "status": "offline"
   },
   {
@@ -353,7 +353,7 @@
     "name": "Scorpion Reborn",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 1063,
+    "level": 1064,
     "status": "offline"
   },
   {

@@ -4,14 +4,14 @@
   gap: 8px;
   padding: 12px 20px;
   margin-top: 10px;
-  background: #7b2cff;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-text-white);
   border-radius: 6px;
 }
 
 .btn:hover {
-  background: #9d4dff;
-  box-shadow: 0 0 15px #7b2cff;
+  background: var(--color-primary-light);
+  box-shadow: 0 0 15px var(--shadow-primary);
 }
 
 .btn img {
@@ -23,7 +23,7 @@
   align-items: center;
   gap: 12px;
   padding: 14px 22px;
-  background: linear-gradient(135deg, #7b2cff, #b266ff);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
@@ -47,20 +47,25 @@
 
 .join-btn small {
   font-size: 11px;
-  color: #ddd;
+  color: var(--color-text-secondary);
   opacity: 0.8;
 }
 
 .join-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px #7b2cff;
+  box-shadow: 0 0 20px var(--shadow-primary);
 }
 
 .join-btn::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--color-overlay-light),
+    transparent
+  );
   opacity: 0;
   transition: 0.4s;
 }

@@ -9,5 +9,5 @@
 
 .counter {
   margin-top: 10px;
-  color: #aaa;
+  color: var(--color-text-secondary);
 }

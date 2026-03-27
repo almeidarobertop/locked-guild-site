@@ -8,9 +8,9 @@
 .search-input {
   padding: 8px;
   border-radius: 6px;
-  border: 1px solid #7b2cff;
-  background: #140024;
-  color: #fff;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-white);
   width: 200px;
 }
 
@@ -23,8 +23,8 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background: #140024;
-  border: 1px solid #7b2cff;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   max-height: 200px;
   overflow-y: auto;
@@ -37,13 +37,13 @@
 }
 
 .autocomplete-item:hover {
-  background: #7b2cff;
+  background: var(--color-primary);
 }
 
 select {
-  background: #140024;
-  color: #fff;
-  border: 1px solid #7b2cff;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-white);
+  border: 1px solid var(--color-border);
   padding: 6px;
   border-radius: 5px;
 }

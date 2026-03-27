@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background: #0b0b0f;
-  color: #eaeaea;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   position: relative;
   z-index: 0;
 }
@@ -15,5 +15,5 @@ section p {
 }
 
 strong {
-  color: #9d4dff;
+  color: var(--color-primary-light);
 }

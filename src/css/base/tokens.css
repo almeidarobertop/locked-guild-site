@@ -1,0 +1,30 @@
+:root {
+  --color-bg-primary: #0b0b0f;
+  --color-bg-secondary: #140024;
+  --color-bg-gradient-start: #1a0033;
+
+  --color-primary: #7b2cff;
+  --color-primary-light: #9d4dff;
+  --color-accent: #b266ff;
+
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #aaa;
+  --color-text-muted: #777;
+
+  --color-border: #7b2cff;
+  --color-border-soft: #333;
+
+  --color-overlay-dark: rgba(0, 0, 0, 0.9);
+  --color-overlay-light: rgba(255,255,255,0.3);
+
+  --color-rank-1: rgba(123, 44, 255, 0.6);
+  --color-rank-2: rgba(123, 44, 255, 0.5);
+  --color-rank-3: rgba(123, 44, 255, 0.4);
+  --color-rank-4: rgba(123, 44, 255, 0.3);
+  --color-rank-5: rgba(123, 44, 255, 0.2);
+
+  --color-scrollbar-track: #140024;
+  --color-scrollbar-thumb: #7b2cff;
+
+  --shadow-primary: #7b2cff;
+}

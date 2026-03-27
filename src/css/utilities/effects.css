@@ -3,11 +3,11 @@ a, .btn, .house-card, .gallery img {
 }
 
 a {
-  color: #b266ff;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #b266ff;
+  color: var(--color-text-white);
+  text-shadow: 0 0 8px var(--color-accent);
 }

@@ -1,15 +1,15 @@
 h1 {
   margin: 10px 0 5px;
   font-size: 2.5rem;
-  color: #b266ff;
+  color: var(--color-accent);
 }
 
 h2 {
-  color: #b266ff;
-  border-bottom: 1px solid #7b2cff;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 5px;
 }
 
 .world {
-  color: #aaa;
+  color: var(--color-text-secondary);
 }

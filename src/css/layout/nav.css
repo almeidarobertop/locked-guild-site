@@ -2,8 +2,8 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #140024;
-  border-bottom: 2px solid #7b2cff;
+  background: var(--color-bg-secondary);
+  border-bottom: 2px solid var(--color-border);
   backdrop-filter: blur(10px);
 }
 
@@ -35,13 +35,13 @@ nav a {
 }
 
 nav a::after {
+  background: var(--color-accent);
   content: "";
   position: absolute;
   bottom: -4px;
   left: 50%;
   width: 0%;
   height: 2px;
-  background: #b266ff;
   transition: 0.3s;
   transform: translateX(-50%);
 }
@@ -64,7 +64,7 @@ nav img {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #b266ff;
+  background: var(--color-accent);
   transition: 0.3s;
 }
 

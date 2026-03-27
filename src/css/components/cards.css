@@ -3,19 +3,32 @@
   gap: 20px;
   overflow-x: auto;
   padding: 20px 0;
-  scrollbar-width:thin;
-  scrollbar-color:#7b2cff #140024
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-bg-secondary);
 }
 
-.houses-scroll::-webkit-scrollbar{height:8px}
-.houses-scroll::-webkit-scrollbar-track{background:#140024;border-radius:10px}
-.houses-scroll::-webkit-scrollbar-thumb{background:linear-gradient(90deg,#7b2cff,#b266ff);border-radius:10px}
-.houses-scroll::-webkit-scrollbar-thumb:hover{background:#b266ff}
+.houses-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.houses-scroll::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+}
+
+.houses-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 10px;
+}
+
+.houses-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
 
 .house-card {
   min-width: 80%;
-  background: #140024;
-  border: 1px solid #7b2cff;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 12px;
   transition: 0.3s;
@@ -27,7 +40,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(123,44,255,0.3), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(123,44,255,0.3),
+    transparent
+  );
   opacity: 0;
   transition: 0.4s;
 }
@@ -38,7 +56,7 @@
 
 .house-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px #7b2cff;
+  box-shadow: 0 0 20px var(--shadow-primary);
 }
 
 .house-card img {
@@ -51,5 +69,5 @@
 .house-card p {
   font-size: 14px;
   margin-top: 10px;
-  color: #ccc;
+  color: var(--color-text-secondary);
 }

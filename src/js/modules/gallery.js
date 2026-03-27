@@ -5,6 +5,7 @@ export function initGallery() {
         gallery: $('gallery'),
         lightbox: $('lightbox'),
         lightboxImg: $('lightbox-img'),
+        lightboxCaption: $('lightbox-caption'),
     };
 
     if (!dom.gallery || !dom.lightbox || !dom.lightboxImg) return;
@@ -23,7 +24,11 @@ export function initGallery() {
         dom.lightboxImg.style.opacity = 0;
 
         setTimeout(() => {
-            dom.lightboxImg.src = `src/screenshots/${imagesList[currentIndex].file}`;
+            const imgData = imagesList[currentIndex];
+
+            dom.lightboxImg.src = `src/screenshots/${imgData.file}`;
+            dom.lightboxCaption.textContent = imgData.title || '';
+
             dom.lightboxImg.style.opacity = 1;
         }, 120);
     };
@@ -42,7 +47,13 @@ export function initGallery() {
 
     const openImg = (index) => {
         currentIndex = index;
-        dom.lightboxImg.src = `src/screenshots/${imagesList[index].file}`;
+
+        const imgData = imagesList[index];
+
+        dom.lightboxImg.src = `src/screenshots/${imgData.file}`;
+        dom.lightboxCaption.textContent = imgData.title || '';
+        dom.lightboxCaption.style.display = imgData.title ? 'block' : 'none';
+
         dom.lightbox.style.display = 'flex';
         document.body.classList.add('no-scroll');
     };

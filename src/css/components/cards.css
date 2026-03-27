@@ -43,7 +43,7 @@
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(123,44,255,0.3),
+    rgba(var(--color-primary-rgb), var(--opacity-30)),
     transparent
   );
   opacity: 0;

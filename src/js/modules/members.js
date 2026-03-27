@@ -79,7 +79,7 @@ export function initMembers() {
           <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
         `;
 
-                row.style.transitionDelay = `${index * 15}ms`;
+                row.style.transitionDelay = `${Math.min(index * 10, 300)}ms`;
 
                 fragment.appendChild(row);
 
@@ -178,19 +178,6 @@ export function initMembers() {
         showAll = state.showAll || false;
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting || hasRendered) return;
-
-            hasRendered = true;
-            applyFilters();
-        });
-    }, {
-        rootMargin: '200px',
-    });
-
-    observer.observe(dom.tableSection);
-
     fetch('src/data/members.json')
         .then((res) => res.json())
         .then((data) => {
@@ -204,19 +191,12 @@ export function initMembers() {
             loadState();
             dom.tableWrapper.classList.toggle('collapsed', !showAll);
 
-            setTimeout(() => {
-                if (!hasRendered) {
-                    hasRendered = true;
-                    applyFilters();
-                }
-            }, 300);
+            hasRendered = true;
+            applyFilters();
         });
 
     dom.sortSelect.addEventListener('change', applyFilters);
     dom.filterSelect.addEventListener('change', applyFilters);
 
-    dom.searchInput.addEventListener('input', () => {
-        if (!hasRendered) hasRendered = true;
-        applyFilters();
-    });
+    dom.searchInput.addEventListener('input', applyFilters);
 }

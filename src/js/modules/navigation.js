@@ -1,30 +1,39 @@
-function go(id) {
-    document.querySelector(id).scrollIntoView({
-        behavior: 'smooth'
+import { $, $$ } from '../core/dom.js';
+
+const scrollToSection = (selector) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: 'smooth' });
     });
-}
+};
 
 export function initNavigation() {
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('#navMenu a');
+    const dom = {
+        hamburger: $('hamburger'),
+        menu: $('navMenu'),
+        links: $$('#navMenu a'),
+    };
 
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+    if (!dom.hamburger || !dom.menu) return;
+
+    dom.hamburger.addEventListener('click', () => {
+        dom.menu.classList.toggle('active');
+        dom.hamburger.classList.toggle('active');
     });
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const target = link.getAttribute('data-target');
+    dom.links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const target = link.dataset.target;
 
             if (target) {
-                e.preventDefault();
-                go(target);
+                event.preventDefault();
+                scrollToSection(target);
             }
 
-            menu.classList.remove('active');
-            hamburger.classList.remove('active');
+            dom.menu.classList.remove('active');
+            dom.hamburger.classList.remove('active');
         });
     });
 }

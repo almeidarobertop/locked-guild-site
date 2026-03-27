@@ -1,7 +1,13 @@
+import { $, create } from '../core/dom.js';
+
 export function initGallery() {
-    const gallery = document.getElementById('gallery');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    const dom = {
+        gallery: $('gallery'),
+        lightbox: $('lightbox'),
+        lightboxImg: $('lightbox-img'),
+    };
+
+    if (!dom.gallery || !dom.lightbox || !dom.lightboxImg) return;
 
     let currentIndex = 0;
     let imagesList = [];
@@ -9,98 +15,99 @@ export function initGallery() {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    function showNext() {
-        currentIndex = (currentIndex + 1) % imagesList.length;
-        updateImage();
-    }
-
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + imagesList.length) % imagesList.length;
-        updateImage();
-    }
-
-    function updateImage() {
-        lightboxImg.style.opacity = 0;
+    const updateImage = () => {
+        dom.lightboxImg.style.opacity = 0;
 
         setTimeout(() => {
-            lightboxImg.src = `src/screenshots/${imagesList[currentIndex].file}`;
-            lightboxImg.style.opacity = 1;
-        }, 150);
-    }
+            dom.lightboxImg.src = `src/screenshots/${imagesList[currentIndex].file}`;
+            dom.lightboxImg.style.opacity = 1;
+        }, 120);
+    };
 
-    function handleSwipe() {
+    const showNext = () => {
+        if (!imagesList.length) return;
+        currentIndex = (currentIndex + 1) % imagesList.length;
+        updateImage();
+    };
+
+    const showPrev = () => {
+        if (!imagesList.length) return;
+        currentIndex = (currentIndex - 1 + imagesList.length) % imagesList.length;
+        updateImage();
+    };
+
+    const openImg = (index) => {
+        currentIndex = index;
+        dom.lightboxImg.src = `src/screenshots/${imagesList[index].file}`;
+        dom.lightbox.style.display = 'flex';
+        document.body.classList.add('no-scroll');
+    };
+
+    const closeImg = () => {
+        dom.lightbox.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    };
+
+    const handleSwipe = () => {
         const diff = touchStartX - touchEndX;
-
         if (Math.abs(diff) < 50) return;
 
         if (diff > 0) showNext();
         else showPrev();
-    }
+    };
 
-    function openImg(index) {
-        currentIndex = index;
-        lightboxImg.src = `src/screenshots/${imagesList[index].file}`;
-        lightbox.style.display = 'flex';
-        document.body.classList.add('no-scroll');
-    }
-
-    function closeImg() {
-        lightbox.style.display = 'none';
-        document.body.classList.remove('no-scroll');
-    }
-
-    // Eventos
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeImg();
+    dom.lightbox.addEventListener('click', (e) => {
+        if (e.target === dom.lightbox) closeImg();
     });
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeImg();
-    });
 
-    document.addEventListener('keydown', (e) => {
-        if (lightbox.style.display !== 'flex') return;
+        if (dom.lightbox.style.display !== 'flex') return;
 
         if (e.key === 'ArrowRight') showNext();
         if (e.key === 'ArrowLeft') showPrev();
     });
 
-    lightbox.addEventListener('touchstart', (e) => {
+    dom.lightbox.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
     });
 
-    lightbox.addEventListener('touchend', (e) => {
+    dom.lightbox.addEventListener('touchend', (e) => {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
     });
 
-    // Data load
     fetch('src/data/gallery.json')
-        .then(res => res.json())
-        .then(images => {
+        .then((res) => res.json())
+        .then((images) => {
             imagesList = images;
-            gallery.innerHTML = '';
+            dom.gallery.innerHTML = '';
+
+            const fragment = document.createDocumentFragment();
 
             images.forEach((imgData, index) => {
-                const img = new Image();
+                const img = create('img');
 
                 img.src = `src/screenshots/${imgData.file}`;
                 img.alt = imgData.title;
                 img.title = imgData.title;
-                img.loading = "lazy";
+                img.loading = 'lazy';
+
+                img.style.transitionDelay = `${index * 25}ms`;
 
                 img.addEventListener('click', () => openImg(index));
 
-                gallery.appendChild(img);
-
-                img.style.transitionDelay = `${index * 30}ms`;
+                fragment.appendChild(img);
 
                 requestAnimationFrame(() => {
                     img.classList.add('show');
                 });
             });
+
+            dom.gallery.appendChild(fragment);
         })
-        .catch(err => {
-            console.error('Erro ao carregar screenshots:', err);
+        .catch(() => {
+            dom.gallery.textContent = 'Failed to load gallery.';
         });
 }

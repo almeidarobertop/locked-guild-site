@@ -10,6 +10,7 @@
             └── 📁base
                 ├── base.css
                 ├── reset.css
+                ├── tokens.css
                 ├── typography.css
             └── 📁components
                 ├── buttons.css
@@ -23,8 +24,6 @@
                 ├── header.css
                 ├── nav.css
                 ├── section.css
-            └── 📁pages
-                ├── home.css
             └── 📁responsive
                 ├── breakpoints.css
             └── 📁utilities
@@ -37,10 +36,15 @@
             ├── gallery.json
             ├── members.json
         └── 📁js
-            ├── gallery.js
-            ├── members.js
-            ├── navigation.js
-            ├── particles.js
+            └── 📁core
+                ├── idle.js
+                ├── observer.js
+            └── 📁modules
+                ├── gallery.js
+                ├── members.js
+                ├── navigation.js
+                ├── particles.js
+            ├── main.js
         └── 📁screenshots
             ├── brainhead-boss.jpeg
             ├── yalahar-quest.jpeg
@@ -154,7 +158,3 @@ Todo processamento deve ocorrer:
 
 - HTML indexável
 - Dados estruturados
-
-## Próximos passos
-
-1. Modernizar o JS aplicando as regras de ESLint e melhorando a estrutura existente para obter mais performance e atender conceitos como INP.

@@ -1,91 +1,105 @@
 export function initMembers() {
+    const dom = {
+        tableWrapper: document.getElementById('tableWrapper'),
+        searchInput: document.getElementById('searchInput'),
+        tableSection: document.getElementById('members'),
+        tbody: document.getElementById('membersTbody'),
+        counter: document.getElementById('memberCount'),
+        sortSelect: document.getElementById('sortLevel'),
+        filterSelect: document.getElementById('filterVoc'),
+    };
+
+    if (
+        !dom.tableWrapper ||
+        !dom.searchInput ||
+        !dom.tableSection ||
+        !dom.tbody ||
+        !dom.counter ||
+        !dom.sortSelect ||
+        !dom.filterSelect
+    ) return;
+
     let membersData = [];
     let showAll = false;
     let hasRendered = false;
 
     const MAX_VISIBLE = 50;
 
-    const tableWrapper = document.getElementById('tableWrapper');
-    const searchInput = document.getElementById('searchInput');
-    const tableSection = document.getElementById('members');
-
     const vocationMap = {
-        knight: "🛡️",
-        paladin: "🏹",
-        sorcerer: "🔥",
-        druid: "🌿",
-        monk: "🥋"
+        knight: '🛡️',
+        paladin: '🏹',
+        sorcerer: '🔥',
+        druid: '🌿',
+        monk: '🥋',
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !hasRendered) {
-                hasRendered = true;
-                applyFilters();
-            }
-        });
-    }, {
-        threshold: 0,
-        rootMargin: '200px'
-    });
+    const getVocationIcon = (vocation) => {
+        const v = vocation.toLowerCase();
 
-    observer.observe(tableSection);
+        for (const key in vocationMap) {
+            if (v.includes(key)) return vocationMap[key];
+        }
 
-    function getRankDisplay(index) {
+        return '⚔️';
+    };
+
+    const getRank = (index) => {
         if (index === 0) return '🥇';
         if (index === 1) return '🥈';
         if (index === 2) return '🥉';
         return index + 1;
-    }
+    };
 
-    function getVocationIcon(vocation) {
-        const v = vocation.toLowerCase();
-        for (const key in vocationMap) {
-            if (v.includes(key)) return vocationMap[key];
-        }
-        return "⚔️";
-    }
+    const renderChunked = (data) => {
+        dom.tbody.innerHTML = '';
+        dom.counter.textContent = `Total: ${data.length} membros`;
 
-    function renderTable(data) {
-        const tbody = document.querySelector('#membersTable tbody');
-        const counter = document.getElementById('memberCount');
+        const visible = showAll ? data : data.slice(0, MAX_VISIBLE);
 
-        tbody.innerHTML = '';
-        counter.innerText = `Total: ${data.length} membros`;
+        let index = 0;
+        const chunkSize = 20;
 
-        const visibleData = showAll ? data : data.slice(0, MAX_VISIBLE);
+        const renderChunk = () => {
+            const fragment = document.createDocumentFragment();
 
-        visibleData.forEach((m, index) => {
-            const row = document.createElement('tr');
+            for (let i = 0; i < chunkSize && index < visible.length; i += 1, index += 1) {
+                const m = visible[index];
+                const row = document.createElement('tr');
 
-            if (index < 5) {
-                row.classList.add(`top-${index + 1}`);
+                if (index < 5) row.classList.add(`top-${index + 1}`);
+
+                row.innerHTML = `
+          <td>${getRank(index)}</td>
+          <td>
+            <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
+              ${m.name}
+            </a>
+          </td>
+          <td>${m.level}</td>
+          <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
+        `;
+
+                row.style.transitionDelay = `${index * 15}ms`;
+
+                fragment.appendChild(row);
+
+                requestAnimationFrame(() => {
+                    row.classList.add('show');
+                });
             }
 
-            row.innerHTML = `
-        <td>${getRankDisplay(index)}</td>
-        <td>
-          <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
-            ${m.name}
-          </a>
-        </td>
-        <td>${m.level}</td>
-        <td>${getVocationIcon(m.vocation)} ${m.vocation}</td>
-      `;
+            dom.tbody.appendChild(fragment);
 
-            tbody.appendChild(row);
+            if (index < visible.length) {
+                requestAnimationFrame(renderChunk);
+            }
+        };
 
-            row.style.transitionDelay = `${index * 30}ms`;
-
-            requestAnimationFrame(() => {
-                row.classList.add('show');
-            });
-        });
-
+        renderChunk();
         renderToggleButton(data.length);
-    }
+    };
 
-    function renderToggleButton(total) {
+    const renderToggleButton = (total) => {
         let btn = document.getElementById('toggleMembers');
 
         if (!btn) {
@@ -93,7 +107,7 @@ export function initMembers() {
             btn.id = 'toggleMembers';
             btn.className = 'btn';
             btn.style.marginTop = '20px';
-            document.getElementById('members').appendChild(btn);
+            dom.tableSection.appendChild(btn);
         }
 
         if (total <= MAX_VISIBLE) {
@@ -102,32 +116,30 @@ export function initMembers() {
         }
 
         btn.style.display = 'inline-flex';
-        btn.classList.toggle('active', showAll);
-
-        btn.innerText = showAll
+        btn.textContent = showAll
             ? 'Mostrar menos'
             : `Mostrar todos (${total})`;
 
         btn.onclick = () => {
             showAll = !showAll;
-            tableWrapper.classList.toggle('collapsed', !showAll);
+            dom.tableWrapper.classList.toggle('collapsed', !showAll);
             applyFilters();
         };
-    }
+    };
 
-    function applyFilters() {
+    const applyFilters = () => {
         let filtered = [...membersData];
 
-        const sort = document.getElementById('sortLevel').value;
-        const voc = document.getElementById('filterVoc').value;
-        const search = searchInput.value.toLowerCase();
+        const sort = dom.sortSelect.value;
+        const voc = dom.filterSelect.value;
+        const search = dom.searchInput.value.toLowerCase();
 
         if (voc) {
-            filtered = filtered.filter(m => m.vocation.includes(voc));
+            filtered = filtered.filter((m) => m.vocation.includes(voc));
         }
 
         if (search) {
-            filtered = filtered.filter(m =>
+            filtered = filtered.filter((m) =>
                 m.name.toLowerCase().includes(search)
             );
         }
@@ -138,43 +150,59 @@ export function initMembers() {
             filtered.sort((a, b) => b.level - a.level);
         }
 
-        renderTable(filtered);
+        renderChunked(filtered);
         saveState();
-    }
+    };
 
-    function saveState() {
-        localStorage.setItem('guildFilters', JSON.stringify({
-            sort: document.getElementById('sortLevel').value,
-            voc: document.getElementById('filterVoc').value,
-            search: searchInput.value,
-            showAll
-        }));
-    }
+    const saveState = () => {
+        localStorage.setItem(
+            'guildFilters',
+            JSON.stringify({
+                sort: dom.sortSelect.value,
+                voc: dom.filterSelect.value,
+                search: dom.searchInput.value,
+                showAll,
+            })
+        );
+    };
 
-    function loadState() {
+    const loadState = () => {
         const saved = localStorage.getItem('guildFilters');
         if (!saved) return;
 
         const state = JSON.parse(saved);
 
-        document.getElementById('sortLevel').value = state.sort || '';
-        document.getElementById('filterVoc').value = state.voc || '';
-        searchInput.value = state.search || '';
+        dom.sortSelect.value = state.sort || '';
+        dom.filterSelect.value = state.voc || '';
+        dom.searchInput.value = state.search || '';
         showAll = state.showAll || false;
-    }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting || hasRendered) return;
+
+            hasRendered = true;
+            applyFilters();
+        });
+    }, {
+        rootMargin: '200px',
+    });
+
+    observer.observe(dom.tableSection);
 
     fetch('src/data/members.json')
-        .then(res => res.json())
-        .then(data => {
-            membersData = data.map(m => ({
+        .then((res) => res.json())
+        .then((data) => {
+            membersData = data.map((m) => ({
                 ...m,
-                level: parseInt(m.level)
+                level: parseInt(m.level, 10),
             }));
 
             membersData.sort((a, b) => b.level - a.level);
 
             loadState();
-            tableWrapper.classList.toggle('collapsed', !showAll);
+            dom.tableWrapper.classList.toggle('collapsed', !showAll);
 
             setTimeout(() => {
                 if (!hasRendered) {
@@ -184,10 +212,10 @@ export function initMembers() {
             }, 300);
         });
 
-    document.getElementById('sortLevel').addEventListener('change', applyFilters);
-    document.getElementById('filterVoc').addEventListener('change', applyFilters);
+    dom.sortSelect.addEventListener('change', applyFilters);
+    dom.filterSelect.addEventListener('change', applyFilters);
 
-    searchInput.addEventListener('input', () => {
+    dom.searchInput.addEventListener('input', () => {
         if (!hasRendered) hasRendered = true;
         applyFilters();
     });

@@ -1,12 +1,30 @@
 const gallery = document.getElementById('gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
 
 function openImg(src) {
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox').style.display = 'flex';
+  lightboxImg.src = src;
+  lightbox.style.display = 'flex';
+
+  document.body.classList.add('no-scroll');
 }
 
-document.getElementById('lightbox').addEventListener('click', () => {
-  document.getElementById('lightbox').style.display = 'none';
+function closeImg() {
+  lightbox.style.display = 'none';
+
+  document.body.classList.remove('no-scroll');
+}
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    closeImg();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeImg();
+  }
 });
 
 fetch('src/data/gallery.json')
@@ -27,9 +45,11 @@ fetch('src/data/gallery.json')
 
       gallery.appendChild(img);
 
-      setTimeout(() => {
+      img.style.transitionDelay = `${index * 30}ms`;
+
+      requestAnimationFrame(() => {
         img.classList.add('show');
-      }, index * 30);
+      });
     });
 
   })

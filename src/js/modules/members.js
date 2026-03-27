@@ -44,9 +44,9 @@ export function initMembers() {
     };
 
     const getRank = (index) => {
-        if (index === 0) return '🥇';
-        if (index === 1) return '🥈';
-        if (index === 2) return '🥉';
+        if (index === 0) return '<span class="medal gold">🥇</span>';
+        if (index === 1) return '<span class="medal silver">🥈</span>';
+        if (index === 2) return '<span class="medal bronze">🥉</span>';
         return index + 1;
     };
 

@@ -1,12 +1,12 @@
 .btn {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  margin-top: 10px;
   background: var(--color-primary);
-  color: var(--color-text-white);
   border-radius: 6px;
+  color: var(--color-text-white);
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 12px 20px;
 }
 
 .btn:hover {
@@ -19,17 +19,17 @@
 }
 
 .join-btn {
-  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 22px;
+  animation: pulse 2s infinite;
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   border-radius: 8px;
-  font-weight: bold;
+  display: inline-flex;
   font-size: 16px;
-  position: relative;
+  font-weight: bold;
+  gap: 12px;
   overflow: hidden;
-  animation: pulse 2s infinite;
+  padding: 14px 22px;
+  position: relative;
 }
 
 #join .btn {
@@ -39,35 +39,34 @@
 }
 
 .join-btn span {
+  align-items: center;
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-  align-items: center;
 }
 
 .join-btn small {
-  font-size: 11px;
   color: var(--color-text-secondary);
+  font-size: 11px;
   opacity: 0.8;
 }
 
 .join-btn:hover {
-  transform: translateY(-2px);
   box-shadow: 0 0 20px var(--shadow-primary);
+  transform: translateY(-2px);
 }
 
 .join-btn::before {
   content: "";
-  position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    var(--color-overlay-light),
-    transparent
-  );
   opacity: 0;
+  position: absolute;
   transition: 0.4s;
+
+  background: linear-gradient(120deg,
+      transparent,
+      var(--color-overlay-light),
+      transparent);
 }
 
 .join-btn:hover::before {

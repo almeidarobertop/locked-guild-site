@@ -1,13 +1,21 @@
 .medal {
-  display: inline-block;
   animation: float 2s infinite ease-in-out;
+  display: inline-block;
 }
 
-.gold { filter: drop-shadow(0 0 6px gold); }
-.silver { filter: drop-shadow(0 0 6px silver); }
-.bronze { filter: drop-shadow(0 0 6px #cd7f32); }
+.gold {
+  filter: drop-shadow(0 0 6px gold);
+}
+
+.silver {
+  filter: drop-shadow(0 0 6px silver);
+}
+
+.bronze {
+  filter: drop-shadow(0 0 6px #cd7f32);
+}
 
 .counter {
-  margin-top: 10px;
   color: var(--color-text-secondary);
+  margin-top: 10px;
 }

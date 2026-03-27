@@ -1,13 +1,13 @@
 footer {
-  text-align: center;
-  padding: 20px;
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
+  padding: 20px;
+  text-align: center;
 }
 
 canvas {
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: -1;
 }

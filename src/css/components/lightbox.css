@@ -1,21 +1,21 @@
 #lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  align-items: center;
+  backdrop-filter: blur(5px);
   background: var(--color-overlay-dark);
   display: none;
-  align-items: center;
+  height: 100%;
   justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 9999;
-  backdrop-filter: blur(5px);
 }
 
 #lightbox img {
-  max-width: 90%;
-  max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 0 30px var(--shadow-primary);
+  max-height: 90%;
+  max-width: 90%;
   transition: opacity 0.2s ease;
 }

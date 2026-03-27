@@ -1,11 +1,11 @@
 header {
-  text-align: center;
-  padding: 40px 20px;
   background: linear-gradient(180deg, var(--color-bg-gradient-start), var(--color-bg-primary));
   border-bottom: 2px solid var(--color-border);
+  padding: 40px 20px;
+  text-align: center;
 }
 
 header img {
-  width: 140px;
   animation: glow 2s infinite alternate;
+  width: 140px;
 }

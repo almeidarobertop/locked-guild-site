@@ -1,0 +1,19 @@
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+section p {
+  text-align: justify;
+}
+
+strong {
+  color: var(--color-primary-light);
+}

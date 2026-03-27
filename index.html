@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,10 +70,10 @@
       </div>
 
       <div class="nav-menu" id="navMenu">
-        <a onclick="go('#join')">Filie-se</a>
-        <a onclick="go('#houses')">Houses</a>
-        <a onclick="go('#members')">Membros</a>
-        <a onclick="go('#screenshots')">Screenshots</a>
+        <a data-target="#join">Filie-se</a>
+        <a data-target="#houses">Houses</a>
+        <a data-target="#members">Membros</a>
+        <a data-target="#screenshots">Screenshots</a>
 
         <a href="https://discord.gg/kJwVQxgw" target="_blank">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
@@ -91,21 +92,22 @@
   <section id="join">
     <h2>Junte-se a nós!</h2>
     <p>A <strong>LOCKED</strong> foi fundada em Relembra em 17 de agosto do ano de 2017.</p>
-    <p>Estamos sempre em busca de novos membros para crescer ainda mais, se interessou? Clique no botão abaixo para se filiar.</p>
-    <p>Mais do que uma guild, somos uma família. Prezamos pela camaradagem e pelo respeito mútuo. Estamos sempre dispostos a ajudar.</p>
+    <p>Estamos sempre em busca de novos membros para crescer ainda mais, se interessou? Clique no botão abaixo para se
+      filiar.</p>
+    <p>Mais do que uma guild, somos uma família. Prezamos pela camaradagem e pelo respeito mútuo. Estamos sempre
+      dispostos a ajudar.</p>
 
-<a class="btn join-btn"
-   href="https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=Locked"
-   target="_blank">
+    <a class="btn join-btn" href="https://www.tibia.com/community/?subtopic=guilds&page=view&GuildName=Locked"
+      target="_blank">
 
-  <img src="https://static.tibia.com/images/mmorpg/version_10/logo_tibia.webp" alt="Tibia">
+      <img src="https://static.tibia.com/images/mmorpg/version_10/logo_tibia.webp" alt="Tibia">
 
-  <span>
-    Aplicar para a LOCKED
-    <small>via Tibia.com</small>
-  </span>
+      <span>
+        Aplicar para a LOCKED
+        <small>via Tibia.com</small>
+      </span>
 
-</a>
+    </a>
   </section>
 
   <section id="houses">
@@ -142,48 +144,45 @@
     </div>
   </section>
 
-  <section id="members">
-    <h2>Membros da Guild</h2>
+  <section id="members" aria-labelledby="members-title">
+    <h2 id="members-title">Membros da Guild</h2>
 
-    <div class="filters">
+    <div class="filters" role="region" aria-label="Filtros de membros">
+
       <div class="search-container">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar membro..."
-          class="search-input"
-          autocomplete="off"
-        />
-        <div id="autocompleteList" class="autocomplete-list"></div>
+        <input type="text" id="searchInput" placeholder="Buscar membro..." class="search-input" autocomplete="off"
+          inputmode="search" enterkeyhint="search" aria-label="Buscar membro por nome" />
       </div>
 
-      <select id="sortLevel">
+      <select id="sortLevel" aria-label="Ordenar por level">
         <option value="">Ordenar por Level</option>
         <option value="desc">Maior → Menor</option>
         <option value="asc">Menor → Maior</option>
       </select>
 
-      <select id="filterVoc">
+      <select id="filterVoc" aria-label="Filtrar por vocação">
         <option value="">Filtrar por Vocação</option>
         <option value="Knight">Knight</option>
         <option value="Paladin">Paladin</option>
         <option value="Sorcerer">Sorcerer</option>
         <option value="Druid">Druid</option>
       </select>
+
     </div>
 
-    <div class="counter" id="memberCount"></div>
-    <div class="table-wrapper" id="tableWrapper">
+    <div class="counter" id="memberCount" aria-live="polite"></div>
+
+    <div class="table-wrapper" id="tableWrapper" role="region" aria-label="Lista de membros">
       <table class="table" id="membersTable">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Level</th>
-            <th>Vocação</th>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Level</th>
+            <th scope="col">Vocação</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="membersTbody"></tbody>
       </table>
     </div>
   </section>
@@ -194,14 +193,13 @@
   </section>
 
   <footer>
-    <p>Desenvolvido e mantido por <a href="https://www.tibia.com/community/?subtopic=characters&name=Potayto" target="_blank">Potayto</a></p>
+    <p>Desenvolvido e mantido por <a href="https://www.tibia.com/community/?subtopic=characters&name=Potayto"
+        target="_blank">Potayto</a></p>
     <p>© 2026 Locked Guild</p>
   </footer>
 
-  <script src="src/js/navigation.js" defer></script>
-  <script src="src/js/gallery.js" defer></script>
-  <script src="src/js/members.js" defer></script>
-  <script src="src/js/particles.js" defer></script>
+  <script type="module" src="src/js/main.js"></script>
 
 </body>
+
 </html>

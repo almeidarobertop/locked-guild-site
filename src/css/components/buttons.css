@@ -1,0 +1,74 @@
+.btn {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 6px;
+  color: var(--color-text-white);
+  display: inline-flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 12px 20px;
+}
+
+.btn:hover {
+  background: var(--color-primary-light);
+  box-shadow: 0 0 15px var(--shadow-primary);
+}
+
+.btn img {
+  width: 32px;
+}
+
+.join-btn {
+  align-items: center;
+  animation: pulse 2s infinite;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: bold;
+  gap: 12px;
+  overflow: hidden;
+  padding: 14px 22px;
+  position: relative;
+}
+
+#join .btn {
+  display: flex;
+  margin: 20px auto 0 auto;
+  width: fit-content;
+}
+
+.join-btn span {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.join-btn small {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.join-btn:hover {
+  box-shadow: 0 0 20px var(--shadow-primary);
+  transform: translateY(-2px);
+}
+
+.join-btn::before {
+  content: "";
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transition: 0.4s;
+
+  background: linear-gradient(120deg,
+      transparent,
+      var(--color-overlay-light),
+      transparent);
+}
+
+.join-btn:hover::before {
+  opacity: 1;
+}

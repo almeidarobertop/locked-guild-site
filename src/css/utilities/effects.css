@@ -1,0 +1,13 @@
+a, .btn, .house-card, .gallery img {
+  transition: all 0.25s ease;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-text-white);
+  text-shadow: 0 0 8px var(--color-accent);
+}

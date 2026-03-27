@@ -15,7 +15,8 @@ const MAX_VISIBLE = 50,
       }
     });
   }, {
-    threshold: 0.2
+    threshold: 0,
+    rootMargin: '200px'
   }),
   vocationMap = {
     knight: "🛡️",
@@ -176,6 +177,13 @@ fetch('src/data/members.json')
 
     loadState();
     tableWrapper.classList.toggle('collapsed', !showAll);
+
+    setTimeout(() => {
+      if (!hasRendered) {
+        hasRendered = true;
+        applyFilters();
+      }
+    }, 300);
   });
 
 document.getElementById('sortLevel').addEventListener('change', applyFilters);

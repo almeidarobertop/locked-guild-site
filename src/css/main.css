@@ -537,6 +537,7 @@ select {
   max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 0 30px #7b2cff;
+  transition: opacity 0.2s ease;
 }
 
 footer {

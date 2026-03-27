@@ -120,9 +120,12 @@ export function initMembers() {
             ? 'Mostrar menos'
             : `Mostrar todos (${total})`;
 
+        btn.classList.toggle('active', showAll);
+
         btn.onclick = () => {
             showAll = !showAll;
             dom.tableWrapper.classList.toggle('collapsed', !showAll);
+            btn.classList.toggle('active', showAll);
             applyFilters();
         };
     };

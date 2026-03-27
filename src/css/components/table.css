@@ -88,10 +88,15 @@
   position: relative;
 }
 
-.top-1::after {
+.top-1 td:nth-child(2) a {
+  position: relative;
+}
+
+.top-1 td:nth-child(2) a::after {
   content: "👑";
-  position: absolute;
-  right: 10px;
+  display: inline-block;
+  top: -10px;
+  position: relative;
 }
 
 .top-2 {

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /src/data/
+Disallow: /src/scripts/
+Allow /
+
+Sitemap: https://www.guildlocked.com.br/sitemap.xml

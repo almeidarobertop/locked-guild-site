@@ -4,7 +4,7 @@
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
     "level": 464,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Dike Arrois",
@@ -17,7 +17,7 @@
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 922,
+    "level": 923,
     "status": "offline"
   },
   {
@@ -32,7 +32,7 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 793,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Zycken",
@@ -108,21 +108,21 @@
     "name": "Hokage Clarinha",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 660,
-    "status": "online"
+    "level": 661,
+    "status": "offline"
   },
   {
     "name": "Luna Nightwitch",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 678,
+    "level": 679,
     "status": "offline"
   },
   {
     "name": "Seven Madlife",
     "rank": "Apex Guardian",
     "vocation": "Master Sorcerer",
-    "level": 655,
+    "level": 656,
     "status": "offline"
   },
   {
@@ -178,7 +178,7 @@
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
-    "level": 356,
+    "level": 358,
     "status": "offline"
   },
   {
@@ -199,8 +199,8 @@
     "name": "Severo Snappee",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
-    "level": 339,
-    "status": "online"
+    "level": 340,
+    "status": "offline"
   },
   {
     "name": "Vinks",
@@ -270,7 +270,7 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 418,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Bombaschick",
@@ -283,7 +283,7 @@
     "name": "Derekaunn",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 210,
+    "level": 212,
     "status": "offline"
   },
   {
@@ -339,8 +339,8 @@
     "name": "Mago Morais",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 228,
-    "status": "online"
+    "level": 229,
+    "status": "offline"
   },
   {
     "name": "Nonota",

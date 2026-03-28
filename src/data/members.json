@@ -11,14 +11,14 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 924,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 923,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Lexus Shoter",
@@ -31,8 +31,8 @@
     "name": "Protetor Carinhoso",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 793,
-    "status": "online"
+    "level": 794,
+    "status": "offline"
   },
   {
     "name": "Zycken",
@@ -102,7 +102,7 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 690,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Hokage Clarinha",
@@ -116,7 +116,7 @@
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 679,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Seven Madlife",
@@ -171,15 +171,15 @@
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 324,
-    "status": "offline"
+    "level": 326,
+    "status": "online"
   },
   {
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
     "level": 358,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Mage Kiro",
@@ -284,7 +284,7 @@
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
     "level": 212,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Deyvcabelinho",
@@ -318,7 +318,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 251,
+    "level": 252,
     "status": "offline"
   },
   {
@@ -340,7 +340,7 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 229,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Nonota",

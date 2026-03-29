@@ -10,15 +10,15 @@
     "name": "Dike Arrois",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 924,
-    "status": "online"
+    "level": 925,
+    "status": "offline"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 923,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Lexus Shoter",
@@ -32,14 +32,14 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 794,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 1293,
-    "status": "offline"
+    "level": 1294,
+    "status": "online"
   },
   {
     "name": "Emahyak",
@@ -101,8 +101,8 @@
     "name": "Claudio Bojanha dois",
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
-    "level": 690,
-    "status": "online"
+    "level": 691,
+    "status": "offline"
   },
   {
     "name": "Hokage Clarinha",
@@ -115,8 +115,8 @@
     "name": "Luna Nightwitch",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 679,
-    "status": "online"
+    "level": 680,
+    "status": "offline"
   },
   {
     "name": "Seven Madlife",
@@ -171,15 +171,15 @@
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 326,
-    "status": "online"
+    "level": 328,
+    "status": "offline"
   },
   {
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
-    "level": 358,
-    "status": "online"
+    "level": 361,
+    "status": "offline"
   },
   {
     "name": "Mage Kiro",
@@ -262,7 +262,7 @@
     "name": "Walord Canelinha",
     "rank": "Rising Sentinel",
     "vocation": "Elder Druid",
-    "level": 32,
+    "level": 35,
     "status": "offline"
   },
   {
@@ -270,7 +270,7 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 418,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Bombaschick",
@@ -283,8 +283,8 @@
     "name": "Derekaunn",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 212,
-    "status": "online"
+    "level": 213,
+    "status": "offline"
   },
   {
     "name": "Deyvcabelinho",
@@ -318,7 +318,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 252,
+    "level": 254,
     "status": "offline"
   },
   {
@@ -340,7 +340,7 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 229,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Nonota",

@@ -3,15 +3,15 @@
     "name": "Potayto",
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
-    "level": 464,
-    "status": "offline"
+    "level": 465,
+    "status": "online"
   },
   {
     "name": "Dike Arrois",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 925,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Indio Grilo Machucado",
@@ -31,15 +31,15 @@
     "name": "Protetor Carinhoso",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 794,
-    "status": "online"
+    "level": 795,
+    "status": "offline"
   },
   {
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
     "level": 1294,
-    "status": "online"
+    "status": "offline"
   },
   {
     "name": "Emahyak",
@@ -143,7 +143,7 @@
     "name": "Vitinho Cepowisks",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
-    "level": 759,
+    "level": 760,
     "status": "offline"
   },
   {
@@ -171,7 +171,7 @@
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 328,
+    "level": 329,
     "status": "offline"
   },
   {
@@ -179,7 +179,7 @@
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
     "level": 361,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Mage Kiro",
@@ -269,8 +269,8 @@
     "name": "Badlius",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
-    "level": 418,
-    "status": "online"
+    "level": 419,
+    "status": "offline"
   },
   {
     "name": "Bombaschick",
@@ -318,7 +318,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 254,
+    "level": 255,
     "status": "offline"
   },
   {
@@ -332,8 +332,8 @@
     "name": "Lukinha Modtanker",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 417,
-    "status": "offline"
+    "level": 419,
+    "status": "online"
   },
   {
     "name": "Mago Morais",
@@ -367,7 +367,7 @@
     "name": "Xandzudo",
     "rank": "Provisional Soul",
     "vocation": "Exalted Monk",
-    "level": 330,
-    "status": "offline"
+    "level": 334,
+    "status": "online"
   }
 ]

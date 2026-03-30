@@ -85,6 +85,9 @@ export function initMembers() {
         return index + 1;
     };
 
+    const getTopLevelBadge = (index) =>
+        index === 0 ? '<span class="member-top-badge" aria-hidden="true">\u{1F451}</span>' : '';
+
     const getLevelGainBadge = (levelGain) => {
         if (!Number.isFinite(levelGain) || levelGain <= 0) return '';
 
@@ -116,9 +119,12 @@ export function initMembers() {
                 row.innerHTML = `
                 <td>${getRank(index)}</td>
                 <td>
-                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(member.name)}" target="_blank" title="${escapeHtmlAttr(member.rank || 'Sem rank')}">
-                        ${escapeHtml(member.name)}
-                    </a>
+                    <span class="member-name">
+                        <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(member.name)}" target="_blank" title="${escapeHtmlAttr(member.rank || 'Sem rank')}">
+                            ${escapeHtml(member.name)}
+                        </a>
+                        ${getTopLevelBadge(index)}
+                    </span>
                 </td>
                 <td>
                     <span class="member-level">

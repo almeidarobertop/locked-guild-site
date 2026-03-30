@@ -82,6 +82,20 @@
   transform: rotate(180deg);
 }
 
+.member-name {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.member-top-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 1;
+  position: relative;
+  top: -10px;
+}
+
 .member-level {
   align-items: flex-start;
   display: inline-flex;
@@ -111,17 +125,6 @@
   background: var(--color-rank-1);
   box-shadow: 0 0 20px var(--shadow-primary);
   position: relative;
-}
-
-.top-1 td:nth-child(2) a {
-  position: relative;
-}
-
-.top-1 td:nth-child(2) a::after {
-  content: "\1F451";
-  display: inline-block;
-  position: relative;
-  top: -10px;
 }
 
 .top-2 {

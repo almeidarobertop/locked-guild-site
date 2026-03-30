@@ -17,7 +17,7 @@
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 924,
+    "level": 925,
     "status": "offline"
   },
   {
@@ -31,14 +31,14 @@
     "name": "Protetor Carinhoso",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 795,
+    "level": 796,
     "status": "online"
   },
   {
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 1294,
+    "level": 1295,
     "status": "offline"
   },
   {
@@ -102,7 +102,7 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 691,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Hokage Clarinha",
@@ -115,14 +115,14 @@
     "name": "Luna Nightwitch",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 680,
+    "level": 681,
     "status": "offline"
   },
   {
     "name": "Seven Madlife",
     "rank": "Apex Guardian",
     "vocation": "Master Sorcerer",
-    "level": 656,
+    "level": 657,
     "status": "offline"
   },
   {
@@ -171,7 +171,7 @@
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 329,
+    "level": 330,
     "status": "offline"
   },
   {
@@ -199,7 +199,7 @@
     "name": "Severo Snappee",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
-    "level": 341,
+    "level": 342,
     "status": "offline"
   },
   {
@@ -290,7 +290,7 @@
     "name": "Derekaunn",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 213,
+    "level": 214,
     "status": "offline"
   },
   {
@@ -332,7 +332,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 259,
+    "level": 260,
     "status": "offline"
   },
   {
@@ -346,7 +346,7 @@
     "name": "Lukinha Modtanker",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 420,
+    "level": 422,
     "status": "offline"
   },
   {
@@ -374,7 +374,7 @@
     "name": "Xandzudo",
     "rank": "Provisional Soul",
     "vocation": "Exalted Monk",
-    "level": 334,
+    "level": 336,
     "status": "offline"
   }
 ]

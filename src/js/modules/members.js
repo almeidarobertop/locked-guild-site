@@ -116,14 +116,16 @@ export function initMembers() {
                 row.innerHTML = `
                 <td>${getRank(index)}</td>
                 <td>
-                    <span class="member-name">
-                        <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(member.name)}" target="_blank" title="${escapeHtmlAttr(member.rank || 'Sem rank')}">
-                            ${escapeHtml(member.name)}
-                        </a>
+                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(member.name)}" target="_blank" title="${escapeHtmlAttr(member.rank || 'Sem rank')}">
+                        ${escapeHtml(member.name)}
+                    </a>
+                </td>
+                <td>
+                    <span class="member-level">
+                        <span class="member-level-value">${member.level}</span>
                         ${getLevelGainBadge(member.levelGain)}
                     </span>
                 </td>
-                <td>${member.level}</td>
                 <td>${getVocationIcon(member.vocation)} ${escapeHtml(capitalize(member.vocation))}</td>
             `;
 

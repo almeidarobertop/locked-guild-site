@@ -54,6 +54,13 @@ export function initMembers() {
     const capitalize = (str) =>
         str.charAt(0).toUpperCase() + str.slice(1);
 
+    const escapeHtmlAttr = (value = '') =>
+        String(value)
+            .replaceAll('&', '&amp;')
+            .replaceAll('"', '&quot;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;');
+
     const getVocationIcon = (vocation) => {
         if (!vocation) return '⚔️';
 
@@ -94,7 +101,7 @@ export function initMembers() {
                 row.innerHTML = `
                 <td>${getRank(index)}</td>
                 <td>
-                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
+                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(m.name)}" target="_blank" title="${escapeHtmlAttr(m.rank || 'Sem rank')}">
                         ${m.name}
                     </a>
                 </td>

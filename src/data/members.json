@@ -481,6 +481,13 @@
     "status": "offline"
   },
   {
+    "name": "Nonota",
+    "rank": "Rising Sentinel",
+    "vocation": "Monk",
+    "level": 15,
+    "status": "offline"
+  },
+  {
     "name": "Valeu tamojunto",
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
@@ -569,6 +576,13 @@
     "levelGain": 0,
     "snapshotDate": "2026-03-30",
     "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "offline"
+  },
+  {
+    "name": "Ed Galoucura",
+    "rank": "Provisional Soul",
+    "vocation": "Druid",
+    "level": 8,
     "status": "offline"
   },
   {

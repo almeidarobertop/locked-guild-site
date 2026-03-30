@@ -3,21 +3,39 @@
     "name": "Potayto",
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
-    "level": 465,
+    "level": 466,
+    "previousLevel": 465,
+    "baselineLevel": 465,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "online"
   },
   {
     "name": "Dike Arrois",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 925,
+    "level": 926,
+    "previousLevel": 925,
+    "baselineLevel": 925,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "online"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 923,
+    "level": 925,
+    "previousLevel": 923,
+    "baselineLevel": 923,
+    "baselineDate": "2026-03-30",
+    "levelGain": 2,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -25,27 +43,51 @@
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
     "level": 750,
+    "previousLevel": 750,
+    "baselineLevel": 750,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Protetor Carinhoso",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 795,
-    "status": "offline"
+    "level": 797,
+    "previousLevel": 795,
+    "baselineLevel": 795,
+    "baselineDate": "2026-03-30",
+    "levelGain": 2,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 1294,
-    "status": "offline"
+    "level": 1295,
+    "previousLevel": 1294,
+    "baselineLevel": 1294,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Emahyak",
     "rank": "Combat Sustainer",
     "vocation": "Master Sorcerer",
-    "level": 121,
+    "level": 122,
+    "previousLevel": 121,
+    "baselineLevel": 121,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -53,6 +95,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Elder Druid",
     "level": 61,
+    "previousLevel": 61,
+    "baselineLevel": 61,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -60,6 +108,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Elite Knight",
     "level": 145,
+    "previousLevel": 145,
+    "baselineLevel": 145,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -67,6 +121,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Elder Druid",
     "level": 95,
+    "previousLevel": 95,
+    "baselineLevel": 95,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -74,6 +134,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Master Sorcerer",
     "level": 130,
+    "previousLevel": 130,
+    "baselineLevel": 130,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -81,6 +147,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Elder Druid",
     "level": 282,
+    "previousLevel": 282,
+    "baselineLevel": 282,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -88,6 +160,12 @@
     "rank": "Combat Sustainer",
     "vocation": "Elder Druid",
     "level": 29,
+    "previousLevel": 29,
+    "baselineLevel": 29,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -95,6 +173,12 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 702,
+    "previousLevel": 702,
+    "baselineLevel": 702,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -102,6 +186,12 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 691,
+    "previousLevel": 691,
+    "baselineLevel": 691,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -109,27 +199,51 @@
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 661,
+    "previousLevel": 661,
+    "baselineLevel": 661,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Luna Nightwitch",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 680,
+    "level": 681,
+    "previousLevel": 680,
+    "baselineLevel": 680,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Seven Madlife",
     "rank": "Apex Guardian",
     "vocation": "Master Sorcerer",
-    "level": 656,
-    "status": "offline"
+    "level": 657,
+    "previousLevel": 656,
+    "baselineLevel": 656,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Sir Alonta",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 765,
+    "previousLevel": 765,
+    "baselineLevel": 765,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -137,13 +251,25 @@
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
     "level": 857,
-    "status": "offline"
+    "previousLevel": 857,
+    "baselineLevel": 857,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Vitinho Cepowisks",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
-    "level": 760,
+    "level": 761,
+    "previousLevel": 760,
+    "baselineLevel": 760,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -151,6 +277,12 @@
     "rank": "Primal Summoner",
     "vocation": "Paladin",
     "level": 201,
+    "previousLevel": 201,
+    "baselineLevel": 201,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -158,6 +290,12 @@
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
     "level": 362,
+    "previousLevel": 362,
+    "baselineLevel": 362,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -165,27 +303,51 @@
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
     "level": 452,
+    "previousLevel": 452,
+    "baselineLevel": 452,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Is Maik",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 329,
+    "level": 330,
+    "previousLevel": 329,
+    "baselineLevel": 329,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
-    "level": 361,
-    "status": "online"
+    "level": 364,
+    "previousLevel": 361,
+    "baselineLevel": 361,
+    "baselineDate": "2026-03-30",
+    "levelGain": 3,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "offline"
   },
   {
     "name": "Mage Kiro",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
     "level": 526,
+    "previousLevel": 526,
+    "baselineLevel": 526,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -193,13 +355,25 @@
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
     "level": 400,
+    "previousLevel": 400,
+    "baselineLevel": 400,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Severo Snappee",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
-    "level": 340,
+    "level": 342,
+    "previousLevel": 340,
+    "baselineLevel": 340,
+    "baselineDate": "2026-03-30",
+    "levelGain": 2,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -207,6 +381,12 @@
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
     "level": 374,
+    "previousLevel": 374,
+    "baselineLevel": 374,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -214,6 +394,12 @@
     "rank": "Primal Summoner",
     "vocation": "Exalted Monk",
     "level": 308,
+    "previousLevel": 308,
+    "baselineLevel": 308,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -221,6 +407,12 @@
     "rank": "Rising Sentinel",
     "vocation": "Royal Paladin",
     "level": 150,
+    "previousLevel": 150,
+    "baselineLevel": 150,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -228,6 +420,12 @@
     "rank": "Rising Sentinel",
     "vocation": "None",
     "level": 2,
+    "previousLevel": 2,
+    "baselineLevel": 2,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -235,6 +433,12 @@
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
     "level": 56,
+    "previousLevel": 56,
+    "baselineLevel": 56,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -242,6 +446,12 @@
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
     "level": 38,
+    "previousLevel": 38,
+    "baselineLevel": 38,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -249,6 +459,25 @@
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
     "level": 54,
+    "previousLevel": 54,
+    "baselineLevel": 54,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "offline"
+  },
+  {
+    "name": "Nonota",
+    "rank": "Rising Sentinel",
+    "vocation": "Monk",
+    "level": 15,
+    "previousLevel": 15,
+    "baselineLevel": 15,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -256,6 +485,12 @@
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
     "level": 163,
+    "previousLevel": 163,
+    "baselineLevel": 163,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -263,6 +498,12 @@
     "rank": "Rising Sentinel",
     "vocation": "Elder Druid",
     "level": 35,
+    "previousLevel": 35,
+    "baselineLevel": 35,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -270,20 +511,38 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 419,
-    "status": "offline"
+    "previousLevel": 419,
+    "baselineLevel": 419,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Bombaschick",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 213,
-    "status": "offline"
+    "previousLevel": 213,
+    "baselineLevel": 213,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Derekaunn",
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
-    "level": 213,
+    "level": 214,
+    "previousLevel": 213,
+    "baselineLevel": 213,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -291,6 +550,25 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 103,
+    "previousLevel": 103,
+    "baselineLevel": 103,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "offline"
+  },
+  {
+    "name": "Ed Galoucura",
+    "rank": "Provisional Soul",
+    "vocation": "Druid",
+    "level": 8,
+    "previousLevel": 8,
+    "baselineLevel": 8,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -298,6 +576,12 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 800,
+    "previousLevel": 800,
+    "baselineLevel": 800,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -305,6 +589,12 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 101,
+    "previousLevel": 101,
+    "baselineLevel": 101,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -312,13 +602,25 @@
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
     "level": 215,
+    "previousLevel": 215,
+    "baselineLevel": 215,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 255,
+    "level": 260,
+    "previousLevel": 255,
+    "baselineLevel": 255,
+    "baselineDate": "2026-03-30",
+    "levelGain": 5,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -326,13 +628,25 @@
     "rank": "Provisional Soul",
     "vocation": "Royal Paladin",
     "level": 544,
-    "status": "offline"
+    "previousLevel": 544,
+    "baselineLevel": 544,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "online"
   },
   {
     "name": "Lukinha Modtanker",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 419,
+    "level": 422,
+    "previousLevel": 419,
+    "baselineLevel": 419,
+    "baselineDate": "2026-03-30",
+    "levelGain": 3,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "online"
   },
   {
@@ -340,20 +654,25 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 229,
-    "status": "offline"
-  },
-  {
-    "name": "Nonota",
-    "rank": "Provisional Soul",
-    "vocation": "Monk",
-    "level": 15,
+    "previousLevel": 229,
+    "baselineLevel": 229,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Scorpion Reborn",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 1064,
+    "level": 1065,
+    "previousLevel": 1064,
+    "baselineLevel": 1064,
+    "baselineDate": "2026-03-30",
+    "levelGain": 1,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
@@ -361,13 +680,25 @@
     "rank": "Provisional Soul",
     "vocation": "Elder Druid",
     "level": 353,
+    "previousLevel": 353,
+    "baselineLevel": 353,
+    "baselineDate": "2026-03-30",
+    "levelGain": 0,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
     "status": "offline"
   },
   {
     "name": "Xandzudo",
     "rank": "Provisional Soul",
     "vocation": "Exalted Monk",
-    "level": 334,
-    "status": "online"
+    "level": 336,
+    "previousLevel": 334,
+    "baselineLevel": 334,
+    "baselineDate": "2026-03-30",
+    "levelGain": 2,
+    "snapshotDate": "2026-03-30",
+    "snapshotAt": "2026-03-30T22:45:19.614Z",
+    "status": "offline"
   }
 ]

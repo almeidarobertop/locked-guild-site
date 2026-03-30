@@ -73,7 +73,7 @@
 }
 
 #toggleMembers::after {
-  content: "▼";
+  content: "\25BC";
   margin-left: 8px;
   transition: transform 0.3s;
 }
@@ -82,20 +82,48 @@
   transform: rotate(180deg);
 }
 
+.member-name {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 4px;
+}
+
+.member-top-badge {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 1;
+  position: relative;
+  top: -10px;
+}
+
+.member-level {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.member-level-value {
+  white-space: nowrap;
+}
+
+.member-level-gain {
+  background: rgba(46, 204, 113, 0.16);
+  border: 1px solid rgba(46, 204, 113, 0.45);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.18);
+  color: #9af0b8;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 7px;
+  white-space: nowrap;
+}
+
 .top-1 {
   background: var(--color-rank-1);
   box-shadow: 0 0 20px var(--shadow-primary);
-  position: relative;
-}
-
-.top-1 td:nth-child(2) a {
-  position: relative;
-}
-
-.top-1 td:nth-child(2) a::after {
-  content: "👑";
-  display: inline-block;
-  top: -10px;
   position: relative;
 }
 
@@ -126,4 +154,21 @@
 
 .top-3 td:first-child {
   border-left: 4px solid var(--color-primary);
+}
+
+@media (min-width: 478px) and (max-width: 525px) {
+  .table th,
+  .table td {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .member-level {
+    gap: 4px;
+  }
+
+  .member-level-gain {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
 }

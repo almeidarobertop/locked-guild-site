@@ -21,17 +21,20 @@ export function initMembers() {
 
     let membersData = [];
     let showAll = false;
-    let hasRendered = false;
 
     const MAX_VISIBLE = 50;
-
-    const vocationMap = {
-        knight: '🛡️',
-        paladin: '🏹',
-        sorcerer: '🔥',
-        druid: '🌿',
-        monk: '🥋',
-        'sem vocação': '⚔️',
+    const MEDALS = {
+        gold: '\u{1F947}',
+        silver: '\u{1F948}',
+        bronze: '\u{1F949}',
+    };
+    const VOCATION_ICONS = {
+        knight: '\u{1F6E1}\uFE0F',
+        paladin: '\u{1F3F9}',
+        sorcerer: '\u{1F525}',
+        druid: '\u{1F33F}',
+        monk: '\u{1F94B}',
+        'sem voca\u00E7\u00E3o': '\u2694\uFE0F',
     };
 
     const rowObserver = 'IntersectionObserver' in window
@@ -54,23 +57,45 @@ export function initMembers() {
     const capitalize = (str) =>
         str.charAt(0).toUpperCase() + str.slice(1);
 
+    const escapeHtml = (value = '') =>
+        String(value)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;');
+
+    const escapeHtmlAttr = (value = '') =>
+        escapeHtml(value).replaceAll('"', '&quot;');
+
     const getVocationIcon = (vocation) => {
-        if (!vocation) return '⚔️';
+        if (!vocation) return VOCATION_ICONS['sem voca\u00E7\u00E3o'];
 
-        const v = vocation.toLowerCase();
+        const normalizedVocation = vocation.toLowerCase();
 
-        for (const key in vocationMap) {
-            if (v.includes(key)) return vocationMap[key];
+        for (const key in VOCATION_ICONS) {
+            if (normalizedVocation.includes(key)) return VOCATION_ICONS[key];
         }
 
-        return '⚔️';
+        return VOCATION_ICONS['sem voca\u00E7\u00E3o'];
     };
 
     const getRank = (index) => {
-        if (index === 0) return '<span class="medal gold">🥇</span>';
-        if (index === 1) return '<span class="medal silver">🥈</span>';
-        if (index === 2) return '<span class="medal bronze">🥉</span>';
+        if (index === 0) return `<span class="medal gold">${MEDALS.gold}</span>`;
+        if (index === 1) return `<span class="medal silver">${MEDALS.silver}</span>`;
+        if (index === 2) return `<span class="medal bronze">${MEDALS.bronze}</span>`;
         return index + 1;
+    };
+
+    const getTopLevelBadge = (index) =>
+        index === 0 ? '<span class="member-top-badge" aria-hidden="true">\u{1F451}</span>' : '';
+
+    const getLevelGainBadge = (levelGain) => {
+        if (!Number.isFinite(levelGain) || levelGain <= 0) return '';
+
+        const description = levelGain === 1
+            ? 'Ganhou 1 level desde a \u00FAltima atualiza\u00E7\u00E3o'
+            : `Ganhou ${levelGain} levels desde a \u00FAltima atualiza\u00E7\u00E3o`;
+
+        return `<span class="member-level-gain" title="${escapeHtmlAttr(description)}" aria-label="${escapeHtmlAttr(description)}">+${levelGain}</span>`;
     };
 
     const renderChunked = (data) => {
@@ -86,7 +111,7 @@ export function initMembers() {
             const fragment = document.createDocumentFragment();
 
             for (let i = 0; i < chunkSize && index < visible.length; i += 1, index += 1) {
-                const m = visible[index];
+                const member = visible[index];
                 const row = document.createElement('tr');
 
                 if (index < 5) row.classList.add(`top-${index + 1}`);
@@ -94,16 +119,23 @@ export function initMembers() {
                 row.innerHTML = `
                 <td>${getRank(index)}</td>
                 <td>
-                    <a href="https://www.tibia.com/community/?subtopic=characters&name=${m.name}" target="_blank">
-                        ${m.name}
-                    </a>
+                    <span class="member-name">
+                        <a href="https://www.tibia.com/community/?subtopic=characters&name=${encodeURIComponent(member.name)}" target="_blank" title="${escapeHtmlAttr(member.rank || 'Sem rank')}">
+                            ${escapeHtml(member.name)}
+                        </a>
+                        ${getTopLevelBadge(index)}
+                    </span>
                 </td>
-                <td>${m.level}</td>
-                <td>${getVocationIcon(m.vocation)} ${capitalize(m.vocation)}</td>
+                <td>
+                    <span class="member-level">
+                        <span class="member-level-value">${member.level}</span>
+                        ${getLevelGainBadge(member.levelGain)}
+                    </span>
+                </td>
+                <td>${getVocationIcon(member.vocation)} ${escapeHtml(capitalize(member.vocation))}</td>
             `;
 
                 row.classList.add('animating');
-
                 row.style.transitionDelay = `${Math.min(index * 10, 300)}ms`;
 
                 if (rowObserver) {
@@ -162,18 +194,18 @@ export function initMembers() {
         let filtered = [...membersData];
 
         const sort = dom.sortSelect.value;
-        const voc = dom.filterSelect.value;
+        const vocationFilter = dom.filterSelect.value;
         const search = dom.searchInput.value.toLowerCase();
 
-        if (voc) {
-            filtered = filtered.filter((m) =>
-                m.vocation.toLowerCase().includes(voc)
+        if (vocationFilter) {
+            filtered = filtered.filter((member) =>
+                member.vocation.toLowerCase().includes(vocationFilter)
             );
         }
 
         if (search) {
-            filtered = filtered.filter((m) =>
-                m.name.toLowerCase().includes(search)
+            filtered = filtered.filter((member) =>
+                member.name.toLowerCase().includes(search)
             );
         }
 
@@ -211,21 +243,45 @@ export function initMembers() {
         showAll = state.showAll || false;
     };
 
+    const populateVocationFilter = () => {
+        const select = dom.filterSelect;
+
+        select.innerHTML = '<option value="">Filtrar por Voca\u00E7\u00E3o</option>';
+
+        const added = new Set();
+
+        membersData.forEach((member) => {
+            const vocation = member.vocation.toLowerCase();
+
+            for (const key in VOCATION_ICONS) {
+                if (vocation.includes(key) && !added.has(key)) {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = `${VOCATION_ICONS[key]} ${capitalize(key)}`;
+                    select.appendChild(option);
+                    added.add(key);
+                }
+            }
+        });
+    };
+
     fetch('src/data/members.json')
         .then((res) => res.json())
         .then((data) => {
-            const DEFAULT_VOCATION = 'Sem vocação';
+            const DEFAULT_VOCATION = 'Sem voca\u00E7\u00E3o';
 
-            membersData = data.map((m) => {
-                let vocation = (m.vocation || '').toLowerCase().trim();
+            membersData = data.map((member) => {
+                let vocation = (member.vocation || '').toLowerCase().trim();
 
                 if (!vocation || vocation === 'none') {
                     vocation = DEFAULT_VOCATION;
                 }
 
                 return {
-                    ...m,
-                    level: parseInt(m.level, 10),
+                    ...member,
+                    level: parseInt(member.level, 10),
+                    levelGain: parseInt(member.levelGain, 10) || 0,
+                    previousLevel: parseInt(member.previousLevel, 10) || parseInt(member.level, 10),
                     vocation,
                 };
             });
@@ -236,35 +292,10 @@ export function initMembers() {
 
             loadState();
             dom.tableWrapper.classList.toggle('collapsed', !showAll);
-
-            hasRendered = true;
             applyFilters();
         });
 
-    const populateVocationFilter = () => {
-        const select = dom.filterSelect;
-
-        select.innerHTML = '<option value="">Filtrar por Vocação</option>';
-
-        const added = new Set();
-
-        membersData.forEach((m) => {
-            const voc = m.vocation.toLowerCase();
-
-            for (const key in vocationMap) {
-                if (voc.includes(key) && !added.has(key)) {
-                    const option = document.createElement('option');
-                    option.value = key;
-                    option.textContent = `${vocationMap[key]} ${capitalize(key)}`;
-                    select.appendChild(option);
-                    added.add(key);
-                }
-            }
-        });
-    };
-
     dom.sortSelect.addEventListener('change', applyFilters);
     dom.filterSelect.addEventListener('change', applyFilters);
-
     dom.searchInput.addEventListener('input', applyFilters);
 }

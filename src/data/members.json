@@ -3,21 +3,21 @@
     "name": "Potayto",
     "rank": "Overlord",
     "vocation": "Master Sorcerer",
-    "level": 465,
-    "status": "online"
+    "level": 466,
+    "status": "offline"
   },
   {
     "name": "Dike Arrois",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 925,
-    "status": "online"
+    "level": 926,
+    "status": "offline"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
-    "level": 923,
+    "level": 924,
     "status": "offline"
   },
   {
@@ -32,7 +32,7 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 795,
-    "status": "offline"
+    "status": "online"
   },
   {
     "name": "Zycken",
@@ -143,7 +143,7 @@
     "name": "Vitinho Cepowisks",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
-    "level": 760,
+    "level": 761,
     "status": "offline"
   },
   {
@@ -178,8 +178,8 @@
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
-    "level": 361,
-    "status": "online"
+    "level": 364,
+    "status": "offline"
   },
   {
     "name": "Mage Kiro",
@@ -199,7 +199,7 @@
     "name": "Severo Snappee",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
-    "level": 340,
+    "level": 341,
     "status": "offline"
   },
   {
@@ -252,6 +252,13 @@
     "status": "offline"
   },
   {
+    "name": "Nonota",
+    "rank": "Rising Sentinel",
+    "vocation": "Monk",
+    "level": 15,
+    "status": "offline"
+  },
+  {
     "name": "Valeu tamojunto",
     "rank": "Rising Sentinel",
     "vocation": "Elite Knight",
@@ -294,6 +301,13 @@
     "status": "offline"
   },
   {
+    "name": "Ed Galoucura",
+    "rank": "Provisional Soul",
+    "vocation": "Druid",
+    "level": 8,
+    "status": "offline"
+  },
+  {
     "name": "Florzinha Love",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
@@ -318,7 +332,7 @@
     "name": "Liocrismar Junior",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 255,
+    "level": 259,
     "status": "offline"
   },
   {
@@ -332,8 +346,8 @@
     "name": "Lukinha Modtanker",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 419,
-    "status": "online"
+    "level": 420,
+    "status": "offline"
   },
   {
     "name": "Mago Morais",
@@ -343,17 +357,10 @@
     "status": "offline"
   },
   {
-    "name": "Nonota",
-    "rank": "Provisional Soul",
-    "vocation": "Monk",
-    "level": 15,
-    "status": "offline"
-  },
-  {
     "name": "Scorpion Reborn",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 1064,
+    "level": 1065,
     "status": "offline"
   },
   {
@@ -368,6 +375,6 @@
     "rank": "Provisional Soul",
     "vocation": "Exalted Monk",
     "level": 334,
-    "status": "online"
+    "status": "offline"
   }
 ]

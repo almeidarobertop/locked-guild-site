@@ -73,13 +73,35 @@
 }
 
 #toggleMembers::after {
-  content: "▼";
+  content: "\25BC";
   margin-left: 8px;
   transition: transform 0.3s;
 }
 
 #toggleMembers.active::after {
   transform: rotate(180deg);
+}
+
+.member-name {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.member-level-gain {
+  background: rgba(46, 204, 113, 0.16);
+  border: 1px solid rgba(46, 204, 113, 0.45);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.18);
+  color: #9af0b8;
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px 7px;
+  position: relative;
+  top: -10px;
+  white-space: nowrap;
 }
 
 .top-1 {
@@ -93,10 +115,10 @@
 }
 
 .top-1 td:nth-child(2) a::after {
-  content: "👑";
+  content: "\1F451";
   display: inline-block;
-  top: -10px;
   position: relative;
+  top: -10px;
 }
 
 .top-2 {

@@ -11,6 +11,7 @@
   --color-text-primary: #eaeaea;
   --color-text-secondary: #aaa;
   --color-text-muted: #777;
+  --color-text-white: rgb(var(--color-white-rgb));
 
   --color-border: #7b2cff;
   --color-border-soft: #333;
@@ -22,16 +23,28 @@
 
   --color-primary-rgb: 123, 44, 255;
   --color-accent-rgb: 178, 102, 255;
+  --color-success-rgb: 46, 204, 113;
+  --color-info-rgb: 68, 156, 255;
+  --color-danger-rgb: 255, 82, 82;
 
   --color-black-rgb: 0, 0, 0;
   --color-white-rgb: 255, 255, 255;
+  --color-gold-rgb: 255, 215, 0;
+  --color-silver-rgb: 192, 192, 192;
+  --color-bronze-rgb: 205, 127, 50;
 
+  --opacity-08: 0.08;
   --opacity-10: 0.1;
+  --opacity-16: 0.16;
+  --opacity-18: 0.18;
   --opacity-20: 0.2;
   --opacity-30: 0.3;
+  --opacity-35: 0.35;
   --opacity-40: 0.4;
+  --opacity-45: 0.45;
   --opacity-50: 0.5;
   --opacity-60: 0.6;
+  --opacity-80: 0.8;
   --opacity-90: 0.9;
 
   --color-overlay-dark: rgba(var(--color-black-rgb), var(--opacity-90));
@@ -42,4 +55,16 @@
   --color-rank-3: rgba(var(--color-primary-rgb), var(--opacity-40));
   --color-rank-4: rgba(var(--color-primary-rgb), var(--opacity-30));
   --color-rank-5: rgba(var(--color-primary-rgb), var(--opacity-20));
+
+  --color-state-success-bg: rgba(var(--color-success-rgb), var(--opacity-16));
+  --color-state-success-border: rgba(var(--color-success-rgb), var(--opacity-45));
+  --color-state-success-shadow: rgba(var(--color-success-rgb), var(--opacity-18));
+  --color-state-success-text: rgb(154, 240, 184);
+
+  --color-state-info-text: rgb(143, 197, 255);
+  --color-state-danger-text: rgb(255, 155, 155);
+
+  --shadow-medal-gold: rgba(var(--color-gold-rgb), var(--opacity-80));
+  --shadow-medal-silver: rgba(var(--color-silver-rgb), var(--opacity-80));
+  --shadow-medal-bronze: rgba(var(--color-bronze-rgb), var(--opacity-80));
 }

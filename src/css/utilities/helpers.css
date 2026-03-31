@@ -4,15 +4,15 @@
 }
 
 .gold {
-  filter: drop-shadow(0 0 6px gold);
+  filter: drop-shadow(0 0 6px var(--shadow-medal-gold));
 }
 
 .silver {
-  filter: drop-shadow(0 0 6px silver);
+  filter: drop-shadow(0 0 6px var(--shadow-medal-silver));
 }
 
 .bronze {
-  filter: drop-shadow(0 0 6px #cd7f32);
+  filter: drop-shadow(0 0 6px var(--shadow-medal-bronze));
 }
 
 .counter {

@@ -381,7 +381,7 @@ export function initMembers() {
     const populateVocationFilter = () => {
         const select = dom.filterSelect;
 
-        select.innerHTML = '<option value="">Filtrar por Vocação</option>';
+        select.innerHTML = '<option value="">Todas Vocações</option>';
 
         const added = new Set();
 

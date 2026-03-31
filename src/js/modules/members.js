@@ -214,10 +214,16 @@ export function initMembers() {
         dom.detailHeader.textContent = DETAIL_HEADERS[getCurrentViewMode()] || DETAIL_HEADERS.vocation;
     };
 
+    const syncTableWrapperState = (total) => {
+        const shouldCollapse = !showAll && total > MAX_VISIBLE;
+        dom.tableWrapper.classList.toggle('collapsed', shouldCollapse);
+    };
+
     const renderChunked = (data) => {
         dom.tbody.innerHTML = '';
         dom.counter.textContent = `Total: ${data.length} membros`;
         updateDetailHeader();
+        syncTableWrapperState(data.length);
 
         const visible = showAll ? data : data.slice(0, MAX_VISIBLE);
 
@@ -289,6 +295,7 @@ export function initMembers() {
 
         if (total <= MAX_VISIBLE) {
             btn.style.display = 'none';
+            btn.classList.remove('active');
             return;
         }
 
@@ -301,7 +308,6 @@ export function initMembers() {
 
         btn.onclick = () => {
             showAll = !showAll;
-            dom.tableWrapper.classList.toggle('collapsed', !showAll);
             btn.classList.toggle('active', showAll);
             applyFilters();
         };
@@ -459,7 +465,6 @@ export function initMembers() {
 
             loadState();
             updateSortToggle();
-            dom.tableWrapper.classList.toggle('collapsed', !showAll);
             applyFilters();
         });
 

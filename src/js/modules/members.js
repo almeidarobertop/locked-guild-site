@@ -127,6 +127,23 @@ export function initMembers() {
 
     const getSkillIcon = (category) => SKILL_ICONS[category] || '\u2605';
 
+    const getSkillTrendBadge = (member) => {
+        const direction = member.primarySkillTrend;
+
+        if (direction !== 'up' && direction !== 'down') return '';
+
+        const isUp = direction === 'up';
+        const description = isUp
+            ? 'Skill aumentou desde a ultima atualizacao'
+            : 'Skill diminuiu desde a ultima atualizacao';
+
+        return `
+            <span class="member-skill-trend member-skill-trend-${direction}" title="${escapeHtmlAttr(description)}" aria-label="${escapeHtmlAttr(description)}">
+                ${isUp ? '\u2191' : '\u2193'}
+            </span>
+        `;
+    };
+
     const getPrimaryHighscore = (member) => {
         const highscore = member.primaryHighscore;
 
@@ -150,7 +167,10 @@ export function initMembers() {
             <span class="member-skill" title="${escapeHtmlAttr(description)}" aria-label="${escapeHtmlAttr(description)}">
                 <span class="member-skill-main">
                     <span class="member-skill-label">${getSkillIcon(primaryHighscore.category)} ${escapeHtml(primaryHighscore.label)}</span>
-                    <span class="member-skill-value">${primaryHighscore.value}</span>
+                    <span class="member-skill-value">
+                        <span class="member-skill-value-number">${primaryHighscore.value}</span>
+                        ${getSkillTrendBadge(member)}
+                    </span>
                 </span>
                 <span class="member-skill-context">#${primaryHighscore.rank} em Ourobra</span>
             </span>
@@ -423,6 +443,9 @@ export function initMembers() {
                     level: parseInt(member.level, 10),
                     levelGain: parseInt(member.levelGain, 10) || 0,
                     previousLevel: parseInt(member.previousLevel, 10) || parseInt(member.level, 10),
+                    primarySkillTrend: member.primarySkillTrend === 'up' || member.primarySkillTrend === 'down'
+                        ? member.primarySkillTrend
+                        : 'none',
                     vocation: normalizedVocation,
                     primaryHighscore: primaryHighscore && Number.isFinite(primaryHighscore.rank) && Number.isFinite(primaryHighscore.value)
                         ? primaryHighscore

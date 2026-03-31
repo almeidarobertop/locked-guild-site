@@ -145,9 +145,11 @@ export function initMembers() {
 
         return `
             <span class="member-skill" title="${escapeHtmlAttr(description)}" aria-label="${escapeHtmlAttr(description)}">
-                <span class="member-skill-label">${getSkillIcon(primaryHighscore.category)} ${escapeHtml(primaryHighscore.label)}</span>
-                <span class="member-skill-value">${primaryHighscore.value}</span>
-                <span class="member-skill-rank">#${primaryHighscore.rank}</span>
+                <span class="member-skill-main">
+                    <span class="member-skill-label">${getSkillIcon(primaryHighscore.category)} ${escapeHtml(primaryHighscore.label)}</span>
+                    <span class="member-skill-value">${primaryHighscore.value}</span>
+                </span>
+                <span class="member-skill-context">#${primaryHighscore.rank} em Ourobra</span>
             </span>
         `;
     };
@@ -257,18 +259,6 @@ export function initMembers() {
         };
     };
 
-    const compareBySkillRank = (a, b) => {
-        const skillA = getPrimaryHighscore(a);
-        const skillB = getPrimaryHighscore(b);
-
-        if (!skillA && !skillB) return b.level - a.level;
-        if (!skillA) return 1;
-        if (!skillB) return -1;
-        if (skillA.rank !== skillB.rank) return skillA.rank - skillB.rank;
-        if (skillA.value !== skillB.value) return skillB.value - skillA.value;
-        return a.name.localeCompare(b.name);
-    };
-
     const compareBySkillValue = (a, b) => {
         const skillA = getPrimaryHighscore(a);
         const skillB = getPrimaryHighscore(b);
@@ -304,14 +294,25 @@ export function initMembers() {
             filtered.sort((a, b) => a.level - b.level);
         } else if (sort === 'desc') {
             filtered.sort((a, b) => b.level - a.level);
-        } else if (sort === 'skill-rank-asc') {
-            filtered.sort(compareBySkillRank);
         } else if (sort === 'skill-value-desc') {
             filtered.sort(compareBySkillValue);
         }
 
         renderChunked(filtered);
         saveState();
+    };
+
+    const handleViewModeChange = () => {
+        const currentSort = dom.sortSelect.value;
+
+        if (
+            dom.viewModeSelect.value === 'skill' &&
+            (!currentSort || currentSort === 'asc' || currentSort === 'desc')
+        ) {
+            dom.sortSelect.value = 'skill-value-desc';
+        }
+
+        applyFilters();
     };
 
     const saveState = () => {
@@ -333,7 +334,9 @@ export function initMembers() {
 
         const state = JSON.parse(saved);
 
-        dom.sortSelect.value = state.sort || '';
+        dom.sortSelect.value = state.sort === 'skill-rank-asc'
+            ? 'skill-value-desc'
+            : state.sort || '';
         dom.filterSelect.value = state.voc || '';
         dom.searchInput.value = state.search || '';
         dom.viewModeSelect.value = state.viewMode || 'vocation';
@@ -403,6 +406,6 @@ export function initMembers() {
 
     dom.sortSelect.addEventListener('change', applyFilters);
     dom.filterSelect.addEventListener('change', applyFilters);
-    dom.viewModeSelect.addEventListener('change', applyFilters);
+    dom.viewModeSelect.addEventListener('change', handleViewModeChange);
     dom.searchInput.addEventListener('input', applyFilters);
 }

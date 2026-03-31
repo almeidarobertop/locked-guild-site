@@ -122,6 +122,13 @@
 }
 
 .member-skill {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.member-skill-main {
   align-items: center;
   display: inline-flex;
   flex-wrap: wrap;
@@ -145,10 +152,11 @@
   padding: 4px 8px;
 }
 
-.member-skill-rank {
-  color: var(--color-accent);
-  font-size: 0.78rem;
-  font-weight: 700;
+.member-skill-context {
+  color: var(--color-text-secondary);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  opacity: 0.82;
   white-space: nowrap;
 }
 
@@ -208,13 +216,13 @@
     padding: 2px 6px;
   }
 
-  .member-skill {
+  .member-skill-main {
     gap: 4px;
   }
 
   .member-skill-label,
   .member-skill-value,
-  .member-skill-rank {
+  .member-skill-context {
     font-size: 0.72rem;
   }
 }

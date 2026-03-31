@@ -23,7 +23,7 @@
 }
 
 #lightbox-caption {
-  color: #fff;
+  color: var(--color-text-white);
   font-size: 14px;
   margin-top: 12px;
   max-width: 90%;

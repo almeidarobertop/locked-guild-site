@@ -5,6 +5,7 @@ const HIGHSCORES_BASE_URL = "https://api.tibiadata.com/v4/highscores/Ourobra";
 const MEMBERS_PATH = "./src/data/members.json";
 const BRAZIL_TIMEZONE = "America/Sao_Paulo";
 const HIGHSCORE_CATEGORIES = ["magic", "distance", "fist", "axe", "sword", "club"];
+const SKILL_TREND_PERSIST_DAYS = 3;
 
 const SKILL_METADATA = {
   magic: { label: "Magic Level", allowedVocations: ["sorcerer", "druid"] },
@@ -22,6 +23,21 @@ const getBrazilDate = (date = new Date()) =>
     month: "2-digit",
     day: "2-digit"
   }).format(date);
+
+const getDaysBetweenDates = (startDate, endDate) => {
+  if (!startDate || !endDate) {
+    return Number.POSITIVE_INFINITY;
+  }
+
+  const start = new Date(`${startDate}T00:00:00Z`);
+  const end = new Date(`${endDate}T00:00:00Z`);
+
+  if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) {
+    return Number.POSITIVE_INFINITY;
+  }
+
+  return Math.floor((end.getTime() - start.getTime()) / 86400000);
+};
 
 const loadPreviousMembers = () => {
   if (!fs.existsSync(MEMBERS_PATH)) {
@@ -189,7 +205,6 @@ const normalizeSkillHighlights = (value) => {
       const previousSnapshotDate = previousMember?.snapshotDate;
       const storedBaselineLevel = Number.parseInt(previousMember?.baselineLevel, 10);
       const previousSkillHighlights = normalizeSkillHighlights(previousMember?.skillHighlights);
-      const storedBaselineSkillHighlights = normalizeSkillHighlights(previousMember?.baselineSkillHighlights);
 
       const baselineLevel =
         previousSnapshotDate === snapshotDate && Number.isFinite(storedBaselineLevel)
@@ -208,25 +223,30 @@ const normalizeSkillHighlights = (value) => {
         : 0;
 
       const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
-      const baselineSkillHighlights =
-        previousSnapshotDate === snapshotDate && Object.keys(storedBaselineSkillHighlights).length > 0
-          ? storedBaselineSkillHighlights
-          : Object.keys(previousSkillHighlights).length > 0
-            ? previousSkillHighlights
-            : skillHighlights;
-
-      const baselinePrimarySkillValue = primaryHighscore
-        ? Number.parseInt(baselineSkillHighlights[primaryHighscore.category]?.value, 10)
+      const previousPrimarySkillValue = primaryHighscore
+        ? Number.parseInt(previousSkillHighlights[primaryHighscore.category]?.value, 10)
         : Number.NaN;
+      const previousPrimarySkillTrend = previousMember?.primarySkillTrend;
+      const previousPrimarySkillTrendDate = previousMember?.primarySkillTrendDate || previousSnapshotDate;
+      const shouldPersistPreviousSkillTrend =
+        primaryHighscore &&
+        (previousPrimarySkillTrend === "up" || previousPrimarySkillTrend === "down") &&
+        getDaysBetweenDates(previousPrimarySkillTrendDate, snapshotDate) < SKILL_TREND_PERSIST_DAYS;
 
       let primarySkillTrend = "none";
+      let primarySkillTrendDate = null;
 
-      if (primaryHighscore && Number.isFinite(baselinePrimarySkillValue)) {
-        if (primaryHighscore.value > baselinePrimarySkillValue) {
+      if (primaryHighscore && Number.isFinite(previousPrimarySkillValue)) {
+        if (primaryHighscore.value > previousPrimarySkillValue) {
           primarySkillTrend = "up";
-        } else if (primaryHighscore.value < baselinePrimarySkillValue) {
+          primarySkillTrendDate = snapshotDate;
+        } else if (primaryHighscore.value < previousPrimarySkillValue) {
           primarySkillTrend = "down";
+          primarySkillTrendDate = snapshotDate;
         }
+      } else if (shouldPersistPreviousSkillTrend) {
+        primarySkillTrend = previousPrimarySkillTrend;
+        primarySkillTrendDate = previousPrimarySkillTrendDate;
       }
 
       return {
@@ -242,9 +262,9 @@ const normalizeSkillHighlights = (value) => {
         snapshotAt,
         status: member.status,
         skillHighlights,
-        baselineSkillHighlights,
         primaryHighscore,
-        primarySkillTrend
+        primarySkillTrend,
+        primarySkillTrendDate
       };
     });
 

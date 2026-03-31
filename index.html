@@ -220,15 +220,14 @@
           inputmode="search" enterkeyhint="search" aria-label="Buscar membro por nome" />
       </div>
 
-      <select id="sortLevel" aria-label="Ordenar por level">
-        <option value="">Ordenar por Level</option>
-        <option value="desc">Maior para Menor</option>
-        <option value="asc">Menor para Maior</option>
-      </select>
-
       <select id="filterVoc" aria-label="Filtrar por vocação">
         <option value="">Filtrar por Vocação</option>
       </select>
+
+      <button type="button" class="sort-toggle" id="sortToggle" aria-label="Alternar direção da ordenação" aria-pressed="true">
+        <span class="sort-toggle-icon" aria-hidden="true">↑</span>
+        <span class="sort-toggle-label">Maior primeiro</span>
+      </button>
 
       <div class="view-toggle" id="viewMode" role="group" aria-label="Alternar visualização da tabela">
         <button type="button" class="view-toggle-btn active" data-view-mode="vocation" aria-pressed="true">Vocação</button>

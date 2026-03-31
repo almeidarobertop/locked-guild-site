@@ -48,6 +48,50 @@ select {
   padding: 6px;
 }
 
+.sort-toggle {
+  align-items: center;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text-white);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+  padding: 8px 12px;
+  transition: all 0.25s ease;
+  width: fit-content;
+}
+
+.sort-toggle:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px var(--shadow-primary);
+}
+
+.sort-toggle-label {
+  color: var(--color-text-white);
+  font-weight: 700;
+}
+
+.sort-toggle-icon {
+  align-items: center;
+  background: rgba(var(--color-primary-rgb), 0.18);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  border-radius: 999px;
+  color: var(--color-accent);
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 700;
+  height: 26px;
+  justify-content: center;
+  line-height: 1;
+  transition: transform 0.25s ease;
+  width: 26px;
+}
+
+.sort-toggle[data-sort-direction="asc"] .sort-toggle-icon {
+  transform: rotate(180deg);
+}
+
 .view-toggle {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);

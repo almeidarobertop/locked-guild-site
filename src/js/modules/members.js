@@ -5,7 +5,7 @@ export function initMembers() {
         tableSection: document.getElementById('members'),
         tbody: document.getElementById('membersTbody'),
         counter: document.getElementById('memberCount'),
-        sortSelect: document.getElementById('sortLevel'),
+        sortToggle: document.getElementById('sortToggle'),
         filterSelect: document.getElementById('filterVoc'),
         viewMode: document.getElementById('viewMode'),
         viewModeButtons: Array.from(document.querySelectorAll('#viewMode [data-view-mode]')),
@@ -18,7 +18,7 @@ export function initMembers() {
         !dom.tableSection ||
         !dom.tbody ||
         !dom.counter ||
-        !dom.sortSelect ||
+        !dom.sortToggle ||
         !dom.filterSelect ||
         !dom.viewMode ||
         dom.viewModeButtons.length === 0 ||
@@ -27,6 +27,7 @@ export function initMembers() {
 
     let membersData = [];
     let showAll = false;
+    let sortDirection = 'desc';
 
     const MAX_VISIBLE = 50;
     const MEDALS = {
@@ -158,6 +159,20 @@ export function initMembers() {
 
     const getCurrentViewMode = () =>
         dom.viewModeButtons.find((button) => button.classList.contains('active'))?.dataset.viewMode || 'vocation';
+
+    const updateSortToggle = () => {
+        const label = sortDirection === 'asc'
+            ? 'Menor primeiro'
+            : 'Maior primeiro';
+
+        dom.sortToggle.dataset.sortDirection = sortDirection;
+        dom.sortToggle.setAttribute('aria-pressed', String(sortDirection === 'desc'));
+
+        const labelNode = dom.sortToggle.querySelector('.sort-toggle-label');
+        if (labelNode) {
+            labelNode.textContent = label;
+        }
+    };
 
     const setCurrentViewMode = (mode) => {
         dom.viewModeButtons.forEach((button) => {
@@ -299,7 +314,6 @@ export function initMembers() {
     const applyFilters = () => {
         let filtered = [...membersData];
 
-        const sort = dom.sortSelect.value;
         const vocationFilter = dom.filterSelect.value;
         const search = dom.searchInput.value.toLowerCase();
 
@@ -315,13 +329,13 @@ export function initMembers() {
             );
         }
 
-        if (sort === 'asc') {
+        if (sortDirection === 'asc') {
             if (getCurrentViewMode() === 'skill') {
                 filtered.sort(compareBySkillValueAsc);
             } else {
                 filtered.sort((a, b) => a.level - b.level);
             }
-        } else if (sort === 'desc') {
+        } else if (sortDirection === 'desc') {
             if (getCurrentViewMode() === 'skill') {
                 filtered.sort(compareBySkillValue);
             } else {
@@ -334,15 +348,6 @@ export function initMembers() {
     };
 
     const handleViewModeChange = () => {
-        const currentSort = dom.sortSelect.value;
-
-        if (
-            getCurrentViewMode() === 'skill' &&
-            !currentSort
-        ) {
-            dom.sortSelect.value = 'desc';
-        }
-
         applyFilters();
     };
 
@@ -350,7 +355,7 @@ export function initMembers() {
         localStorage.setItem(
             'guildFilters',
             JSON.stringify({
-                sort: dom.sortSelect.value,
+                sortDirection,
                 voc: dom.filterSelect.value,
                 search: dom.searchInput.value,
                 showAll,
@@ -365,13 +370,12 @@ export function initMembers() {
 
         const state = JSON.parse(saved);
 
-        dom.sortSelect.value = state.sort === 'skill-rank-asc'
-            ? 'desc'
-            : state.sort || '';
+        sortDirection = state.sortDirection === 'asc' ? 'asc' : 'desc';
         dom.filterSelect.value = state.voc || '';
         dom.searchInput.value = state.search || '';
         setCurrentViewMode(state.viewMode || 'vocation');
         showAll = state.showAll || false;
+        updateSortToggle();
     };
 
     const populateVocationFilter = () => {
@@ -431,11 +435,16 @@ export function initMembers() {
             membersData.sort((a, b) => b.level - a.level);
 
             loadState();
+            updateSortToggle();
             dom.tableWrapper.classList.toggle('collapsed', !showAll);
             applyFilters();
         });
 
-    dom.sortSelect.addEventListener('change', applyFilters);
+    dom.sortToggle.addEventListener('click', () => {
+        sortDirection = sortDirection === 'desc' ? 'asc' : 'desc';
+        updateSortToggle();
+        applyFilters();
+    });
     dom.filterSelect.addEventListener('change', applyFilters);
     dom.viewModeButtons.forEach((button) => {
         button.addEventListener('click', () => {

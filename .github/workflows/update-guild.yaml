@@ -24,8 +24,20 @@ jobs:
 
       - name: Install dependencies
         run: npm init -y && npm install
+
+      - name: Resolve scraper mode
+        id: scraper_mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=snapshot" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 14 * * *" ]; then
+            echo "mode=sync" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=snapshot" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Generate members data
-        run: node src/scripts/scraper.js
+        run: node src/scripts/scraper.js ${{ steps.scraper_mode.outputs.mode }}
 
       - name: Generate gallery
         run: node src/scripts/generate-gallery.js
@@ -44,6 +56,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "update members"
+            git commit -m "update members (${{ steps.scraper_mode.outputs.mode }})"
             git push
           fi

@@ -6,6 +6,7 @@ const MEMBERS_PATH = "./src/data/members.json";
 const BRAZIL_TIMEZONE = "America/Sao_Paulo";
 const HIGHSCORE_CATEGORIES = ["magic", "distance", "fist", "axe", "sword", "club"];
 const SKILL_TREND_PERSIST_DAYS = 3;
+const SCRAPER_MODE = process.argv[2] || "snapshot";
 
 const SKILL_METADATA = {
   magic: { label: "Magic Level", allowedVocations: ["sorcerer", "druid"] },
@@ -184,8 +185,125 @@ const normalizeSkillHighlights = (value) => {
   );
 };
 
+const buildSnapshotMember = ({
+  member,
+  previousMember,
+  snapshotDate,
+  snapshotAt,
+  highscoreIndexes
+}) => {
+  const previousLevel = Number.parseInt(previousMember?.level, 10);
+  const currentLevel = Number.parseInt(member.level, 10);
+  const previousSnapshotDate = previousMember?.snapshotDate;
+  const storedBaselineLevel = Number.parseInt(previousMember?.baselineLevel, 10);
+  const previousSkillHighlights = normalizeSkillHighlights(previousMember?.skillHighlights);
+
+  const baselineLevel =
+    previousSnapshotDate === snapshotDate && Number.isFinite(storedBaselineLevel)
+      ? storedBaselineLevel
+      : Number.isFinite(previousLevel)
+        ? previousLevel
+        : currentLevel;
+
+  const baselineDate =
+    previousSnapshotDate === snapshotDate && previousMember?.baselineDate
+      ? previousMember.baselineDate
+      : previousSnapshotDate || snapshotDate;
+
+  const levelGain = currentLevel > baselineLevel
+    ? currentLevel - baselineLevel
+    : 0;
+
+  const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
+  const previousPrimarySkillValue = primaryHighscore
+    ? Number.parseInt(previousSkillHighlights[primaryHighscore.category]?.value, 10)
+    : Number.NaN;
+  const previousPrimarySkillTrend = previousMember?.primarySkillTrend;
+  const previousPrimarySkillTrendDate = previousMember?.primarySkillTrendDate || previousSnapshotDate;
+  const shouldPersistPreviousSkillTrend =
+    primaryHighscore &&
+    (previousPrimarySkillTrend === "up" || previousPrimarySkillTrend === "down") &&
+    getDaysBetweenDates(previousPrimarySkillTrendDate, snapshotDate) < SKILL_TREND_PERSIST_DAYS;
+
+  let primarySkillTrend = "none";
+  let primarySkillTrendDate = null;
+
+  if (primaryHighscore && Number.isFinite(previousPrimarySkillValue)) {
+    if (primaryHighscore.value > previousPrimarySkillValue) {
+      primarySkillTrend = "up";
+      primarySkillTrendDate = snapshotDate;
+    } else if (primaryHighscore.value < previousPrimarySkillValue) {
+      primarySkillTrend = "down";
+      primarySkillTrendDate = snapshotDate;
+    }
+  } else if (shouldPersistPreviousSkillTrend) {
+    primarySkillTrend = previousPrimarySkillTrend;
+    primarySkillTrendDate = previousPrimarySkillTrendDate;
+  }
+
+  return {
+    name: member.name,
+    rank: member.rank,
+    vocation: member.vocation,
+    level: currentLevel,
+    previousLevel: Number.isFinite(previousLevel) ? previousLevel : currentLevel,
+    baselineLevel,
+    baselineDate,
+    levelGain,
+    snapshotDate,
+    snapshotAt,
+    status: member.status,
+    skillHighlights,
+    primaryHighscore,
+    primarySkillTrend,
+    primarySkillTrendDate
+  };
+};
+
+const buildRosterSyncMember = ({
+  member,
+  previousMember,
+  snapshotDate,
+  snapshotAt,
+  highscoreIndexes
+}) => {
+  if (!previousMember) {
+    const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
+    const currentLevel = Number.parseInt(member.level, 10);
+
+    return {
+      name: member.name,
+      rank: member.rank,
+      vocation: member.vocation,
+      level: currentLevel,
+      previousLevel: currentLevel,
+      baselineLevel: currentLevel,
+      baselineDate: snapshotDate,
+      levelGain: 0,
+      snapshotDate,
+      snapshotAt,
+      status: member.status,
+      skillHighlights,
+      primaryHighscore,
+      primarySkillTrend: "none",
+      primarySkillTrendDate: null
+    };
+  }
+
+  return {
+    ...previousMember,
+    rank: member.rank,
+    vocation: member.vocation,
+    status: member.status
+  };
+};
+
 (async () => {
   try {
+    if (!["snapshot", "sync"].includes(SCRAPER_MODE)) {
+      throw new Error(`Unsupported scraper mode: ${SCRAPER_MODE}`);
+    }
+
     const data = await fetchJson(GUILD_URL);
     const guildMembers = data.guild?.members;
 
@@ -194,78 +312,30 @@ const normalizeSkillHighlights = (value) => {
     }
 
     const previousMembers = loadPreviousMembers();
-    const highscoreIndexes = await buildHighscoreIndexes();
     const snapshotAt = new Date().toISOString();
     const snapshotDate = getBrazilDate();
+    const shouldFetchHighscores = SCRAPER_MODE === "snapshot" || guildMembers.some((member) => !previousMembers.has(member.name));
+    const highscoreIndexes = shouldFetchHighscores ? await buildHighscoreIndexes() : null;
 
     const members = guildMembers.map((member) => {
       const previousMember = previousMembers.get(member.name);
-      const previousLevel = Number.parseInt(previousMember?.level, 10);
-      const currentLevel = Number.parseInt(member.level, 10);
-      const previousSnapshotDate = previousMember?.snapshotDate;
-      const storedBaselineLevel = Number.parseInt(previousMember?.baselineLevel, 10);
-      const previousSkillHighlights = normalizeSkillHighlights(previousMember?.skillHighlights);
-
-      const baselineLevel =
-        previousSnapshotDate === snapshotDate && Number.isFinite(storedBaselineLevel)
-          ? storedBaselineLevel
-          : Number.isFinite(previousLevel)
-            ? previousLevel
-            : currentLevel;
-
-      const baselineDate =
-        previousSnapshotDate === snapshotDate && previousMember?.baselineDate
-          ? previousMember.baselineDate
-          : previousSnapshotDate || snapshotDate;
-
-      const levelGain = currentLevel > baselineLevel
-        ? currentLevel - baselineLevel
-        : 0;
-
-      const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
-      const previousPrimarySkillValue = primaryHighscore
-        ? Number.parseInt(previousSkillHighlights[primaryHighscore.category]?.value, 10)
-        : Number.NaN;
-      const previousPrimarySkillTrend = previousMember?.primarySkillTrend;
-      const previousPrimarySkillTrendDate = previousMember?.primarySkillTrendDate || previousSnapshotDate;
-      const shouldPersistPreviousSkillTrend =
-        primaryHighscore &&
-        (previousPrimarySkillTrend === "up" || previousPrimarySkillTrend === "down") &&
-        getDaysBetweenDates(previousPrimarySkillTrendDate, snapshotDate) < SKILL_TREND_PERSIST_DAYS;
-
-      let primarySkillTrend = "none";
-      let primarySkillTrendDate = null;
-
-      if (primaryHighscore && Number.isFinite(previousPrimarySkillValue)) {
-        if (primaryHighscore.value > previousPrimarySkillValue) {
-          primarySkillTrend = "up";
-          primarySkillTrendDate = snapshotDate;
-        } else if (primaryHighscore.value < previousPrimarySkillValue) {
-          primarySkillTrend = "down";
-          primarySkillTrendDate = snapshotDate;
-        }
-      } else if (shouldPersistPreviousSkillTrend) {
-        primarySkillTrend = previousPrimarySkillTrend;
-        primarySkillTrendDate = previousPrimarySkillTrendDate;
+      if (SCRAPER_MODE === "snapshot") {
+        return buildSnapshotMember({
+          member,
+          previousMember,
+          snapshotDate,
+          snapshotAt,
+          highscoreIndexes
+        });
       }
 
-      return {
-        name: member.name,
-        rank: member.rank,
-        vocation: member.vocation,
-        level: currentLevel,
-        previousLevel: Number.isFinite(previousLevel) ? previousLevel : currentLevel,
-        baselineLevel,
-        baselineDate,
-        levelGain,
+      return buildRosterSyncMember({
+        member,
+        previousMember,
         snapshotDate,
         snapshotAt,
-        status: member.status,
-        skillHighlights,
-        primaryHighscore,
-        primarySkillTrend,
-        primarySkillTrendDate
-      };
+        highscoreIndexes
+      });
     });
 
     fs.mkdirSync("./src/data", { recursive: true });
@@ -275,7 +345,7 @@ const normalizeSkillHighlights = (value) => {
       JSON.stringify(members, null, 2)
     );
 
-    console.log("Members updated:", members.length);
+    console.log(`Members updated (${SCRAPER_MODE}):`, members.length);
   } catch (err) {
     console.error(err);
     process.exit(1);

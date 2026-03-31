@@ -224,14 +224,16 @@
         <option value="">Filtrar por Vocação</option>
       </select>
 
-      <button type="button" class="sort-toggle" id="sortToggle" aria-label="Alternar direção da ordenação" aria-pressed="true">
-        <span class="sort-toggle-icon" aria-hidden="true">↑</span>
-        <span class="sort-toggle-label">Maior primeiro</span>
-      </button>
+      <div class="filters-actions">
+        <button type="button" class="sort-toggle" id="sortToggle" aria-label="Alternar direção da ordenação" aria-pressed="true">
+          <span class="sort-toggle-icon" aria-hidden="true">↑</span>
+          <span class="sort-toggle-label">Maior primeiro</span>
+        </button>
 
-      <div class="view-toggle" id="viewMode" role="group" aria-label="Alternar visualização da tabela">
-        <button type="button" class="view-toggle-btn active" data-view-mode="vocation" aria-pressed="true">Vocação</button>
-        <button type="button" class="view-toggle-btn" data-view-mode="skill" aria-pressed="false">Skill</button>
+        <div class="view-toggle" id="viewMode" role="group" aria-label="Alternar visualização da tabela">
+          <button type="button" class="view-toggle-btn active" data-view-mode="vocation" aria-pressed="true">Vocação</button>
+          <button type="button" class="view-toggle-btn" data-view-mode="skill" aria-pressed="false">Skill</button>
+        </div>
       </div>
 
     </div>

@@ -13,7 +13,13 @@
   }
 
   .filters {
-    flex-direction: row;
+    align-items: center;
+    grid-template-columns: minmax(220px, 1.2fr) minmax(220px, 1fr) auto auto;
+  }
+
+  .filters-actions {
+    grid-template-columns: auto auto;
+    width: auto;
   }
 
   .gallery {

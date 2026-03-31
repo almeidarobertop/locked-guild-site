@@ -121,6 +121,42 @@
   white-space: nowrap;
 }
 
+.member-skill {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.member-skill-label {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.member-skill-value {
+  background: rgba(var(--color-primary-rgb), 0.2);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  border-radius: 999px;
+  color: var(--color-text-white);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.member-skill-rank {
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.member-skill-empty {
+  color: var(--color-text-secondary);
+  opacity: 0.8;
+}
+
 .top-1 {
   background: var(--color-rank-1);
   box-shadow: 0 0 20px var(--shadow-primary);
@@ -170,5 +206,15 @@
   .member-level-gain {
     font-size: 0.68rem;
     padding: 2px 6px;
+  }
+
+  .member-skill {
+    gap: 4px;
+  }
+
+  .member-skill-label,
+  .member-skill-value,
+  .member-skill-rank {
+    font-size: 0.72rem;
   }
 }

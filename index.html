@@ -97,7 +97,7 @@
     <h2>Junte-se a nós!</h2>
     <p>A <strong>LOCKED</strong> foi fundada em Relembra em 17 de agosto do ano de 2017.</p>
     <p>Em determinado momento, Relembra passou por uma fusão de servidores onde passou a se chamar Batabra. Enquanto em Batabra, a Locked foi premiada
-       com um troféu de Guild mais antiga dos servidores fundidos. Este troféu se encontra em exibição 
+       com um troféu de Guild mais antiga dos servidores fundidos. Este troféu se encontra em exibição
        em nossa Guild Hall em Edron.</p>
     <p><strong>You see a golden goblet. It weighs 15.00 oz. You read: To "Locked", Batabra's oldest guild, commemorating Tibia's 25th anniversary.</strong></p>
     <p>Junte-se a nós afim de manter nossa história e irmandade. Se interessou? Clique no botão abaixo para se
@@ -222,8 +222,15 @@
 
       <select id="sortLevel" aria-label="Ordenar por level">
         <option value="">Ordenar por Level</option>
-        <option value="desc">Maior → Menor</option>
-        <option value="asc">Menor → Maior</option>
+        <option value="desc">Maior para Menor</option>
+        <option value="asc">Menor para Maior</option>
+        <option value="skill-rank-asc">Melhor Skill Rank</option>
+        <option value="skill-value-desc">Maior Skill</option>
+      </select>
+
+      <select id="viewMode" aria-label="Alternar visualização da tabela">
+        <option value="vocation">Exibir Vocação</option>
+        <option value="skill">Exibir Skill</option>
       </select>
 
       <select id="filterVoc" aria-label="Filtrar por vocação">
@@ -241,7 +248,7 @@
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Level</th>
-            <th scope="col">Vocação</th>
+            <th scope="col" id="memberDetailHeader">Vocacao</th>
           </tr>
         </thead>
         <tbody id="membersTbody"></tbody>

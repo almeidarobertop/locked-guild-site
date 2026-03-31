@@ -108,11 +108,11 @@
 }
 
 .member-level-gain {
-  background: rgba(46, 204, 113, 0.16);
-  border: 1px solid rgba(46, 204, 113, 0.45);
+  background: var(--color-state-success-bg);
+  border: 1px solid var(--color-state-success-border);
   border-radius: 999px;
-  box-shadow: 0 0 12px rgba(46, 204, 113, 0.18);
-  color: #9af0b8;
+  box-shadow: 0 0 12px var(--color-state-success-shadow);
+  color: var(--color-state-success-text);
   display: inline-flex;
   font-size: 0.72rem;
   font-weight: 700;
@@ -142,8 +142,8 @@
 
 .member-skill-value {
   align-items: center;
-  background: rgba(var(--color-primary-rgb), 0.2);
-  border: 1px solid rgba(var(--color-primary-rgb), 0.35);
+  background: rgba(var(--color-primary-rgb), var(--opacity-20));
+  border: 1px solid rgba(var(--color-primary-rgb), var(--opacity-35));
   border-radius: 999px;
   color: var(--color-text-white);
   display: inline-flex;
@@ -165,11 +165,11 @@
 }
 
 .member-skill-trend-up {
-  color: #8fc5ff;
+  color: var(--color-state-info-text);
 }
 
 .member-skill-trend-down {
-  color: #ff9b9b;
+  color: var(--color-state-danger-text);
 }
 
 .member-skill-context {

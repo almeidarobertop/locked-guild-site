@@ -7,7 +7,8 @@ export function initMembers() {
         counter: document.getElementById('memberCount'),
         sortSelect: document.getElementById('sortLevel'),
         filterSelect: document.getElementById('filterVoc'),
-        viewModeSelect: document.getElementById('viewMode'),
+        viewMode: document.getElementById('viewMode'),
+        viewModeButtons: Array.from(document.querySelectorAll('#viewMode [data-view-mode]')),
         detailHeader: document.getElementById('memberDetailHeader'),
     };
 
@@ -19,7 +20,8 @@ export function initMembers() {
         !dom.counter ||
         !dom.sortSelect ||
         !dom.filterSelect ||
-        !dom.viewModeSelect ||
+        !dom.viewMode ||
+        dom.viewModeButtons.length === 0 ||
         !dom.detailHeader
     ) return;
 
@@ -154,8 +156,19 @@ export function initMembers() {
         `;
     };
 
+    const getCurrentViewMode = () =>
+        dom.viewModeButtons.find((button) => button.classList.contains('active'))?.dataset.viewMode || 'vocation';
+
+    const setCurrentViewMode = (mode) => {
+        dom.viewModeButtons.forEach((button) => {
+            const isActive = button.dataset.viewMode === mode;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
+    };
+
     const getDetailCellMarkup = (member) => {
-        if (dom.viewModeSelect.value === 'skill') {
+        if (getCurrentViewMode() === 'skill') {
             return getSkillMarkup(member);
         }
 
@@ -163,7 +176,7 @@ export function initMembers() {
     };
 
     const updateDetailHeader = () => {
-        dom.detailHeader.textContent = DETAIL_HEADERS[dom.viewModeSelect.value] || DETAIL_HEADERS.vocation;
+        dom.detailHeader.textContent = DETAIL_HEADERS[getCurrentViewMode()] || DETAIL_HEADERS.vocation;
     };
 
     const renderChunked = (data) => {
@@ -306,7 +319,7 @@ export function initMembers() {
         const currentSort = dom.sortSelect.value;
 
         if (
-            dom.viewModeSelect.value === 'skill' &&
+            getCurrentViewMode() === 'skill' &&
             (!currentSort || currentSort === 'asc' || currentSort === 'desc')
         ) {
             dom.sortSelect.value = 'skill-value-desc';
@@ -323,7 +336,7 @@ export function initMembers() {
                 voc: dom.filterSelect.value,
                 search: dom.searchInput.value,
                 showAll,
-                viewMode: dom.viewModeSelect.value,
+                viewMode: getCurrentViewMode(),
             })
         );
     };
@@ -339,7 +352,7 @@ export function initMembers() {
             : state.sort || '';
         dom.filterSelect.value = state.voc || '';
         dom.searchInput.value = state.search || '';
-        dom.viewModeSelect.value = state.viewMode || 'vocation';
+        setCurrentViewMode(state.viewMode || 'vocation');
         showAll = state.showAll || false;
     };
 
@@ -406,6 +419,12 @@ export function initMembers() {
 
     dom.sortSelect.addEventListener('change', applyFilters);
     dom.filterSelect.addEventListener('change', applyFilters);
-    dom.viewModeSelect.addEventListener('change', handleViewModeChange);
+    dom.viewModeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            if (button.classList.contains('active')) return;
+            setCurrentViewMode(button.dataset.viewMode || 'vocation');
+            handleViewModeChange();
+        });
+    });
     dom.searchInput.addEventListener('input', applyFilters);
 }

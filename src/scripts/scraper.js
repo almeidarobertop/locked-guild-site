@@ -151,6 +151,23 @@ const buildSkillData = (member, highscoreIndexes) => {
   };
 };
 
+const normalizeSkillHighlights = (value) => {
+  if (!value || typeof value !== "object") {
+    return {};
+  }
+
+  return Object.fromEntries(
+    Object.entries(value).map(([category, entry]) => [
+      category,
+      {
+        rank: Number.parseInt(entry?.rank, 10),
+        value: Number.parseInt(entry?.value, 10),
+        label: entry?.label || SKILL_METADATA[category]?.label || "Skill"
+      }
+    ])
+  );
+};
+
 (async () => {
   try {
     const data = await fetchJson(GUILD_URL);
@@ -171,6 +188,8 @@ const buildSkillData = (member, highscoreIndexes) => {
       const currentLevel = Number.parseInt(member.level, 10);
       const previousSnapshotDate = previousMember?.snapshotDate;
       const storedBaselineLevel = Number.parseInt(previousMember?.baselineLevel, 10);
+      const previousSkillHighlights = normalizeSkillHighlights(previousMember?.skillHighlights);
+      const storedBaselineSkillHighlights = normalizeSkillHighlights(previousMember?.baselineSkillHighlights);
 
       const baselineLevel =
         previousSnapshotDate === snapshotDate && Number.isFinite(storedBaselineLevel)
@@ -189,6 +208,26 @@ const buildSkillData = (member, highscoreIndexes) => {
         : 0;
 
       const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
+      const baselineSkillHighlights =
+        previousSnapshotDate === snapshotDate && Object.keys(storedBaselineSkillHighlights).length > 0
+          ? storedBaselineSkillHighlights
+          : Object.keys(previousSkillHighlights).length > 0
+            ? previousSkillHighlights
+            : skillHighlights;
+
+      const baselinePrimarySkillValue = primaryHighscore
+        ? Number.parseInt(baselineSkillHighlights[primaryHighscore.category]?.value, 10)
+        : Number.NaN;
+
+      let primarySkillTrend = "none";
+
+      if (primaryHighscore && Number.isFinite(baselinePrimarySkillValue)) {
+        if (primaryHighscore.value > baselinePrimarySkillValue) {
+          primarySkillTrend = "up";
+        } else if (primaryHighscore.value < baselinePrimarySkillValue) {
+          primarySkillTrend = "down";
+        }
+      }
 
       return {
         name: member.name,
@@ -203,7 +242,9 @@ const buildSkillData = (member, highscoreIndexes) => {
         snapshotAt,
         status: member.status,
         skillHighlights,
-        primaryHighscore
+        baselineSkillHighlights,
+        primaryHighscore,
+        primarySkillTrend
       };
     });
 

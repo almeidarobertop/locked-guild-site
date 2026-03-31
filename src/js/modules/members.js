@@ -284,6 +284,18 @@ export function initMembers() {
         return a.name.localeCompare(b.name);
     };
 
+    const compareBySkillValueAsc = (a, b) => {
+        const skillA = getPrimaryHighscore(a);
+        const skillB = getPrimaryHighscore(b);
+
+        if (!skillA && !skillB) return a.level - b.level;
+        if (!skillA) return 1;
+        if (!skillB) return -1;
+        if (skillA.value !== skillB.value) return skillA.value - skillB.value;
+        if (skillA.rank !== skillB.rank) return skillA.rank - skillB.rank;
+        return a.name.localeCompare(b.name);
+    };
+
     const applyFilters = () => {
         let filtered = [...membersData];
 
@@ -304,11 +316,17 @@ export function initMembers() {
         }
 
         if (sort === 'asc') {
-            filtered.sort((a, b) => a.level - b.level);
+            if (getCurrentViewMode() === 'skill') {
+                filtered.sort(compareBySkillValueAsc);
+            } else {
+                filtered.sort((a, b) => a.level - b.level);
+            }
         } else if (sort === 'desc') {
-            filtered.sort((a, b) => b.level - a.level);
-        } else if (sort === 'skill-value-desc') {
-            filtered.sort(compareBySkillValue);
+            if (getCurrentViewMode() === 'skill') {
+                filtered.sort(compareBySkillValue);
+            } else {
+                filtered.sort((a, b) => b.level - a.level);
+            }
         }
 
         renderChunked(filtered);
@@ -320,9 +338,9 @@ export function initMembers() {
 
         if (
             getCurrentViewMode() === 'skill' &&
-            (!currentSort || currentSort === 'asc' || currentSort === 'desc')
+            !currentSort
         ) {
-            dom.sortSelect.value = 'skill-value-desc';
+            dom.sortSelect.value = 'desc';
         }
 
         applyFilters();
@@ -348,7 +366,7 @@ export function initMembers() {
         const state = JSON.parse(saved);
 
         dom.sortSelect.value = state.sort === 'skill-rank-asc'
-            ? 'skill-value-desc'
+            ? 'desc'
             : state.sort || '';
         dom.filterSelect.value = state.voc || '';
         dom.searchInput.value = state.search || '';

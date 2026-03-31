@@ -75,6 +75,7 @@
       <div class="nav-menu" id="navMenu">
         <a data-target="#join">Filie-se</a>
         <a data-target="#houses">Houses</a>
+        <a data-target="#useful-links">Sites úteis</a>
         <a data-target="#members">Membros</a>
         <a data-target="#screenshots">Screenshots</a>
 
@@ -96,7 +97,7 @@
     <h2>Junte-se a nós!</h2>
     <p>A <strong>LOCKED</strong> foi fundada em Relembra em 17 de agosto do ano de 2017.</p>
     <p>Em determinado momento, Relembra passou por uma fusão de servidores onde passou a se chamar Batabra. Enquanto em Batabra, a Locked foi premiada
-       com um troféu de Guild mais antiga dos servidores fundidos. Este troféu se encontra em exibição 
+       com um troféu de Guild mais antiga dos servidores fundidos. Este troféu se encontra em exibição
        em nossa Guild Hall em Edron.</p>
     <p><strong>You see a golden goblet. It weighs 15.00 oz. You read: To "Locked", Batabra's oldest guild, commemorating Tibia's 25th anniversary.</strong></p>
     <p>Junte-se a nós afim de manter nossa história e irmandade. Se interessou? Clique no botão abaixo para se
@@ -119,7 +120,13 @@
 
   <section id="houses">
     <h2>Nossas Houses</h2>
-    <p>Com camas, NPC de banco, stash, food e refil completo.</p>
+    <p>
+      Com <a href="https://www.tibiawiki.com.br/wiki/Camas" target="_blank" rel="noopener noreferrer">camas</a>,
+      <a href="https://www.tibiawiki.com.br/wiki/Hireling_(Banker)" target="_blank" rel="noopener noreferrer">NPC de banco</a>,
+      <a href="https://www.tibiawiki.com.br/wiki/Hireling_(Steward)" target="_blank" rel="noopener noreferrer">stash</a>,
+      <a href="https://www.tibiawiki.com.br/wiki/Hireling_(Cooking)" target="_blank" rel="noopener noreferrer">food</a> e
+      <a href="https://www.tibiawiki.com.br/wiki/Hireling_(Trader)" target="_blank" rel="noopener noreferrer">refil completo</a>.
+    </p>
 
     <div class="houses-scroll">
 
@@ -172,6 +179,37 @@
     </div>
   </section>
 
+  <section id="useful-links" aria-labelledby="useful-links-title">
+    <h2 id="useful-links-title">Sites úteis</h2>
+    <p>Ferramentas e guias que ajudam no dia a dia da guild, com rotas, preços, wiki e informações rápidas.</p>
+
+    <div class="resources-grid">
+      <article class="resource-card">
+        <h3>Exevopan</h3>
+        <p>Mapa interativo e utilitários para explorar cidades, cavernas, spawns e pontos importantes do Tibia.</p>
+        <a href="https://www.exevopan.com/" target="_blank" rel="noopener noreferrer">Acessar site</a>
+      </article>
+
+      <article class="resource-card">
+        <h3>TibiaWiki BR</h3>
+        <p>Guia completo em português com quests, criaturas, itens, mecânicas e sistemas do jogo.</p>
+        <a href="https://www.tibiawiki.com.br/" target="_blank" rel="noopener noreferrer">Abrir wiki</a>
+      </article>
+
+      <article class="resource-card">
+        <h3>Tibia Trade</h3>
+        <p>Consulta de preços e histórico de mercado para acompanhar itens, oportunidades e tendências.</p>
+        <a href="https://www.tibiatrade.gg/" target="_blank" rel="noopener noreferrer">Ver mercado</a>
+      </article>
+
+      <article class="resource-card">
+        <h3>Tibia Route</h3>
+        <p>Mapa de task delivery para encontrar destinos com mais rapidez e otimizar suas entregas.</p>
+        <a href="https://www.tibiaroute.com/br/task-delivery-map" target="_blank" rel="noopener noreferrer">Ver rota</a>
+      </article>
+    </div>
+  </section>
+
   <section id="members" aria-labelledby="members-title">
     <h2 id="members-title">Membros da Guild</h2>
 
@@ -182,15 +220,21 @@
           inputmode="search" enterkeyhint="search" aria-label="Buscar membro por nome" />
       </div>
 
-      <select id="sortLevel" aria-label="Ordenar por level">
-        <option value="">Ordenar por Level</option>
-        <option value="desc">Maior → Menor</option>
-        <option value="asc">Menor → Maior</option>
-      </select>
-
       <select id="filterVoc" aria-label="Filtrar por vocação">
         <option value="">Filtrar por Vocação</option>
       </select>
+
+      <div class="filters-actions">
+        <button type="button" class="sort-toggle" id="sortToggle" aria-label="Alternar direção da ordenação" aria-pressed="true">
+          <span class="sort-toggle-icon" aria-hidden="true">↑</span>
+          <span class="sort-toggle-label">Maior primeiro</span>
+        </button>
+
+        <div class="view-toggle" id="viewMode" role="group" aria-label="Alternar visualização da tabela">
+          <button type="button" class="view-toggle-btn active" data-view-mode="vocation" aria-pressed="true">Vocação</button>
+          <button type="button" class="view-toggle-btn" data-view-mode="skill" aria-pressed="false">Skill</button>
+        </div>
+      </div>
 
     </div>
 
@@ -203,7 +247,7 @@
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Level</th>
-            <th scope="col">Vocação</th>
+            <th scope="col" id="memberDetailHeader">Vocacao</th>
           </tr>
         </thead>
         <tbody id="membersTbody"></tbody>

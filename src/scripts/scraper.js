@@ -1,8 +1,19 @@
 const fs = require("fs");
 
-const URL = "https://api.tibiadata.com/v4/guild/Locked";
+const GUILD_URL = "https://api.tibiadata.com/v4/guild/Locked";
+const HIGHSCORES_BASE_URL = "https://api.tibiadata.com/v4/highscores/Ourobra";
 const MEMBERS_PATH = "./src/data/members.json";
 const BRAZIL_TIMEZONE = "America/Sao_Paulo";
+const HIGHSCORE_CATEGORIES = ["magic", "distance", "fist", "axe", "sword", "club"];
+
+const SKILL_METADATA = {
+  magic: { label: "Magic Level", allowedVocations: ["sorcerer", "druid"] },
+  distance: { label: "Distance Fighting", allowedVocations: ["paladin"] },
+  fist: { label: "Fist Fighting", allowedVocations: ["monk"] },
+  axe: { label: "Axe Fighting", allowedVocations: ["knight"] },
+  sword: { label: "Sword Fighting", allowedVocations: ["knight"] },
+  club: { label: "Club Fighting", allowedVocations: ["knight"] }
+};
 
 const getBrazilDate = (date = new Date()) =>
   new Intl.DateTimeFormat("en-CA", {
@@ -32,18 +43,132 @@ const loadPreviousMembers = () => {
   }
 };
 
+const normalizeName = (name = "") => name.trim().toLowerCase();
+
+const isAllowedForVocation = (category, vocation = "") => {
+  const metadata = SKILL_METADATA[category];
+  if (!metadata) return false;
+
+  const normalizedVocation = vocation.toLowerCase();
+  return metadata.allowedVocations.some((key) => normalizedVocation.includes(key));
+};
+
+const shouldReplaceHighscore = (currentBest, candidate) => {
+  if (!currentBest) return true;
+  if (candidate.rank !== currentBest.rank) return candidate.rank < currentBest.rank;
+  if (candidate.value !== currentBest.value) return candidate.value > currentBest.value;
+  return candidate.label.localeCompare(currentBest.label) < 0;
+};
+
+const fetchJson = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Request failed (${response.status}) for ${url}`);
+  }
+
+  return response.json();
+};
+
+const fetchHighscoresByCategory = async (category) => {
+  const entries = new Map();
+  let page = 1;
+  let totalPages = 1;
+
+  while (page <= totalPages) {
+    const url = `${HIGHSCORES_BASE_URL}/${category}/all/${page}`;
+    const data = await fetchJson(url);
+    const highscores = data.highscores;
+
+    if (!highscores || !Array.isArray(highscores.highscore_list)) {
+      throw new Error(`Unexpected highscores response for ${category} page ${page}`);
+    }
+
+    totalPages = Number.parseInt(highscores.highscore_page?.total_pages, 10) || 1;
+
+    highscores.highscore_list.forEach((entry) => {
+      entries.set(normalizeName(entry.name), {
+        category,
+        label: SKILL_METADATA[category].label,
+        rank: Number.parseInt(entry.rank, 10),
+        value: Number.parseInt(entry.value, 10),
+        vocation: entry.vocation
+      });
+    });
+
+    page += 1;
+  }
+
+  return entries;
+};
+
+const buildHighscoreIndexes = async () => {
+  const indexes = {};
+
+  for (const category of HIGHSCORE_CATEGORIES) {
+    indexes[category] = await fetchHighscoresByCategory(category);
+  }
+
+  return indexes;
+};
+
+const buildSkillData = (member, highscoreIndexes) => {
+  const skillHighlights = {};
+  let primaryHighscore = null;
+  const normalizedName = normalizeName(member.name);
+
+  for (const category of HIGHSCORE_CATEGORIES) {
+    if (!isAllowedForVocation(category, member.vocation)) {
+      continue;
+    }
+
+    const entry = highscoreIndexes[category]?.get(normalizedName);
+    if (!entry) {
+      continue;
+    }
+
+    skillHighlights[category] = {
+      rank: entry.rank,
+      value: entry.value,
+      label: entry.label
+    };
+
+    const candidate = {
+      category,
+      label: entry.label,
+      rank: entry.rank,
+      value: entry.value
+    };
+
+    if (shouldReplaceHighscore(primaryHighscore, candidate)) {
+      primaryHighscore = candidate;
+    }
+  }
+
+  return {
+    skillHighlights,
+    primaryHighscore
+  };
+};
+
 (async () => {
   try {
-    const res = await fetch(URL);
-    const data = await res.json();
+    const data = await fetchJson(GUILD_URL);
+    const guildMembers = data.guild?.members;
+
+    if (!Array.isArray(guildMembers)) {
+      throw new Error("Unexpected guild response: missing members list");
+    }
+
     const previousMembers = loadPreviousMembers();
+    const highscoreIndexes = await buildHighscoreIndexes();
     const snapshotAt = new Date().toISOString();
     const snapshotDate = getBrazilDate();
 
-    const members = data.guild.members.map((m) => {
-      const previousMember = previousMembers.get(m.name);
+    const members = guildMembers.map((member) => {
+      const previousMember = previousMembers.get(member.name);
       const previousLevel = Number.parseInt(previousMember?.level, 10);
-      const currentLevel = Number.parseInt(m.level, 10);
+      const currentLevel = Number.parseInt(member.level, 10);
       const previousSnapshotDate = previousMember?.snapshotDate;
       const storedBaselineLevel = Number.parseInt(previousMember?.baselineLevel, 10);
 
@@ -63,10 +188,12 @@ const loadPreviousMembers = () => {
         ? currentLevel - baselineLevel
         : 0;
 
+      const { skillHighlights, primaryHighscore } = buildSkillData(member, highscoreIndexes);
+
       return {
-        name: m.name,
-        rank: m.rank,
-        vocation: m.vocation,
+        name: member.name,
+        rank: member.rank,
+        vocation: member.vocation,
         level: currentLevel,
         previousLevel: Number.isFinite(previousLevel) ? previousLevel : currentLevel,
         baselineLevel,
@@ -74,7 +201,9 @@ const loadPreviousMembers = () => {
         levelGain,
         snapshotDate,
         snapshotAt,
-        status: m.status
+        status: member.status,
+        skillHighlights,
+        primaryHighscore
       };
     });
 
@@ -86,7 +215,6 @@ const loadPreviousMembers = () => {
     );
 
     console.log("Members updated:", members.length);
-
   } catch (err) {
     console.error(err);
     process.exit(1);

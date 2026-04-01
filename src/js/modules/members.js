@@ -10,6 +10,12 @@ export function initMembers() {
         viewMode: document.getElementById('viewMode'),
         viewModeButtons: Array.from(document.querySelectorAll('#viewMode [data-view-mode]')),
         detailHeader: document.getElementById('memberDetailHeader'),
+        sharePanel: document.getElementById('sharePanel'),
+        shareSummary: document.getElementById('shareSummary'),
+        shareRange: document.getElementById('shareRange'),
+        shareMatches: document.getElementById('shareMatches'),
+        shareToggle: document.getElementById('shareToggle'),
+        shareClear: document.getElementById('shareClear'),
     };
 
     if (
@@ -22,12 +28,19 @@ export function initMembers() {
         !dom.filterSelect ||
         !dom.viewMode ||
         dom.viewModeButtons.length === 0 ||
-        !dom.detailHeader
+        !dom.detailHeader ||
+        !dom.sharePanel ||
+        !dom.shareSummary ||
+        !dom.shareRange ||
+        !dom.shareMatches ||
+        !dom.shareToggle ||
+        !dom.shareClear
     ) return;
 
     let membersData = [];
     let showAll = false;
     let sortDirection = 'desc';
+    let shareOnly = false;
 
     const MAX_VISIBLE = 50;
     const MEDALS = {
@@ -84,6 +97,13 @@ export function initMembers() {
 
     const escapeHtmlAttr = (value = '') =>
         escapeHtml(value).replaceAll('"', '&quot;');
+
+    const normalizeText = (value = '') =>
+        String(value)
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .trim()
+            .toLowerCase();
 
     const getNormalizedVocation = (vocation) => {
         if (!vocation) return 'sem vocacao';
@@ -194,6 +214,13 @@ export function initMembers() {
         }
     };
 
+    const updateShareToggle = () => {
+        dom.shareToggle.setAttribute('aria-pressed', String(shareOnly));
+        dom.shareToggle.textContent = shareOnly
+            ? 'Ocultar da Tabela'
+            : 'Mostrar na Tabela';
+    };
+
     const setCurrentViewMode = (mode) => {
         dom.viewModeButtons.forEach((button) => {
             const isActive = button.dataset.viewMode === mode;
@@ -219,7 +246,76 @@ export function initMembers() {
         dom.tableWrapper.classList.toggle('collapsed', shouldCollapse);
     };
 
-    const renderChunked = (data) => {
+    const getShareRange = (level) => ({
+        min: Math.floor(level * (2 / 3)),
+        max: Math.ceil(level * 1.5),
+    });
+
+    const canShareExperience = (anchor, member) => {
+        if (!anchor || !member || !Number.isFinite(anchor.level) || !Number.isFinite(member.level)) {
+            return false;
+        }
+
+        const range = getShareRange(anchor.level);
+        return member.level >= range.min && member.level <= range.max;
+    };
+
+    const getShareAnchor = (searchValue, filteredMembers) => {
+        const normalizedSearch = normalizeText(searchValue);
+        if (!normalizedSearch) return null;
+
+        const exactMatch = membersData.find((member) => member.searchName === normalizedSearch);
+        if (exactMatch) return exactMatch;
+
+        if (filteredMembers.length === 1) {
+            return filteredMembers[0];
+        }
+
+        return null;
+    };
+
+    const getShareBadgeMarkup = (type) => {
+        if (type === 'anchor') {
+            return '<span class="member-share-badge">Referência</span>';
+        }
+
+        if (type === 'match') {
+            return '<span class="member-share-badge">Share</span>';
+        }
+
+        return '';
+    };
+
+    const renderSharePanel = (shareContext) => {
+        if (!shareContext) {
+            dom.sharePanel.hidden = true;
+            dom.shareMatches.innerHTML = '';
+            updateShareToggle();
+            return;
+        }
+
+        const { anchor, range, compatibleMembers } = shareContext;
+        const memberLabel = compatibleMembers.length === 1 ? 'membro compatível' : 'membros compatíveis';
+
+        dom.shareSummary.innerHTML = `
+            <strong>${escapeHtml(anchor.name)}</strong> level ${anchor.level}
+            pode dividir experiência com ${compatibleMembers.length} ${memberLabel} na guild.
+        `;
+        dom.shareRange.textContent = `Níveis: ${range.min} a ${range.max}.`;
+        dom.shareMatches.innerHTML = compatibleMembers.length > 0
+            ? compatibleMembers.map((member) => `
+                <span class="share-chip">
+                    ${escapeHtml(member.name)}
+                    <strong>${member.level}</strong>
+                </span>
+            `).join('')
+            : '<span class="share-chip">Nenhum membro da guild está nesse intervalo de level agora.</span>';
+
+        dom.sharePanel.hidden = false;
+        updateShareToggle();
+    };
+
+    const renderChunked = (data, shareContext) => {
         dom.tbody.innerHTML = '';
         dom.counter.textContent = `Total: ${data.length} membros`;
         updateDetailHeader();
@@ -236,8 +332,12 @@ export function initMembers() {
             for (let i = 0; i < chunkSize && index < visible.length; i += 1, index += 1) {
                 const member = visible[index];
                 const row = document.createElement('tr');
+                const isShareAnchor = shareContext?.anchor.name === member.name;
+                const isShareMatch = !isShareAnchor && canShareExperience(shareContext?.anchor, member);
 
                 if (index < 5) row.classList.add(`top-${index + 1}`);
+                if (isShareAnchor) row.classList.add('is-share-anchor');
+                if (isShareMatch) row.classList.add('is-share-match');
 
                 row.innerHTML = `
                 <td>${getRank(index)}</td>
@@ -247,6 +347,7 @@ export function initMembers() {
                             ${escapeHtml(member.name)}
                         </a>
                         ${getTopLevelBadge(index)}
+                        ${getShareBadgeMarkup(isShareAnchor ? 'anchor' : isShareMatch ? 'match' : '')}
                     </span>
                 </td>
                 <td>
@@ -337,39 +438,69 @@ export function initMembers() {
         return a.name.localeCompare(b.name);
     };
 
-    const applyFilters = () => {
-        let filtered = [...membersData];
+    const sortMembers = (members) => {
+        if (sortDirection === 'asc') {
+            if (getCurrentViewMode() === 'skill') {
+                members.sort(compareBySkillValueAsc);
+            } else {
+                members.sort((a, b) => a.level - b.level);
+            }
 
+            return;
+        }
+
+        if (getCurrentViewMode() === 'skill') {
+            members.sort(compareBySkillValue);
+        } else {
+            members.sort((a, b) => b.level - a.level);
+        }
+    };
+
+    const applyFilters = () => {
         const vocationFilter = dom.filterSelect.value;
-        const search = dom.searchInput.value.toLowerCase();
+        const search = dom.searchInput.value;
+        const normalizedSearch = normalizeText(search);
+
+        let filteredByVocation = [...membersData];
 
         if (vocationFilter) {
-            filtered = filtered.filter((member) =>
+            filteredByVocation = filteredByVocation.filter((member) =>
                 member.vocation.toLowerCase().includes(vocationFilter)
             );
         }
 
-        if (search) {
+        let filtered = [...filteredByVocation];
+
+        if (normalizedSearch) {
             filtered = filtered.filter((member) =>
-                member.name.toLowerCase().includes(search)
+                member.searchName.includes(normalizedSearch)
             );
         }
 
-        if (sortDirection === 'asc') {
-            if (getCurrentViewMode() === 'skill') {
-                filtered.sort(compareBySkillValueAsc);
-            } else {
-                filtered.sort((a, b) => a.level - b.level);
+        const shareAnchor = getShareAnchor(search, filtered);
+        const shareContext = shareAnchor
+            ? {
+                anchor: shareAnchor,
+                range: getShareRange(shareAnchor.level),
+                compatibleMembers: membersData
+                    .filter((member) => member.name !== shareAnchor.name && canShareExperience(shareAnchor, member))
+                    .sort((a, b) => b.level - a.level),
             }
-        } else if (sortDirection === 'desc') {
-            if (getCurrentViewMode() === 'skill') {
-                filtered.sort(compareBySkillValue);
-            } else {
-                filtered.sort((a, b) => b.level - a.level);
-            }
+            : null;
+
+        if (shareOnly && !shareContext) {
+            shareOnly = false;
         }
 
-        renderChunked(filtered);
+        if (shareOnly && shareContext) {
+            filtered = filteredByVocation.filter((member) =>
+                member.name === shareContext.anchor.name || canShareExperience(shareContext.anchor, member)
+            );
+        }
+
+        sortMembers(filtered);
+        renderSharePanel(shareContext);
+        renderChunked(filtered, shareContext);
         saveState();
     };
 
@@ -384,6 +515,7 @@ export function initMembers() {
                 sortDirection,
                 voc: dom.filterSelect.value,
                 search: dom.searchInput.value,
+                shareOnly,
                 showAll,
                 viewMode: getCurrentViewMode(),
             })
@@ -392,7 +524,10 @@ export function initMembers() {
 
     const loadState = () => {
         const saved = localStorage.getItem('guildFilters');
-        if (!saved) return;
+        if (!saved) {
+            updateShareToggle();
+            return;
+        }
 
         const state = JSON.parse(saved);
 
@@ -400,8 +535,10 @@ export function initMembers() {
         dom.filterSelect.value = state.voc || '';
         dom.searchInput.value = state.search || '';
         setCurrentViewMode(state.viewMode || 'vocation');
-        showAll = state.showAll || false;
+        showAll = Boolean(state.showAll);
+        shareOnly = Boolean(state.shareOnly);
         updateSortToggle();
+        updateShareToggle();
     };
 
     const populateVocationFilter = () => {
@@ -444,11 +581,13 @@ export function initMembers() {
                     }
                     : null;
 
+                const parsedLevel = parseInt(member.level, 10);
+
                 return {
                     ...member,
-                    level: parseInt(member.level, 10),
+                    level: parsedLevel,
                     levelGain: parseInt(member.levelGain, 10) || 0,
-                    previousLevel: parseInt(member.previousLevel, 10) || parseInt(member.level, 10),
+                    previousLevel: parseInt(member.previousLevel, 10) || parsedLevel,
                     primarySkillTrend: member.primarySkillTrend === 'up' || member.primarySkillTrend === 'down'
                         ? member.primarySkillTrend
                         : 'none',
@@ -456,11 +595,11 @@ export function initMembers() {
                     primaryHighscore: primaryHighscore && Number.isFinite(primaryHighscore.rank) && Number.isFinite(primaryHighscore.value)
                         ? primaryHighscore
                         : null,
+                    searchName: normalizeText(member.name),
                 };
             });
 
             populateVocationFilter();
-
             membersData.sort((a, b) => b.level - a.level);
 
             loadState();
@@ -482,4 +621,15 @@ export function initMembers() {
         });
     });
     dom.searchInput.addEventListener('input', applyFilters);
+    dom.shareToggle.addEventListener('click', () => {
+        shareOnly = !shareOnly;
+        updateShareToggle();
+        applyFilters();
+    });
+    dom.shareClear.addEventListener('click', () => {
+        dom.searchInput.value = '';
+        shareOnly = false;
+        updateShareToggle();
+        applyFilters();
+    });
 }

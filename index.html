@@ -240,6 +240,24 @@
 
     <div class="counter" id="memberCount" aria-live="polite"></div>
 
+    <div class="share-panel" id="sharePanel" hidden aria-live="polite">
+      <div class="share-panel-copy">
+        <p class="share-panel-eyebrow">Share Experience</p>
+        <p class="share-panel-summary" id="shareSummary"></p>
+        <p class="share-panel-range" id="shareRange"></p>
+        <div class="share-panel-chips" id="shareMatches"></div>
+      </div>
+
+      <div class="share-panel-actions">
+        <button type="button" class="share-toggle-btn" id="shareToggle" aria-pressed="false">
+          Mostrar na Tabela
+        </button>
+        <button type="button" class="share-clear-btn" id="shareClear">
+          Limpar
+        </button>
+      </div>
+    </div>
+
     <div class="table-wrapper" id="tableWrapper" role="region" aria-label="Lista de membros">
       <table class="table" id="membersTable">
         <thead>

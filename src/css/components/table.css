@@ -85,6 +85,7 @@
 .member-name {
   align-items: flex-start;
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
@@ -99,6 +100,7 @@
 .member-level {
   align-items: flex-start;
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 6px;
   white-space: nowrap;
 }
@@ -119,6 +121,35 @@
   line-height: 1;
   padding: 3px 7px;
   white-space: nowrap;
+}
+
+.member-share-badge {
+  align-items: center;
+  background: rgba(var(--color-info-rgb), 0.14);
+  border: 1px solid rgba(var(--color-info-rgb), 0.34);
+  border-radius: 999px;
+  color: var(--color-state-info-text);
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.table tbody tr.is-share-match {
+  background:
+    linear-gradient(90deg, rgba(var(--color-info-rgb), 0.12), transparent 70%);
+}
+
+.table tbody tr.is-share-anchor {
+  background:
+    linear-gradient(90deg, rgba(var(--color-accent-rgb), 0.18), rgba(var(--color-primary-rgb), 0.08));
+}
+
+.table tbody tr.is-share-anchor td:first-child {
+  border-left: 4px solid var(--color-accent);
 }
 
 .member-skill {

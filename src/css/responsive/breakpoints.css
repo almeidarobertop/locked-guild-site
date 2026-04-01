@@ -22,6 +22,18 @@
     width: auto;
   }
 
+  .share-panel {
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  }
+
+  .share-panel-actions {
+    align-self: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: auto;
+  }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }

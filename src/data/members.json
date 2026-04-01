@@ -10,7 +10,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 134,
@@ -38,7 +38,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 20,
@@ -66,7 +66,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 34,
@@ -122,7 +122,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 97,
@@ -178,7 +178,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 27,
@@ -448,7 +448,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 195,
@@ -1246,34 +1246,6 @@
     "primarySkillTrendDate": null
   },
   {
-    "name": "Loshh",
-    "rank": "Provisional Soul",
-    "vocation": "Royal Paladin",
-    "level": 546,
-    "previousLevel": 545,
-    "baselineLevel": 545,
-    "baselineDate": "2026-03-31",
-    "levelGain": 1,
-    "snapshotDate": "2026-04-01",
-    "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
-    "skillHighlights": {
-      "distance": {
-        "rank": 148,
-        "value": 122,
-        "label": "Distance Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "distance",
-      "label": "Distance Fighting",
-      "rank": 148,
-      "value": 122
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
     "name": "Lukinha Modtanker",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
@@ -1385,7 +1357,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-01",
     "snapshotAt": "2026-04-01T05:11:04.986Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "fist": {
         "rank": 134,

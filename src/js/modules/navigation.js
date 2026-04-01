@@ -11,16 +11,25 @@ const scrollToSection = (selector) => {
 
 export function initNavigation() {
     const dom = {
+        nav: document.querySelector('nav'),
         hamburger: $('hamburger'),
         menu: $('navMenu'),
         links: $$('#navMenu a'),
     };
 
-    if (!dom.hamburger || !dom.menu) return;
+    if (!dom.nav || !dom.hamburger || !dom.menu) return;
+
+    const syncStickyOffsets = () => {
+        document.documentElement.style.setProperty('--nav-sticky-offset', `${dom.nav.offsetHeight}px`);
+    };
+
+    syncStickyOffsets();
+    window.addEventListener('resize', syncStickyOffsets);
 
     dom.hamburger.addEventListener('click', () => {
         dom.menu.classList.toggle('active');
         dom.hamburger.classList.toggle('active');
+        syncStickyOffsets();
     });
 
     dom.links.forEach((link) => {
@@ -34,6 +43,7 @@ export function initNavigation() {
 
             dom.menu.classList.remove('active');
             dom.hamburger.classList.remove('active');
+            syncStickyOffsets();
         });
     });
 }

@@ -14,12 +14,21 @@
 
   .filters {
     align-items: center;
-    grid-template-columns: minmax(220px, 1.2fr) minmax(220px, 1fr) auto auto;
+    overflow: visible;
+  }
+
+  .filters-mobile-toggle {
+    display: none;
+  }
+
+  .filters-body {
+    align-items: center;
+    grid-template-columns: minmax(0, 1.15fr) minmax(200px, 0.95fr) minmax(0, 360px);
   }
 
   .filters-actions {
-    grid-template-columns: auto auto;
-    width: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    width: 100%;
   }
 
   .share-panel {

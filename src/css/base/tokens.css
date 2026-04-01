@@ -67,4 +67,7 @@
   --shadow-medal-gold: rgba(var(--color-gold-rgb), var(--opacity-80));
   --shadow-medal-silver: rgba(var(--color-silver-rgb), var(--opacity-80));
   --shadow-medal-bronze: rgba(var(--color-bronze-rgb), var(--opacity-80));
+
+  --nav-sticky-offset: 0px;
+  --filters-sticky-gap: 0px;
 }

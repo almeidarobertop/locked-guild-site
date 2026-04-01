@@ -1,8 +1,56 @@
 .filters {
+  backdrop-filter: blur(14px);
+  background: rgba(var(--color-black-rgb), 0.84);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.18);
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgba(var(--color-black-rgb), 0.2);
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+  overflow: clip;
+  padding: 12px;
+  position: sticky;
+  top: calc(var(--nav-sticky-offset) + var(--filters-sticky-gap));
+  z-index: 900;
+}
+
+.filters-mobile-toggle {
+  align-items: center;
+  background: rgba(var(--color-primary-rgb), 0.14);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.26);
+  border-radius: 12px;
+  color: var(--color-text-white);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 10px;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.filters-mobile-toggle-icon {
+  color: var(--color-accent);
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+
+.filters-mobile-toggle[aria-expanded="true"] .filters-mobile-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.filters-body {
   display: grid;
   gap: 10px;
   grid-template-columns: minmax(0, 1fr);
-  margin-top: 15px;
+  min-width: 0;
+}
+
+.filters.is-collapsed .filters-body {
+  display: none;
 }
 
 .search-input {
@@ -19,6 +67,7 @@
 }
 
 .search-container {
+  min-width: 0;
   position: relative;
   width: 100%;
 }
@@ -91,6 +140,7 @@ select {
   display: grid;
   gap: 10px;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-width: 0;
   width: 100%;
 }
 
@@ -151,6 +201,7 @@ select {
   display: inline-flex;
   gap: 6px;
   min-height: 46px;
+  min-width: 0;
   padding: 4px;
   width: 100%;
 }

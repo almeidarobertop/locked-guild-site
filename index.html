@@ -214,7 +214,12 @@
     <h2 id="members-title">Membros da Guild</h2>
 
     <div class="filters" role="region" aria-label="Filtros de membros">
+      <button type="button" class="filters-mobile-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filtersBody">
+        <span class="filters-mobile-toggle-label">Filtros e busca</span>
+        <span class="filters-mobile-toggle-icon" aria-hidden="true">▾</span>
+      </button>
 
+      <div class="filters-body" id="filtersBody">
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar membro..." class="search-input" autocomplete="off"
           inputmode="search" enterkeyhint="search" aria-label="Buscar membro por nome" />
@@ -235,7 +240,7 @@
           <button type="button" class="view-toggle-btn" data-view-mode="skill" aria-pressed="false">Skill</button>
         </div>
       </div>
-
+      </div>
     </div>
 
     <div class="counter" id="memberCount" aria-live="polite"></div>

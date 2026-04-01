@@ -3,6 +3,9 @@ export function initMembers() {
         tableWrapper: document.getElementById('tableWrapper'),
         searchInput: document.getElementById('searchInput'),
         tableSection: document.getElementById('members'),
+        filters: document.querySelector('#members .filters'),
+        filtersBody: document.getElementById('filtersBody'),
+        filtersToggle: document.getElementById('filtersToggle'),
         tbody: document.getElementById('membersTbody'),
         counter: document.getElementById('memberCount'),
         sortToggle: document.getElementById('sortToggle'),
@@ -22,6 +25,9 @@ export function initMembers() {
         !dom.tableWrapper ||
         !dom.searchInput ||
         !dom.tableSection ||
+        !dom.filters ||
+        !dom.filtersBody ||
+        !dom.filtersToggle ||
         !dom.tbody ||
         !dom.counter ||
         !dom.sortToggle ||
@@ -41,11 +47,13 @@ export function initMembers() {
     let showAll = false;
     let sortDirection = 'desc';
     let shareOnly = false;
+    let filtersCollapsed = window.matchMedia('(max-width: 767px)').matches;
     let autocompleteItems = [];
     let activeAutocompleteIndex = -1;
 
     const MAX_VISIBLE = 50;
     const MAX_AUTOCOMPLETE_RESULTS = 8;
+    const mobileMediaQuery = window.matchMedia('(max-width: 767px)');
     const MEDALS = {
         gold: '\u{1F947}',
         silver: '\u{1F948}',
@@ -233,6 +241,34 @@ export function initMembers() {
         dom.shareToggle.textContent = shareOnly
             ? 'Ocultar da Tabela'
             : 'Mostrar na Tabela';
+    };
+
+    const updateFiltersToggle = () => {
+        const isMobile = mobileMediaQuery.matches;
+        const shouldCollapse = isMobile && filtersCollapsed;
+
+        dom.filters.classList.toggle('is-collapsed', shouldCollapse);
+        dom.filtersBody.hidden = shouldCollapse;
+        dom.filtersToggle.hidden = !isMobile;
+        dom.filtersToggle.setAttribute('aria-expanded', String(!shouldCollapse));
+    };
+
+    const setFiltersCollapsed = (collapsed, shouldPersist = true) => {
+        filtersCollapsed = mobileMediaQuery.matches ? collapsed : false;
+        updateFiltersToggle();
+
+        if (shouldPersist) {
+            saveState();
+        }
+    };
+
+    const syncFiltersLayout = () => {
+        if (!mobileMediaQuery.matches) {
+            setFiltersCollapsed(false, false);
+            return;
+        }
+
+        updateFiltersToggle();
     };
 
     const setCurrentViewMode = (mode) => {
@@ -606,6 +642,7 @@ export function initMembers() {
                 voc: dom.filterSelect.value,
                 search: dom.searchInput.value,
                 shareOnly,
+                filtersCollapsed,
                 showAll,
                 viewMode: getCurrentViewMode(),
             })
@@ -616,6 +653,7 @@ export function initMembers() {
         const saved = localStorage.getItem('guildFilters');
         if (!saved) {
             updateShareToggle();
+            syncFiltersLayout();
             return;
         }
 
@@ -627,8 +665,12 @@ export function initMembers() {
         setCurrentViewMode(state.viewMode || 'vocation');
         showAll = Boolean(state.showAll);
         shareOnly = Boolean(state.shareOnly);
+        filtersCollapsed = typeof state.filtersCollapsed === 'boolean'
+            ? state.filtersCollapsed
+            : mobileMediaQuery.matches;
         updateSortToggle();
         updateShareToggle();
+        syncFiltersLayout();
     };
 
     const populateVocationFilter = () => {
@@ -703,6 +745,9 @@ export function initMembers() {
         updateSortToggle();
         applyFilters();
     });
+    dom.filtersToggle.addEventListener('click', () => {
+        setFiltersCollapsed(!filtersCollapsed);
+    });
     dom.filterSelect.addEventListener('change', applyFilters);
     dom.viewModeButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -754,6 +799,9 @@ export function initMembers() {
         window.setTimeout(closeAutocomplete, 120);
     });
     dom.searchInput.addEventListener('focus', () => {
+        if (mobileMediaQuery.matches && filtersCollapsed) {
+            setFiltersCollapsed(false);
+        }
         renderAutocomplete();
     });
     autocompleteList.addEventListener('mousedown', (event) => {
@@ -781,4 +829,10 @@ export function initMembers() {
         applyFilters();
         closeAutocomplete();
     });
+    if (typeof mobileMediaQuery.addEventListener === 'function') {
+        mobileMediaQuery.addEventListener('change', syncFiltersLayout);
+    } else if (typeof mobileMediaQuery.addListener === 'function') {
+        mobileMediaQuery.addListener(syncFiltersLayout);
+    }
+    syncFiltersLayout();
 }

@@ -5,7 +5,7 @@ const HIGHSCORES_BASE_URL = "https://api.tibiadata.com/v4/highscores/Ourobra";
 const MEMBERS_PATH = "./src/data/members.json";
 const BRAZIL_TIMEZONE = "America/Sao_Paulo";
 const HIGHSCORE_CATEGORIES = ["magic", "distance", "fist", "axe", "sword", "club"];
-const SKILL_TREND_PERSIST_DAYS = 3;
+const SKILL_TREND_PERSIST_DAYS = 7;
 const SCRAPER_MODE = process.argv[2] || "snapshot";
 
 const SKILL_METADATA = {

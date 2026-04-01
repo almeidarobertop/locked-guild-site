@@ -41,8 +41,11 @@ export function initMembers() {
     let showAll = false;
     let sortDirection = 'desc';
     let shareOnly = false;
+    let autocompleteItems = [];
+    let activeAutocompleteIndex = -1;
 
     const MAX_VISIBLE = 50;
+    const MAX_AUTOCOMPLETE_RESULTS = 8;
     const MEDALS = {
         gold: '\u{1F947}',
         silver: '\u{1F948}',
@@ -104,6 +107,17 @@ export function initMembers() {
             .replace(/[\u0300-\u036f]/g, '')
             .trim()
             .toLowerCase();
+
+    const autocompleteList = document.createElement('div');
+    autocompleteList.className = 'autocomplete-list';
+    autocompleteList.id = 'membersAutocomplete';
+    autocompleteList.hidden = true;
+    autocompleteList.setAttribute('role', 'listbox');
+    dom.searchInput.setAttribute('autocomplete', 'off');
+    dom.searchInput.setAttribute('aria-autocomplete', 'list');
+    dom.searchInput.setAttribute('aria-controls', autocompleteList.id);
+    dom.searchInput.setAttribute('aria-expanded', 'false');
+    dom.searchInput.parentElement?.appendChild(autocompleteList);
 
     const getNormalizedVocation = (vocation) => {
         if (!vocation) return 'sem vocacao';
@@ -284,6 +298,82 @@ export function initMembers() {
         }
 
         return '';
+    };
+
+    const closeAutocomplete = () => {
+        autocompleteItems = [];
+        activeAutocompleteIndex = -1;
+        autocompleteList.hidden = true;
+        autocompleteList.innerHTML = '';
+        dom.searchInput.setAttribute('aria-expanded', 'false');
+        dom.searchInput.removeAttribute('aria-activedescendant');
+    };
+
+    const selectAutocompleteItem = (member) => {
+        dom.searchInput.value = member.name;
+        closeAutocomplete();
+        applyFilters();
+    };
+
+    const updateAutocompleteActiveItem = () => {
+        const buttons = autocompleteList.querySelectorAll('.autocomplete-item');
+
+        buttons.forEach((button, index) => {
+            const isActive = index === activeAutocompleteIndex;
+            button.classList.toggle('active', isActive);
+            button.setAttribute('aria-selected', String(isActive));
+
+            if (isActive) {
+                dom.searchInput.setAttribute('aria-activedescendant', button.id);
+                button.scrollIntoView({ block: 'nearest' });
+            }
+        });
+
+        if (activeAutocompleteIndex < 0) {
+            dom.searchInput.removeAttribute('aria-activedescendant');
+        }
+    };
+
+    const renderAutocomplete = () => {
+        const search = normalizeText(dom.searchInput.value);
+
+        if (!search) {
+            closeAutocomplete();
+            return;
+        }
+
+        autocompleteItems = membersData
+            .filter((member) => member.searchName.includes(search) && member.searchName !== search)
+            .sort((a, b) => {
+                const startsA = Number(!a.searchName.startsWith(search));
+                const startsB = Number(!b.searchName.startsWith(search));
+
+                if (startsA !== startsB) return startsA - startsB;
+                return a.name.localeCompare(b.name);
+            })
+            .slice(0, MAX_AUTOCOMPLETE_RESULTS);
+
+        if (autocompleteItems.length === 0) {
+            closeAutocomplete();
+            return;
+        }
+
+        activeAutocompleteIndex = -1;
+        autocompleteList.innerHTML = autocompleteItems.map((member, index) => `
+            <button
+                type="button"
+                class="autocomplete-item"
+                id="autocomplete-item-${index}"
+                role="option"
+                aria-selected="false"
+                data-name="${escapeHtmlAttr(member.name)}"
+            >
+                <span class="autocomplete-item-name">${escapeHtml(member.name)}</span>
+                <span class="autocomplete-item-meta">Lvl ${member.level}</span>
+            </button>
+        `).join('');
+        autocompleteList.hidden = false;
+        dom.searchInput.setAttribute('aria-expanded', 'true');
     };
 
     const renderSharePanel = (shareContext) => {
@@ -605,6 +695,7 @@ export function initMembers() {
             loadState();
             updateSortToggle();
             applyFilters();
+            renderAutocomplete();
         });
 
     dom.sortToggle.addEventListener('click', () => {
@@ -620,7 +711,64 @@ export function initMembers() {
             handleViewModeChange();
         });
     });
-    dom.searchInput.addEventListener('input', applyFilters);
+    dom.searchInput.addEventListener('input', () => {
+        applyFilters();
+        renderAutocomplete();
+    });
+    dom.searchInput.addEventListener('keydown', (event) => {
+        if (autocompleteItems.length === 0 || autocompleteList.hidden) {
+            if (event.key === 'Escape') {
+                closeAutocomplete();
+            }
+            return;
+        }
+
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            activeAutocompleteIndex = (activeAutocompleteIndex + 1) % autocompleteItems.length;
+            updateAutocompleteActiveItem();
+            return;
+        }
+
+        if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            activeAutocompleteIndex = activeAutocompleteIndex <= 0
+                ? autocompleteItems.length - 1
+                : activeAutocompleteIndex - 1;
+            updateAutocompleteActiveItem();
+            return;
+        }
+
+        if (event.key === 'Enter' && activeAutocompleteIndex >= 0) {
+            event.preventDefault();
+            selectAutocompleteItem(autocompleteItems[activeAutocompleteIndex]);
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeAutocomplete();
+        }
+    });
+    dom.searchInput.addEventListener('blur', () => {
+        window.setTimeout(closeAutocomplete, 120);
+    });
+    dom.searchInput.addEventListener('focus', () => {
+        renderAutocomplete();
+    });
+    autocompleteList.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        const item = event.target instanceof Element
+            ? event.target.closest('.autocomplete-item')
+            : null;
+
+        if (!item) return;
+
+        const member = autocompleteItems.find((entry) => entry.name === item.getAttribute('data-name'));
+        if (member) {
+            selectAutocompleteItem(member);
+        }
+    });
     dom.shareToggle.addEventListener('click', () => {
         shareOnly = !shareOnly;
         updateShareToggle();
@@ -631,5 +779,6 @@ export function initMembers() {
         shareOnly = false;
         updateShareToggle();
         applyFilters();
+        closeAutocomplete();
     });
 }

@@ -178,7 +178,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 343,
@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 26,
@@ -448,7 +448,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 100,
@@ -1156,6 +1156,23 @@
     "primarySkillTrendDate": null
   },
   {
+    "name": "Crazy Merlim",
+    "rank": "Provisional Soul",
+    "vocation": "Elder Druid",
+    "level": 35,
+    "previousLevel": 35,
+    "baselineLevel": 35,
+    "baselineDate": "2026-04-10",
+    "levelGain": 0,
+    "snapshotDate": "2026-04-10",
+    "snapshotAt": "2026-04-10T15:12:59.861Z",
+    "status": "offline",
+    "skillHighlights": {},
+    "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
     "name": "Deyvcabelinho",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
@@ -1228,7 +1245,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 18,
@@ -1351,7 +1368,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 23,
@@ -1396,7 +1413,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-10",
     "snapshotAt": "2026-04-10T05:11:48.977Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 753,
@@ -1483,6 +1500,34 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Malikzs",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 208,
+    "previousLevel": 208,
+    "baselineLevel": 208,
+    "baselineDate": "2026-04-10",
+    "levelGain": 0,
+    "snapshotDate": "2026-04-10",
+    "snapshotAt": "2026-04-10T15:12:59.861Z",
+    "status": "online",
+    "skillHighlights": {
+      "distance": {
+        "rank": 342,
+        "value": 118,
+        "label": "Distance Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "distance",
+      "label": "Distance Fighting",
+      "rank": 342,
+      "value": 118
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },

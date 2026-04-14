@@ -94,7 +94,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 34,
@@ -150,7 +150,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 99,
@@ -476,7 +476,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 198,
@@ -1076,7 +1076,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1273,7 +1273,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 13,
@@ -1368,7 +1368,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 84,
@@ -1441,7 +1441,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 753,
@@ -1497,7 +1497,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 112,
@@ -1525,7 +1525,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1615,7 +1615,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "axe": {
         "rank": 22,
@@ -1633,34 +1633,6 @@
     "primarySkillTrendDate": null
   },
   {
-    "name": "Wild Serenity",
-    "rank": "Provisional Soul",
-    "vocation": "Elder Druid",
-    "level": 355,
-    "previousLevel": 355,
-    "baselineLevel": 355,
-    "baselineDate": "2026-04-13",
-    "levelGain": 0,
-    "snapshotDate": "2026-04-14",
-    "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 684,
-        "value": 96,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 684,
-      "value": 96
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
     "name": "Xandzudo",
     "rank": "Provisional Soul",
     "vocation": "Exalted Monk",
@@ -1671,7 +1643,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-14",
     "snapshotAt": "2026-04-14T05:09:37.187Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "fist": {
         "rank": 147,

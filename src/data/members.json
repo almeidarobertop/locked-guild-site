@@ -10,7 +10,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 139,
@@ -38,7 +38,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 20,
@@ -476,7 +476,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 200,
@@ -694,7 +694,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 158,
@@ -1121,7 +1121,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 472,
@@ -1273,7 +1273,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 13,
@@ -1464,7 +1464,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 112,
@@ -1484,7 +1484,7 @@
   {
     "name": "Mago Morais",
     "rank": "Provisional Soul",
-    "vocation": "Elite Knight",
+    "vocation": "Knight",
     "level": 236,
     "previousLevel": 234,
     "baselineLevel": 234,
@@ -1582,7 +1582,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 22,
@@ -1610,7 +1610,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 849,
@@ -1638,7 +1638,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-15",
     "snapshotAt": "2026-04-15T05:10:36.725Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "fist": {
         "rank": 149,

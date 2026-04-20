@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 21,
@@ -476,7 +476,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 22,
@@ -504,7 +504,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 202,
@@ -1124,7 +1124,7 @@
   {
     "name": "Ana Katana",
     "rank": "Provisional Soul",
-    "vocation": "Master Sorcerer",
+    "vocation": "Sorcerer",
     "level": 160,
     "previousLevel": 160,
     "baselineLevel": 160,
@@ -1194,7 +1194,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 470,
@@ -1329,7 +1329,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1363,7 +1363,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 15,
@@ -1700,7 +1700,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-20",
     "snapshotAt": "2026-04-20T05:25:34.778Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "fist": {
         "rank": 151,

@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 21,
@@ -150,7 +150,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 103,
@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 26,
@@ -504,7 +504,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 202,
@@ -750,7 +750,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 736,
@@ -1124,7 +1124,7 @@
   {
     "name": "Ana Katana",
     "rank": "Provisional Soul",
-    "vocation": "Sorcerer",
+    "vocation": "Master Sorcerer",
     "level": 161,
     "previousLevel": 160,
     "baselineLevel": 160,
@@ -1509,7 +1509,7 @@
     "levelGain": 5,
     "snapshotDate": "2026-04-21",
     "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 758,
@@ -1673,6 +1673,34 @@
     "primarySkillTrendDate": null
   },
   {
+    "name": "Razzga Mortalha",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 130,
+    "previousLevel": 130,
+    "baselineLevel": 130,
+    "baselineDate": "2026-04-21",
+    "levelGain": 0,
+    "snapshotDate": "2026-04-21",
+    "snapshotAt": "2026-04-21T15:51:10.817Z",
+    "status": "offline",
+    "skillHighlights": {
+      "distance": {
+        "rank": 482,
+        "value": 116,
+        "label": "Distance Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "distance",
+      "label": "Distance Fighting",
+      "rank": 482,
+      "value": 116
+    },
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
     "name": "Sevrus",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
@@ -1696,34 +1724,6 @@
       "label": "Magic Level",
       "rank": 847,
       "value": 93
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Xandzudo",
-    "rank": "Provisional Soul",
-    "vocation": "Exalted Monk",
-    "level": 351,
-    "previousLevel": 351,
-    "baselineLevel": 351,
-    "baselineDate": "2026-04-20",
-    "levelGain": 0,
-    "snapshotDate": "2026-04-21",
-    "snapshotAt": "2026-04-21T05:13:26.574Z",
-    "status": "offline",
-    "skillHighlights": {
-      "fist": {
-        "rank": 153,
-        "value": 101,
-        "label": "Fist Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "fist",
-      "label": "Fist Fighting",
-      "rank": 153,
-      "value": 101
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null

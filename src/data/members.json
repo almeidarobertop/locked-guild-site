@@ -10,7 +10,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 139,
@@ -38,7 +38,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 21,
@@ -122,7 +122,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 104,
@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 26,
@@ -504,7 +504,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 200,
@@ -565,7 +565,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 175,
@@ -733,7 +733,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1363,7 +1363,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1397,7 +1397,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 15,
@@ -1428,34 +1428,6 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Imorgitara Daria",
-    "rank": "Provisional Soul",
-    "vocation": "Elite Knight",
-    "level": 179,
-    "previousLevel": 179,
-    "baselineLevel": 179,
-    "baselineDate": "2026-04-23",
-    "levelGain": 0,
-    "snapshotDate": "2026-04-24",
-    "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
-    "skillHighlights": {
-      "axe": {
-        "rank": 273,
-        "value": 109,
-        "label": "Axe Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "axe",
-      "label": "Axe Fighting",
-      "rank": 273,
-      "value": 109
-    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },
@@ -1543,7 +1515,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 890,
@@ -1559,34 +1531,6 @@
     },
     "primarySkillTrend": "down",
     "primarySkillTrendDate": "2026-04-24"
-  },
-  {
-    "name": "Lodrizera",
-    "rank": "Provisional Soul",
-    "vocation": "Master Sorcerer",
-    "level": 223,
-    "previousLevel": 223,
-    "baselineLevel": 223,
-    "baselineDate": "2026-04-23",
-    "levelGain": 0,
-    "snapshotDate": "2026-04-24",
-    "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 999,
-        "value": 91,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 999,
-      "value": 91
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
   },
   {
     "name": "Madam Curie",
@@ -1612,34 +1556,6 @@
       "label": "Magic Level",
       "rank": 425,
       "value": 102
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Maga du oz",
-    "rank": "Provisional Soul",
-    "vocation": "Elder Druid",
-    "level": 334,
-    "previousLevel": 334,
-    "baselineLevel": 334,
-    "baselineDate": "2026-04-23",
-    "levelGain": 0,
-    "snapshotDate": "2026-04-24",
-    "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 521,
-        "value": 100,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 521,
-      "value": 100
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
@@ -1686,6 +1602,34 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Marck The Knight",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 420,
+    "previousLevel": 420,
+    "baselineLevel": 420,
+    "baselineDate": "2026-04-24",
+    "levelGain": 0,
+    "snapshotDate": "2026-04-24",
+    "snapshotAt": "2026-04-24T15:45:54.140Z",
+    "status": "online",
+    "skillHighlights": {
+      "axe": {
+        "rank": 104,
+        "value": 114,
+        "label": "Axe Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "axe",
+      "label": "Axe Fighting",
+      "rank": 104,
+      "value": 114
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },
@@ -1818,7 +1762,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-04-24",
     "snapshotAt": "2026-04-24T05:20:28.342Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 482,

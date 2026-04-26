@@ -66,7 +66,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 217,
@@ -170,7 +170,7 @@
   {
     "name": "Saint Kaelor",
     "rank": "Field Marshal",
-    "vocation": "Royal Paladin",
+    "vocation": "Paladin",
     "level": 182,
     "previousLevel": 182,
     "baselineLevel": 182,
@@ -420,7 +420,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 15,
@@ -476,7 +476,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 102,
@@ -593,7 +593,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 175,
@@ -1329,7 +1329,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1391,7 +1391,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-04-26",
     "snapshotAt": "2026-04-26T05:24:07.971Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

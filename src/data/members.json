@@ -150,7 +150,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 100,
@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 27,
@@ -364,7 +364,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 148,
@@ -565,7 +565,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 178,
@@ -1273,7 +1273,7 @@
     "levelGain": 6,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1341,7 +1341,7 @@
     "levelGain": 8,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 356,
@@ -1470,7 +1470,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1487,7 +1487,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1674,34 +1674,6 @@
       "label": "Magic Level",
       "rank": 429,
       "value": 102
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Malikzs",
-    "rank": "Provisional Soul",
-    "vocation": "Royal Paladin",
-    "level": 221,
-    "previousLevel": 221,
-    "baselineLevel": 221,
-    "baselineDate": "2026-05-01",
-    "levelGain": 0,
-    "snapshotDate": "2026-05-02",
-    "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
-    "skillHighlights": {
-      "distance": {
-        "rank": 284,
-        "value": 119,
-        "label": "Distance Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "distance",
-      "label": "Distance Fighting",
-      "rank": 284,
-      "value": 119
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
@@ -1897,7 +1869,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-02",
     "snapshotAt": "2026-05-02T05:22:29.502Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 741,

@@ -806,7 +806,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-05",
     "snapshotAt": "2026-05-05T05:27:28.553Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 164,
@@ -1621,7 +1621,7 @@
     "levelGain": 5,
     "snapshotDate": "2026-05-05",
     "snapshotAt": "2026-05-05T05:27:28.553Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 105,

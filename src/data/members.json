@@ -38,7 +38,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 22,
@@ -364,7 +364,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 154,
@@ -1526,7 +1526,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "fist": {
         "rank": 946,
@@ -1604,6 +1604,23 @@
     "levelGain": 7,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
+    "status": "online",
+    "skillHighlights": {},
+    "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Impunity",
+    "rank": "Provisional Soul",
+    "vocation": "Exalted Monk",
+    "level": 30,
+    "previousLevel": 30,
+    "baselineLevel": 30,
+    "baselineDate": "2026-05-08",
+    "levelGain": 0,
+    "snapshotDate": "2026-05-08",
+    "snapshotAt": "2026-05-08T15:58:07.465Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1649,7 +1666,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 127,
@@ -1778,7 +1795,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 108,
@@ -1834,7 +1851,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-08",
     "snapshotAt": "2026-05-08T05:15:21.960Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1916,6 +1933,34 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Myster Gyn",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 228,
+    "previousLevel": 228,
+    "baselineLevel": 228,
+    "baselineDate": "2026-05-08",
+    "levelGain": 0,
+    "snapshotDate": "2026-05-08",
+    "snapshotAt": "2026-05-08T15:58:07.465Z",
+    "status": "offline",
+    "skillHighlights": {
+      "club": {
+        "rank": 226,
+        "value": 110,
+        "label": "Club Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "club",
+      "label": "Club Fighting",
+      "rank": 226,
+      "value": 110
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },
@@ -2055,6 +2100,34 @@
       "label": "Magic Level",
       "rank": 808,
       "value": 94
+    },
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Taya Tuliats",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 113,
+    "previousLevel": 113,
+    "baselineLevel": 113,
+    "baselineDate": "2026-05-08",
+    "levelGain": 0,
+    "snapshotDate": "2026-05-08",
+    "snapshotAt": "2026-05-08T15:58:07.465Z",
+    "status": "offline",
+    "skillHighlights": {
+      "distance": {
+        "rank": 671,
+        "value": 114,
+        "label": "Distance Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "distance",
+      "label": "Distance Fighting",
+      "rank": 671,
+      "value": 114
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null

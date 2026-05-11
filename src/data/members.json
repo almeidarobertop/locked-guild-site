@@ -789,7 +789,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -834,7 +834,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 107,
@@ -1678,7 +1678,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 444,
@@ -1723,7 +1723,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 107,
@@ -1903,7 +1903,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 136,
@@ -1959,7 +1959,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-05-11",
     "snapshotAt": "2026-05-11T06:12:36.970Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 289,

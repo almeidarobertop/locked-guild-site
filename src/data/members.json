@@ -705,7 +705,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 484,
@@ -834,7 +834,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 161,
@@ -1689,7 +1689,7 @@
     "levelGain": 8,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1723,7 +1723,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 108,
@@ -1847,7 +1847,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 227,
@@ -1959,7 +1959,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-15",
     "snapshotAt": "2026-05-15T06:08:08.438Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 269,

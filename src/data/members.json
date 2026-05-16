@@ -150,7 +150,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-16",
     "snapshotAt": "2026-05-16T05:38:57.369Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 99,
@@ -420,7 +420,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-16",
     "snapshotAt": "2026-05-16T05:38:57.369Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 82,
@@ -695,34 +695,6 @@
     "primarySkillTrendDate": null
   },
   {
-    "name": "Badlius",
-    "rank": "Primal Summoner",
-    "vocation": "Master Sorcerer",
-    "level": 433,
-    "previousLevel": 432,
-    "baselineLevel": 432,
-    "baselineDate": "2026-05-15",
-    "levelGain": 1,
-    "snapshotDate": "2026-05-16",
-    "snapshotAt": "2026-05-16T05:38:57.369Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 447,
-        "value": 102,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 447,
-      "value": 102
-    },
-    "primarySkillTrend": "up",
-    "primarySkillTrendDate": "2026-05-16"
-  },
-  {
     "name": "Biscoito Babado",
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
@@ -862,7 +834,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-16",
     "snapshotAt": "2026-05-16T05:38:57.369Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 107,
@@ -1088,6 +1060,34 @@
       "label": "Axe Fighting",
       "rank": 280,
       "value": 109
+    },
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Wapaakalypse",
+    "rank": "Primal Summoner",
+    "vocation": "Master Sorcerer",
+    "level": 433,
+    "previousLevel": 433,
+    "baselineLevel": 433,
+    "baselineDate": "2026-05-16",
+    "levelGain": 0,
+    "snapshotDate": "2026-05-16",
+    "snapshotAt": "2026-05-16T15:33:02.537Z",
+    "status": "offline",
+    "skillHighlights": {
+      "magic": {
+        "rank": 447,
+        "value": 102,
+        "label": "Magic Level"
+      }
+    },
+    "primaryHighscore": {
+      "category": "magic",
+      "label": "Magic Level",
+      "rank": 447,
+      "value": 102
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
@@ -1723,7 +1723,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-16",
     "snapshotAt": "2026-05-16T05:38:57.369Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 109,

@@ -504,7 +504,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-19",
     "snapshotAt": "2026-05-19T06:32:11.686Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 26,

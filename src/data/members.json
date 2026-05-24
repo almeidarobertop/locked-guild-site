@@ -834,7 +834,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-24",
     "snapshotAt": "2026-05-24T06:21:03.286Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 104,
@@ -1249,7 +1249,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-24",
     "snapshotAt": "2026-05-24T06:21:03.286Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1959,7 +1959,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-24",
     "snapshotAt": "2026-05-24T06:21:03.286Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -2004,7 +2004,7 @@
     "levelGain": 5,
     "snapshotDate": "2026-05-24",
     "snapshotAt": "2026-05-24T06:21:03.286Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 269,

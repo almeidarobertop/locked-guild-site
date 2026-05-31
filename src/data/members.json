@@ -778,7 +778,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 153,
@@ -834,7 +834,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 595,
@@ -890,7 +890,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 318,
@@ -1610,7 +1610,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1852,7 +1852,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1993,7 +1993,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-05-31",
     "snapshotAt": "2026-05-31T06:39:23.817Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -2030,6 +2030,34 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Zielona Ninja",
+    "rank": "Provisional Soul",
+    "vocation": "Royal Paladin",
+    "level": 646,
+    "previousLevel": 646,
+    "baselineLevel": 646,
+    "baselineDate": "2026-05-31",
+    "levelGain": 0,
+    "snapshotDate": "2026-05-31",
+    "snapshotAt": "2026-05-31T15:47:34.887Z",
+    "status": "online",
+    "skillHighlights": {
+      "distance": {
+        "rank": 168,
+        "value": 121,
+        "label": "Distance Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "distance",
+      "label": "Distance Fighting",
+      "rank": 168,
+      "value": 121
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   }

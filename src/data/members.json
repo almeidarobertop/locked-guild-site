@@ -38,7 +38,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 14,
@@ -94,7 +94,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 19,
@@ -504,7 +504,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 152,
@@ -565,7 +565,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 152,
@@ -677,7 +677,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 546,
@@ -890,7 +890,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 317,
@@ -1131,7 +1131,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 578,
@@ -1373,7 +1373,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 641,
@@ -1807,7 +1807,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-06-04",
     "snapshotAt": "2026-06-04T07:03:47.281Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1990,6 +1990,34 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Seso Eneseso",
+    "rank": "Provisional Soul",
+    "vocation": "Elder Druid",
+    "level": 300,
+    "previousLevel": 300,
+    "baselineLevel": 300,
+    "baselineDate": "2026-06-04",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-04",
+    "snapshotAt": "2026-06-04T17:27:59.725Z",
+    "status": "offline",
+    "skillHighlights": {
+      "magic": {
+        "rank": 784,
+        "value": 93,
+        "label": "Magic Level"
+      }
+    },
+    "primaryHighscore": {
+      "category": "magic",
+      "label": "Magic Level",
+      "rank": 784,
+      "value": 93
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },

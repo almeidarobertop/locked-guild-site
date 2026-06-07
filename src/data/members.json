@@ -6,10 +6,10 @@
     "level": 475,
     "previousLevel": 475,
     "baselineLevel": 475,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
@@ -32,12 +32,12 @@
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 970,
-    "previousLevel": 969,
-    "baselineLevel": 969,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 970,
+    "baselineLevel": 970,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "club": {
@@ -62,39 +62,39 @@
     "level": 738,
     "previousLevel": 738,
     "baselineLevel": 738,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "magic": {
-        "rank": 154,
-        "value": 113,
+        "rank": 147,
+        "value": 114,
         "label": "Magic Level"
       }
     },
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 154,
-      "value": 113
+      "rank": 147,
+      "value": 114
     },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
+    "primarySkillTrend": "up",
+    "primarySkillTrendDate": "2026-06-07"
   },
   {
     "name": "Indio Grilo Machucado",
     "rank": "Field Marshal",
     "vocation": "Elite Knight",
     "level": 969,
-    "previousLevel": 968,
-    "baselineLevel": 968,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
+    "previousLevel": 969,
+    "baselineLevel": 969,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 19,
@@ -118,14 +118,14 @@
     "level": 757,
     "previousLevel": 757,
     "baselineLevel": 757,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 80,
+        "rank": 83,
         "value": 124,
         "label": "Distance Fighting"
       }
@@ -133,7 +133,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 80,
+      "rank": 83,
       "value": 124
     },
     "primarySkillTrend": "none",
@@ -146,10 +146,10 @@
     "level": 839,
     "previousLevel": 839,
     "baselineLevel": 839,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
@@ -174,14 +174,14 @@
     "level": 182,
     "previousLevel": 182,
     "baselineLevel": 182,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 318,
+        "rank": 320,
         "value": 118,
         "label": "Distance Fighting"
       }
@@ -189,7 +189,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 318,
+      "rank": 320,
       "value": 118
     },
     "primarySkillTrend": "none",
@@ -199,13 +199,13 @@
     "name": "Zycken",
     "rank": "Field Marshal",
     "vocation": "Royal Paladin",
-    "level": 1327,
+    "level": 1328,
     "previousLevel": 1327,
     "baselineLevel": 1327,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
@@ -230,10 +230,10 @@
     "level": 137,
     "previousLevel": 137,
     "baselineLevel": 137,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -247,10 +247,10 @@
     "level": 61,
     "previousLevel": 61,
     "baselineLevel": 61,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -264,10 +264,10 @@
     "level": 146,
     "previousLevel": 146,
     "baselineLevel": 146,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
@@ -292,10 +292,10 @@
     "level": 95,
     "previousLevel": 95,
     "baselineLevel": 95,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -309,10 +309,10 @@
     "level": 130,
     "previousLevel": 130,
     "baselineLevel": 130,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -326,10 +326,10 @@
     "level": 286,
     "previousLevel": 286,
     "baselineLevel": 286,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -343,10 +343,10 @@
     "level": 30,
     "previousLevel": 30,
     "baselineLevel": 30,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -358,16 +358,16 @@
     "rank": "Apex Guardian",
     "vocation": "Royal Paladin",
     "level": 727,
-    "previousLevel": 726,
-    "baselineLevel": 726,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
+    "previousLevel": 727,
+    "baselineLevel": 727,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 127,
+        "rank": 129,
         "value": 122,
         "label": "Distance Fighting"
       }
@@ -375,7 +375,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 127,
+      "rank": 129,
       "value": 122
     },
     "primarySkillTrend": "none",
@@ -388,14 +388,14 @@
     "level": 704,
     "previousLevel": 704,
     "baselineLevel": 704,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 103,
+        "rank": 104,
         "value": 123,
         "label": "Distance Fighting"
       }
@@ -403,7 +403,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 103,
+      "rank": 104,
       "value": 123
     },
     "primarySkillTrend": "none",
@@ -413,17 +413,17 @@
     "name": "Hokage Clarinha",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
-    "level": 706,
+    "level": 707,
     "previousLevel": 706,
     "baselineLevel": 706,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
     "skillHighlights": {
       "club": {
-        "rank": 75,
+        "rank": 79,
         "value": 116,
         "label": "Club Fighting"
       }
@@ -431,7 +431,7 @@
     "primaryHighscore": {
       "category": "club",
       "label": "Club Fighting",
-      "rank": 75,
+      "rank": 79,
       "value": 116
     },
     "primarySkillTrend": "none",
@@ -444,10 +444,10 @@
     "level": 717,
     "previousLevel": 717,
     "baselineLevel": 717,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
@@ -470,12 +470,12 @@
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
     "level": 868,
-    "previousLevel": 867,
-    "baselineLevel": 867,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 868,
+    "baselineLevel": 868,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
@@ -500,14 +500,14 @@
     "level": 718,
     "previousLevel": 718,
     "baselineLevel": 718,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "magic": {
-        "rank": 148,
+        "rank": 147,
         "value": 114,
         "label": "Magic Level"
       }
@@ -515,7 +515,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 148,
+      "rank": 147,
       "value": 114
     },
     "primarySkillTrend": "none",
@@ -528,10 +528,10 @@
     "level": 787,
     "previousLevel": 787,
     "baselineLevel": 787,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "axe": {
@@ -561,14 +561,14 @@
     "level": 883,
     "previousLevel": 883,
     "baselineLevel": 883,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 148,
+        "rank": 147,
         "value": 114,
         "label": "Magic Level"
       }
@@ -576,7 +576,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 148,
+      "rank": 147,
       "value": 114
     },
     "primarySkillTrend": "none",
@@ -586,17 +586,17 @@
     "name": "Vitinho Cepowisks",
     "rank": "Apex Guardian",
     "vocation": "Elder Druid",
-    "level": 807,
+    "level": 808,
     "previousLevel": 807,
     "baselineLevel": 807,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "magic": {
-        "rank": 109,
+        "rank": 108,
         "value": 117,
         "label": "Magic Level"
       }
@@ -604,7 +604,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 109,
+      "rank": 108,
       "value": 117
     },
     "primarySkillTrend": "none",
@@ -617,14 +617,14 @@
     "level": 201,
     "previousLevel": 201,
     "baselineLevel": 201,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 547,
+        "rank": 548,
         "value": 115,
         "label": "Distance Fighting"
       }
@@ -632,7 +632,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 547,
+      "rank": 548,
       "value": 115
     },
     "primarySkillTrend": "none",
@@ -645,14 +645,14 @@
     "level": 246,
     "previousLevel": 246,
     "baselineLevel": 246,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
-        "rank": 257,
+        "rank": 256,
         "value": 111,
         "label": "Sword Fighting"
       }
@@ -660,7 +660,7 @@
     "primaryHighscore": {
       "category": "sword",
       "label": "Sword Fighting",
-      "rank": 257,
+      "rank": 256,
       "value": 111
     },
     "primarySkillTrend": "none",
@@ -671,16 +671,16 @@
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
     "level": 364,
-    "previousLevel": 363,
-    "baselineLevel": 363,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 364,
+    "baselineLevel": 364,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 541,
+        "rank": 540,
         "value": 98,
         "label": "Magic Level"
       }
@@ -688,7 +688,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 541,
+      "rank": 540,
       "value": 98
     },
     "primarySkillTrend": "none",
@@ -698,17 +698,17 @@
     "name": "Bombaschick",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 239,
+    "level": 240,
     "previousLevel": 239,
     "baselineLevel": 239,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "club": {
-        "rank": 434,
+        "rank": 435,
         "value": 105,
         "label": "Club Fighting"
       }
@@ -716,7 +716,7 @@
     "primaryHighscore": {
       "category": "club",
       "label": "Club Fighting",
-      "rank": 434,
+      "rank": 435,
       "value": 105
     },
     "primarySkillTrend": "none",
@@ -729,14 +729,14 @@
     "level": 463,
     "previousLevel": 463,
     "baselineLevel": 463,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 465,
+        "rank": 467,
         "value": 116,
         "label": "Distance Fighting"
       }
@@ -744,7 +744,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 465,
+      "rank": 467,
       "value": 116
     },
     "primarySkillTrend": "none",
@@ -755,12 +755,12 @@
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
     "level": 283,
-    "previousLevel": 282,
-    "baselineLevel": 282,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 283,
+    "baselineLevel": 283,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -772,16 +772,16 @@
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
     "level": 423,
-    "previousLevel": 422,
-    "baselineLevel": 422,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 423,
+    "baselineLevel": 423,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "sword": {
-        "rank": 151,
+        "rank": 150,
         "value": 115,
         "label": "Sword Fighting"
       }
@@ -789,7 +789,7 @@
     "primaryHighscore": {
       "category": "sword",
       "label": "Sword Fighting",
-      "rank": 151,
+      "rank": 150,
       "value": 115
     },
     "primarySkillTrend": "none",
@@ -799,45 +799,45 @@
     "name": "Ithan Crow",
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
-    "level": 323,
-    "previousLevel": 321,
-    "baselineLevel": 321,
-    "baselineDate": "2026-06-05",
-    "levelGain": 2,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "level": 324,
+    "previousLevel": 323,
+    "baselineLevel": 323,
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 80,
-        "value": 124,
+        "rank": 71,
+        "value": 125,
         "label": "Distance Fighting"
       }
     },
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 80,
-      "value": 124
+      "rank": 71,
+      "value": 125
     },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
+    "primarySkillTrend": "up",
+    "primarySkillTrendDate": "2026-06-07"
   },
   {
     "name": "Kow Hife",
     "rank": "Primal Summoner",
     "vocation": "Elder Druid",
     "level": 416,
-    "previousLevel": 415,
-    "baselineLevel": 415,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 416,
+    "baselineLevel": 416,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 573,
+        "rank": 576,
         "value": 97,
         "label": "Magic Level"
       }
@@ -845,7 +845,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 573,
+      "rank": 576,
       "value": 97
     },
     "primarySkillTrend": "none",
@@ -856,16 +856,16 @@
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
     "level": 208,
-    "previousLevel": 207,
-    "baselineLevel": 207,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 208,
+    "baselineLevel": 208,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 866,
+        "rank": 867,
         "value": 112,
         "label": "Distance Fighting"
       }
@@ -873,7 +873,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 866,
+      "rank": 867,
       "value": 112
     },
     "primarySkillTrend": "none",
@@ -886,14 +886,14 @@
     "level": 297,
     "previousLevel": 297,
     "baselineLevel": 297,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
-        "rank": 317,
+        "rank": 316,
         "value": 108,
         "label": "Axe Fighting"
       }
@@ -901,7 +901,7 @@
     "primaryHighscore": {
       "category": "axe",
       "label": "Axe Fighting",
-      "rank": 317,
+      "rank": 316,
       "value": 108
     },
     "primarySkillTrend": "none",
@@ -914,14 +914,14 @@
     "level": 531,
     "previousLevel": 531,
     "baselineLevel": 531,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 345,
+        "rank": 344,
         "value": 103,
         "label": "Magic Level"
       }
@@ -929,7 +929,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 345,
+      "rank": 344,
       "value": 103
     },
     "primarySkillTrend": "none",
@@ -942,10 +942,10 @@
     "level": 237,
     "previousLevel": 237,
     "baselineLevel": 237,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -956,13 +956,13 @@
     "name": "New Beast",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 228,
+    "level": 229,
     "previousLevel": 228,
     "baselineLevel": 228,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
@@ -987,10 +987,10 @@
     "level": 436,
     "previousLevel": 436,
     "baselineLevel": 436,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
@@ -1012,17 +1012,17 @@
     "name": "Pedraozinho",
     "rank": "Primal Summoner",
     "vocation": "Elite Knight",
-    "level": 354,
-    "previousLevel": 351,
-    "baselineLevel": 351,
-    "baselineDate": "2026-06-05",
-    "levelGain": 3,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "level": 355,
+    "previousLevel": 354,
+    "baselineLevel": 354,
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "sword": {
-        "rank": 257,
+        "rank": 256,
         "value": 111,
         "label": "Sword Fighting"
       }
@@ -1030,7 +1030,7 @@
     "primaryHighscore": {
       "category": "sword",
       "label": "Sword Fighting",
-      "rank": 257,
+      "rank": 256,
       "value": 111
     },
     "primarySkillTrend": "none",
@@ -1043,14 +1043,14 @@
     "level": 408,
     "previousLevel": 408,
     "baselineLevel": 408,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 738,
+        "rank": 739,
         "value": 113,
         "label": "Distance Fighting"
       }
@@ -1058,7 +1058,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 738,
+      "rank": 739,
       "value": 113
     },
     "primarySkillTrend": "none",
@@ -1068,17 +1068,17 @@
     "name": "Razzga Mortalha",
     "rank": "Primal Summoner",
     "vocation": "Royal Paladin",
-    "level": 211,
-    "previousLevel": 209,
-    "baselineLevel": 209,
-    "baselineDate": "2026-06-05",
-    "levelGain": 2,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
+    "level": 212,
+    "previousLevel": 211,
+    "baselineLevel": 211,
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 465,
+        "rank": 467,
         "value": 116,
         "label": "Distance Fighting"
       }
@@ -1086,7 +1086,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 465,
+      "rank": 467,
       "value": 116
     },
     "primarySkillTrend": "none",
@@ -1099,14 +1099,14 @@
     "level": 375,
     "previousLevel": 375,
     "baselineLevel": 375,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
-        "rank": 276,
+        "rank": 275,
         "value": 109,
         "label": "Axe Fighting"
       }
@@ -1114,7 +1114,7 @@
     "primaryHighscore": {
       "category": "axe",
       "label": "Axe Fighting",
-      "rank": 276,
+      "rank": 275,
       "value": 109
     },
     "primarySkillTrend": "none",
@@ -1125,16 +1125,16 @@
     "rank": "Primal Summoner",
     "vocation": "Master Sorcerer",
     "level": 437,
-    "previousLevel": 436,
-    "baselineLevel": 436,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 437,
+    "baselineLevel": 437,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 372,
+        "rank": 373,
         "value": 102,
         "label": "Magic Level"
       }
@@ -1142,7 +1142,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 372,
+      "rank": 373,
       "value": 102
     },
     "primarySkillTrend": "none",
@@ -1155,14 +1155,14 @@
     "level": 393,
     "previousLevel": 393,
     "baselineLevel": 393,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "online",
     "skillHighlights": {
       "magic": {
-        "rank": 573,
+        "rank": 576,
         "value": 97,
         "label": "Magic Level"
       }
@@ -1170,7 +1170,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 573,
+      "rank": 576,
       "value": 97
     },
     "primarySkillTrend": "none",
@@ -1183,14 +1183,14 @@
     "level": 308,
     "previousLevel": 308,
     "baselineLevel": 308,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "fist": {
-        "rank": 434,
+        "rank": 436,
         "value": 95,
         "label": "Fist Fighting"
       }
@@ -1198,7 +1198,7 @@
     "primaryHighscore": {
       "category": "fist",
       "label": "Fist Fighting",
-      "rank": 434,
+      "rank": 436,
       "value": 95
     },
     "primarySkillTrend": "none",
@@ -1211,10 +1211,10 @@
     "level": 52,
     "previousLevel": 52,
     "baselineLevel": 52,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1228,10 +1228,10 @@
     "level": 8,
     "previousLevel": 8,
     "baselineLevel": 8,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1245,14 +1245,14 @@
     "level": 150,
     "previousLevel": 150,
     "baselineLevel": 150,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 866,
+        "rank": 867,
         "value": 112,
         "label": "Distance Fighting"
       }
@@ -1260,7 +1260,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 866,
+      "rank": 867,
       "value": 112
     },
     "primarySkillTrend": "none",
@@ -1273,41 +1273,52 @@
     "level": 188,
     "previousLevel": 188,
     "baselineLevel": 188,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 862,
-        "value": 92,
+        "rank": 678,
+        "value": 95,
         "label": "Magic Level"
       }
     },
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 862,
-      "value": 92
+      "rank": 678,
+      "value": 95
     },
     "primarySkillTrend": "up",
-    "primarySkillTrendDate": "2026-06-06"
+    "primarySkillTrendDate": "2026-06-07"
   },
   {
     "name": "Arlekinho",
     "rank": "Rising Sentinel",
     "vocation": "Master Sorcerer",
-    "level": 197,
+    "level": 198,
     "previousLevel": 197,
     "baselineLevel": 197,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "online",
-    "skillHighlights": {},
-    "primaryHighscore": null,
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "offline",
+    "skillHighlights": {
+      "magic": {
+        "rank": 943,
+        "value": 91,
+        "label": "Magic Level"
+      }
+    },
+    "primaryHighscore": {
+      "category": "magic",
+      "label": "Magic Level",
+      "rank": 943,
+      "value": 91
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },
@@ -1318,10 +1329,10 @@
     "level": 2,
     "previousLevel": 2,
     "baselineLevel": 2,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1335,10 +1346,10 @@
     "level": 75,
     "previousLevel": 75,
     "baselineLevel": 75,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "fist": {
@@ -1363,10 +1374,10 @@
     "level": 158,
     "previousLevel": 158,
     "baselineLevel": 158,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1380,10 +1391,10 @@
     "level": 61,
     "previousLevel": 61,
     "baselineLevel": 61,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1397,14 +1408,14 @@
     "level": 157,
     "previousLevel": 157,
     "baselineLevel": 157,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 643,
+        "rank": 645,
         "value": 114,
         "label": "Distance Fighting"
       }
@@ -1412,7 +1423,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 643,
+      "rank": 645,
       "value": 114
     },
     "primarySkillTrend": "none",
@@ -1425,10 +1436,10 @@
     "level": 102,
     "previousLevel": 102,
     "baselineLevel": 102,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1442,14 +1453,14 @@
     "level": 82,
     "previousLevel": 82,
     "baselineLevel": 82,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "club": {
-        "rank": 139,
+        "rank": 141,
         "value": 113,
         "label": "Club Fighting"
       }
@@ -1457,7 +1468,7 @@
     "primaryHighscore": {
       "category": "club",
       "label": "Club Fighting",
-      "rank": 139,
+      "rank": 141,
       "value": 113
     },
     "primarySkillTrend": "none",
@@ -1470,14 +1481,14 @@
     "level": 171,
     "previousLevel": 171,
     "baselineLevel": 171,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 318,
+        "rank": 320,
         "value": 118,
         "label": "Distance Fighting"
       }
@@ -1485,7 +1496,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 318,
+      "rank": 320,
       "value": 118
     },
     "primarySkillTrend": "none",
@@ -1498,10 +1509,10 @@
     "level": 59,
     "previousLevel": 59,
     "baselineLevel": 59,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
@@ -1526,10 +1537,10 @@
     "level": 8,
     "previousLevel": 8,
     "baselineLevel": 8,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1543,14 +1554,14 @@
     "level": 161,
     "previousLevel": 161,
     "baselineLevel": 161,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "fist": {
-        "rank": 942,
+        "rank": 946,
         "value": 82,
         "label": "Fist Fighting"
       }
@@ -1558,7 +1569,7 @@
     "primaryHighscore": {
       "category": "fist",
       "label": "Fist Fighting",
-      "rank": 942,
+      "rank": 946,
       "value": 82
     },
     "primarySkillTrend": "none",
@@ -1571,10 +1582,10 @@
     "level": 188,
     "previousLevel": 188,
     "baselineLevel": 188,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1588,10 +1599,10 @@
     "level": 187,
     "previousLevel": 187,
     "baselineLevel": 187,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1605,10 +1616,10 @@
     "level": 101,
     "previousLevel": 101,
     "baselineLevel": 101,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1622,10 +1633,10 @@
     "level": 130,
     "previousLevel": 130,
     "baselineLevel": 130,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1639,10 +1650,10 @@
     "level": 15,
     "previousLevel": 15,
     "baselineLevel": 15,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1656,10 +1667,10 @@
     "level": 134,
     "previousLevel": 134,
     "baselineLevel": 134,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1673,10 +1684,10 @@
     "level": 74,
     "previousLevel": 74,
     "baselineLevel": 74,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1690,10 +1701,10 @@
     "level": 54,
     "previousLevel": 54,
     "baselineLevel": 54,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "fist": {
@@ -1718,10 +1729,10 @@
     "level": 20,
     "previousLevel": 20,
     "baselineLevel": 20,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1735,10 +1746,10 @@
     "level": 144,
     "previousLevel": 144,
     "baselineLevel": 144,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1752,10 +1763,10 @@
     "level": 15,
     "previousLevel": 15,
     "baselineLevel": 15,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1769,10 +1780,10 @@
     "level": 164,
     "previousLevel": 164,
     "baselineLevel": 164,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
@@ -1797,10 +1808,10 @@
     "level": 35,
     "previousLevel": 35,
     "baselineLevel": 35,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1814,10 +1825,10 @@
     "level": 143,
     "previousLevel": 143,
     "baselineLevel": 143,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1828,14 +1839,14 @@
     "name": "Alth Jero",
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
-    "level": 132,
-    "previousLevel": 131,
-    "baselineLevel": 131,
-    "baselineDate": "2026-06-05",
+    "level": 133,
+    "previousLevel": 132,
+    "baselineLevel": 132,
+    "baselineDate": "2026-06-06",
     "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
-    "status": "offline",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1846,16 +1857,16 @@
     "rank": "Provisional Soul",
     "vocation": "Elite Knight",
     "level": 80,
-    "previousLevel": 70,
-    "baselineLevel": 70,
-    "baselineDate": "2026-06-05",
-    "levelGain": 10,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 80,
+    "baselineLevel": 80,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "axe": {
-        "rank": 276,
+        "rank": 275,
         "value": 109,
         "label": "Axe Fighting"
       }
@@ -1863,7 +1874,7 @@
     "primaryHighscore": {
       "category": "axe",
       "label": "Axe Fighting",
-      "rank": 276,
+      "rank": 275,
       "value": 109
     },
     "primarySkillTrend": "none",
@@ -1876,10 +1887,10 @@
     "level": 130,
     "previousLevel": 130,
     "baselineLevel": 130,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1890,13 +1901,13 @@
     "name": "Eternalved",
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
-    "level": 108,
+    "level": 109,
     "previousLevel": 108,
     "baselineLevel": 108,
-    "baselineDate": "2026-06-05",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1907,13 +1918,13 @@
     "name": "Lksaguinarioxp",
     "rank": "Provisional Soul",
     "vocation": "Druid",
-    "level": 32,
-    "previousLevel": 30,
-    "baselineLevel": 30,
-    "baselineDate": "2026-06-05",
-    "levelGain": 2,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "level": 33,
+    "previousLevel": 32,
+    "baselineLevel": 32,
+    "baselineDate": "2026-06-06",
+    "levelGain": 1,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -1927,14 +1938,14 @@
     "level": 647,
     "previousLevel": 647,
     "baselineLevel": 647,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 162,
+        "rank": 163,
         "value": 121,
         "label": "Distance Fighting"
       }
@@ -1942,7 +1953,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 162,
+      "rank": 163,
       "value": 121
     },
     "primarySkillTrend": "none",
@@ -1955,14 +1966,14 @@
     "level": 107,
     "previousLevel": 107,
     "baselineLevel": 107,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "distance": {
-        "rank": 261,
+        "rank": 264,
         "value": 119,
         "label": "Distance Fighting"
       }
@@ -1970,7 +1981,7 @@
     "primaryHighscore": {
       "category": "distance",
       "label": "Distance Fighting",
-      "rank": 261,
+      "rank": 264,
       "value": 119
     },
     "primarySkillTrend": "none",
@@ -1983,10 +1994,10 @@
     "level": 123,
     "previousLevel": 123,
     "baselineLevel": 123,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -2000,14 +2011,14 @@
     "level": 301,
     "previousLevel": 301,
     "baselineLevel": 301,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {
       "magic": {
-        "rank": 784,
+        "rank": 790,
         "value": 93,
         "label": "Magic Level"
       }
@@ -2015,7 +2026,7 @@
     "primaryHighscore": {
       "category": "magic",
       "label": "Magic Level",
-      "rank": 784,
+      "rank": 790,
       "value": 93
     },
     "primarySkillTrend": "none",
@@ -2026,12 +2037,12 @@
     "rank": "Provisional Soul",
     "vocation": "Master Sorcerer",
     "level": 103,
-    "previousLevel": 102,
-    "baselineLevel": 102,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 103,
+    "baselineLevel": 103,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -2045,10 +2056,10 @@
     "level": 45,
     "previousLevel": 45,
     "baselineLevel": 45,
-    "baselineDate": "2026-06-05",
+    "baselineDate": "2026-06-06",
     "levelGain": 0,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
@@ -2060,12 +2071,12 @@
     "rank": "Provisional Soul",
     "vocation": "Sorcerer",
     "level": 72,
-    "previousLevel": 71,
-    "baselineLevel": 71,
-    "baselineDate": "2026-06-05",
-    "levelGain": 1,
-    "snapshotDate": "2026-06-06",
-    "snapshotAt": "2026-06-06T06:07:14.577Z",
+    "previousLevel": 72,
+    "baselineLevel": 72,
+    "baselineDate": "2026-06-06",
+    "levelGain": 0,
+    "snapshotDate": "2026-06-07",
+    "snapshotAt": "2026-06-07T06:47:10.767Z",
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,

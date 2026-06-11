@@ -789,7 +789,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-11",
     "snapshotAt": "2026-06-11T07:13:06.363Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

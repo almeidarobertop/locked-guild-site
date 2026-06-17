@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-17",
     "snapshotAt": "2026-06-17T07:31:55.728Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "club": {
         "rank": 13,
@@ -1159,7 +1159,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-17",
     "snapshotAt": "2026-06-17T07:31:55.728Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 565,

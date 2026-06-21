@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 13,
@@ -66,7 +66,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 143,
@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 15,
@@ -392,7 +392,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 100,
@@ -448,7 +448,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 87,
@@ -504,7 +504,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 129,
@@ -677,7 +677,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 259,
@@ -890,7 +890,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "axe": {
         "rank": 312,
@@ -1019,7 +1019,7 @@
     "levelGain": 9,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 225,
@@ -1075,7 +1075,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 458,
@@ -1266,7 +1266,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 619,
@@ -1897,7 +1897,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 271,
@@ -1953,7 +1953,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 308,
@@ -2043,7 +2043,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-06-21",
     "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 705,
@@ -2059,23 +2059,6 @@
     },
     "primarySkillTrend": "up",
     "primarySkillTrendDate": "2026-06-21"
-  },
-  {
-    "name": "Tio Diddo",
-    "rank": "Provisional Soul",
-    "vocation": "Elder Druid",
-    "level": 52,
-    "previousLevel": 52,
-    "baselineLevel": 52,
-    "baselineDate": "2026-06-20",
-    "levelGain": 0,
-    "snapshotDate": "2026-06-21",
-    "snapshotAt": "2026-06-21T07:15:05.651Z",
-    "status": "offline",
-    "skillHighlights": {},
-    "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
   },
   {
     "name": "Top Free",

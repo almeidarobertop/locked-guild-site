@@ -364,7 +364,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-01",
     "snapshotAt": "2026-07-01T06:50:24.767Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 130,
@@ -817,7 +817,7 @@
     "levelGain": 4,
     "snapshotDate": "2026-07-01",
     "snapshotAt": "2026-07-01T06:50:24.767Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1064,7 +1064,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-07-01",
     "snapshotAt": "2026-07-01T06:50:24.767Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 458,
@@ -1120,7 +1120,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-07-01",
     "snapshotAt": "2026-07-01T06:50:24.767Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 362,
@@ -1906,34 +1906,6 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Alteon",
-    "rank": "Provisional Soul",
-    "vocation": "Master Sorcerer",
-    "level": 159,
-    "previousLevel": 159,
-    "baselineLevel": 159,
-    "baselineDate": "2026-06-30",
-    "levelGain": 0,
-    "snapshotDate": "2026-07-01",
-    "snapshotAt": "2026-07-01T06:50:24.767Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 559,
-        "value": 97,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 559,
-      "value": 97
-    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },

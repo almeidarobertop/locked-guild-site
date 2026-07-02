@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 16,
@@ -364,7 +364,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 131,
@@ -504,7 +504,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 131,
@@ -851,7 +851,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 131,
@@ -1064,7 +1064,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 459,
@@ -1120,7 +1120,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-02",
     "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 362,
@@ -1337,34 +1337,6 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Chiccao",
-    "rank": "Rising Sentinel",
-    "vocation": "Royal Paladin",
-    "level": 160,
-    "previousLevel": 160,
-    "baselineLevel": 160,
-    "baselineDate": "2026-07-01",
-    "levelGain": 0,
-    "snapshotDate": "2026-07-02",
-    "snapshotAt": "2026-07-02T06:21:45.148Z",
-    "status": "offline",
-    "skillHighlights": {
-      "distance": {
-        "rank": 632,
-        "value": 114,
-        "label": "Distance Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "distance",
-      "label": "Distance Fighting",
-      "rank": 632,
-      "value": 114
-    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },

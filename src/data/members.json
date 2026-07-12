@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 15,
@@ -94,7 +94,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 16,
@@ -593,7 +593,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 133,
@@ -705,7 +705,7 @@
     "levelGain": 5,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 226,
@@ -733,7 +733,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 493,
@@ -1047,7 +1047,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1870,7 +1870,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 44,
@@ -1918,7 +1918,7 @@
   {
     "name": "Ram Tchu",
     "rank": "Provisional Soul",
-    "vocation": "Elite Knight",
+    "vocation": "Knight",
     "level": 436,
     "previousLevel": 436,
     "baselineLevel": 436,
@@ -1954,7 +1954,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-07-12",
     "snapshotAt": "2026-07-12T05:41:15.685Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 185,

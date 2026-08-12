@@ -94,7 +94,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 16,
@@ -150,7 +150,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 65,
@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 17,
@@ -649,7 +649,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "axe": {
         "rank": 160,
@@ -817,7 +817,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 387,
@@ -845,7 +845,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1965,7 +1965,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 276,
@@ -1994,6 +1994,23 @@
     "snapshotDate": "2026-08-12",
     "snapshotAt": "2026-08-12T04:20:56.135Z",
     "status": "offline",
+    "skillHighlights": {},
+    "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Rafaxixe",
+    "rank": "Provisional Soul",
+    "vocation": "Master Sorcerer",
+    "level": 115,
+    "previousLevel": 115,
+    "baselineLevel": 115,
+    "baselineDate": "2026-08-12",
+    "levelGain": 0,
+    "snapshotDate": "2026-08-12",
+    "snapshotAt": "2026-08-12T15:28:10.610Z",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

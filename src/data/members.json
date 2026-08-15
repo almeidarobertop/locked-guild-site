@@ -66,7 +66,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 113,
@@ -150,7 +150,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 65,
@@ -206,7 +206,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 17,
@@ -392,7 +392,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 103,
@@ -448,7 +448,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "club": {
         "rank": 68,
@@ -560,7 +560,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 100,
@@ -649,7 +649,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 159,
@@ -677,7 +677,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 87,
@@ -1700,7 +1700,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-15",
     "snapshotAt": "2026-08-15T03:11:10.271Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

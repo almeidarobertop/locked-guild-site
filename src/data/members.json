@@ -150,7 +150,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-08-31",
     "snapshotAt": "2026-08-31T08:47:58.709Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 65,
@@ -431,7 +431,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-31",
     "snapshotAt": "2026-08-31T08:47:58.709Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 267,
@@ -856,7 +856,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-08-31",
     "snapshotAt": "2026-08-31T08:47:58.709Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

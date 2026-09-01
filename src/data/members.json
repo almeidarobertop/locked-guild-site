@@ -431,7 +431,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-01",
     "snapshotAt": "2026-09-01T07:55:20.050Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 267,
@@ -856,7 +856,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-09-01",
     "snapshotAt": "2026-09-01T07:55:20.050Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -2010,7 +2010,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-09-01",
     "snapshotAt": "2026-09-01T07:55:20.050Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

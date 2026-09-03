@@ -94,7 +94,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-09-03",
     "snapshotAt": "2026-09-03T07:18:15.265Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 16,
@@ -856,7 +856,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-03",
     "snapshotAt": "2026-09-03T07:18:15.265Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",

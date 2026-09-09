@@ -431,7 +431,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-09-09",
     "snapshotAt": "2026-09-09T07:29:44.837Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 216,
@@ -856,7 +856,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-09-09",
     "snapshotAt": "2026-09-09T07:29:44.837Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1985,34 +1985,6 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Re Voada",
-    "rank": "Provisional Soul",
-    "vocation": "Elite Knight",
-    "level": 462,
-    "previousLevel": 462,
-    "baselineLevel": 462,
-    "baselineDate": "2026-09-08",
-    "levelGain": 0,
-    "snapshotDate": "2026-09-09",
-    "snapshotAt": "2026-09-09T07:29:44.837Z",
-    "status": "offline",
-    "skillHighlights": {
-      "club": {
-        "rank": 191,
-        "value": 111,
-        "label": "Club Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "club",
-      "label": "Club Fighting",
-      "rank": 191,
-      "value": 111
-    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   }

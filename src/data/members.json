@@ -828,7 +828,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-09-16",
     "snapshotAt": "2026-09-16T07:49:14.672Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 394,

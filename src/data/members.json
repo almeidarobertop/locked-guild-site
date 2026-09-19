@@ -150,7 +150,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-19",
     "snapshotAt": "2026-09-19T07:27:56.190Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 70,
@@ -571,7 +571,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-19",
     "snapshotAt": "2026-09-19T07:27:56.190Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 88,
@@ -828,7 +828,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-09-19",
     "snapshotAt": "2026-09-19T07:27:56.190Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 394,
@@ -865,7 +865,7 @@
   {
     "name": "Dike Fibrado",
     "rank": "Primal Summoner",
-    "vocation": "Elite Knight",
+    "vocation": "Knight",
     "level": 293,
     "previousLevel": 293,
     "baselineLevel": 293,
@@ -929,7 +929,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-09-19",
     "snapshotAt": "2026-09-19T07:27:56.190Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 113,
@@ -1320,7 +1320,7 @@
   {
     "name": "Brinquedo Rozknat",
     "rank": "Rising Sentinel",
-    "vocation": "Elite Knight",
+    "vocation": "Knight",
     "level": 158,
     "previousLevel": 158,
     "baselineLevel": 158,

@@ -38,7 +38,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-20",
     "snapshotAt": "2026-09-20T07:51:43.658Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "club": {
         "rank": 13,
@@ -929,7 +929,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-09-20",
     "snapshotAt": "2026-09-20T07:51:43.658Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "sword": {
         "rank": 114,

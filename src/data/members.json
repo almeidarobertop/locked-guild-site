@@ -459,7 +459,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-10-03",
     "snapshotAt": "2026-10-03T08:25:29.566Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 139,

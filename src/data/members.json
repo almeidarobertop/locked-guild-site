@@ -637,7 +637,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-10-12",
     "snapshotAt": "2026-10-12T09:33:51.703Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 106,

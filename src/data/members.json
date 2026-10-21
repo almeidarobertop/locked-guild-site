@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-10-21",
     "snapshotAt": "2026-10-21T07:53:25.537Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 16,
@@ -828,7 +828,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-10-21",
     "snapshotAt": "2026-10-21T07:53:25.537Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1732,7 +1732,7 @@
   {
     "name": "Mundica Pobreloko",
     "rank": "Rising Sentinel",
-    "vocation": "Elite Knight",
+    "vocation": "Knight",
     "level": 146,
     "previousLevel": 146,
     "baselineLevel": 146,

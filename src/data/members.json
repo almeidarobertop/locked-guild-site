@@ -543,7 +543,7 @@
     "levelGain": 3,
     "snapshotDate": "2026-10-31",
     "snapshotAt": "2026-10-31T08:38:47.130Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 76,
@@ -660,7 +660,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-10-31",
     "snapshotAt": "2026-10-31T08:38:47.130Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 63,

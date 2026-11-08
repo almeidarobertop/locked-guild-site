@@ -449,34 +449,6 @@
     "primarySkillTrendDate": null
   },
   {
-    "name": "Florentino ananek",
-    "rank": "Apex Guardian",
-    "vocation": "Elder Druid",
-    "level": 757,
-    "previousLevel": 756,
-    "baselineLevel": 756,
-    "baselineDate": "2026-11-07",
-    "levelGain": 1,
-    "snapshotDate": "2026-11-08",
-    "snapshotAt": "2026-11-08T09:18:35.276Z",
-    "status": "offline",
-    "skillHighlights": {
-      "magic": {
-        "rank": 136,
-        "value": 114,
-        "label": "Magic Level"
-      }
-    },
-    "primaryHighscore": {
-      "category": "magic",
-      "label": "Magic Level",
-      "rank": 136,
-      "value": 114
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
     "name": "Jobaz",
     "rank": "Apex Guardian",
     "vocation": "Elite Knight",
@@ -604,7 +576,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-08",
     "snapshotAt": "2026-11-08T09:18:35.276Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 92,
@@ -632,7 +604,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-08",
     "snapshotAt": "2026-11-08T09:18:35.276Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 106,
@@ -660,7 +632,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-08",
     "snapshotAt": "2026-11-08T09:18:35.276Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 61,
@@ -946,7 +918,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-08",
     "snapshotAt": "2026-11-08T09:18:35.276Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 753,

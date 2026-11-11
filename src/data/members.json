@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-11",
     "snapshotAt": "2026-11-11T09:42:48.004Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 16,
@@ -604,7 +604,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-11",
     "snapshotAt": "2026-11-11T09:42:48.004Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 107,

@@ -576,7 +576,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-12",
     "snapshotAt": "2026-11-12T10:02:55.189Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 92,
@@ -604,7 +604,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-12",
     "snapshotAt": "2026-11-12T10:02:55.189Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 107,
@@ -772,7 +772,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-12",
     "snapshotAt": "2026-11-12T10:02:55.189Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1873,6 +1873,67 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "All Time Loow",
+    "rank": "Provisional Soul",
+    "vocation": "Elite Knight",
+    "level": 174,
+    "previousLevel": 174,
+    "baselineLevel": 174,
+    "baselineDate": "2026-11-12",
+    "levelGain": 0,
+    "snapshotDate": "2026-11-12",
+    "snapshotAt": "2026-11-12T21:30:51.817Z",
+    "status": "offline",
+    "skillHighlights": {
+      "axe": {
+        "rank": 769,
+        "value": 100,
+        "label": "Axe Fighting"
+      },
+      "sword": {
+        "rank": 611,
+        "value": 105,
+        "label": "Sword Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "sword",
+      "label": "Sword Fighting",
+      "rank": 611,
+      "value": 105
+    },
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
+    "name": "Gusu Segura Bronka",
+    "rank": "Provisional Soul",
+    "vocation": "Knight",
+    "level": 125,
+    "previousLevel": 125,
+    "baselineLevel": 125,
+    "baselineDate": "2026-11-12",
+    "levelGain": 0,
+    "snapshotDate": "2026-11-12",
+    "snapshotAt": "2026-11-12T21:30:51.817Z",
+    "status": "offline",
+    "skillHighlights": {
+      "club": {
+        "rank": 236,
+        "value": 110,
+        "label": "Club Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "club",
+      "label": "Club Fighting",
+      "rank": 236,
+      "value": 110
+    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   }

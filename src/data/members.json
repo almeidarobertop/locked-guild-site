@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "distance": {
         "rank": 16,
@@ -487,7 +487,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 121,
@@ -515,7 +515,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 74,
@@ -576,7 +576,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 92,
@@ -632,7 +632,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 62,
@@ -772,7 +772,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -890,7 +890,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 91,
@@ -1639,7 +1639,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-14",
     "snapshotAt": "2026-11-14T09:14:10.344Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {},
     "primaryHighscore": null,
     "primarySkillTrend": "none",
@@ -1912,7 +1912,7 @@
   {
     "name": "Gusu Segura Bronka",
     "rank": "Provisional Soul",
-    "vocation": "Knight",
+    "vocation": "Elite Knight",
     "level": 125,
     "previousLevel": 125,
     "baselineLevel": 125,

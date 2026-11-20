@@ -56,6 +56,34 @@
     "primarySkillTrendDate": null
   },
   {
+    "name": "Draydios Xalgar",
+    "rank": "Field Marshal",
+    "vocation": "Elite Knight",
+    "level": 1061,
+    "previousLevel": 1061,
+    "baselineLevel": 1061,
+    "baselineDate": "2026-11-20",
+    "levelGain": 0,
+    "snapshotDate": "2026-11-20",
+    "snapshotAt": "2026-11-20T21:54:29.400Z",
+    "status": "offline",
+    "skillHighlights": {
+      "sword": {
+        "rank": 18,
+        "value": 125,
+        "label": "Sword Fighting"
+      }
+    },
+    "primaryHighscore": {
+      "category": "sword",
+      "label": "Sword Fighting",
+      "rank": 18,
+      "value": 125
+    },
+    "primarySkillTrend": "none",
+    "primarySkillTrendDate": null
+  },
+  {
     "name": "Golf Sapao Ressuscitado",
     "rank": "Field Marshal",
     "vocation": "Elder Druid",
@@ -79,34 +107,6 @@
       "label": "Magic Level",
       "rank": 91,
       "value": 117
-    },
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "Indio Grilo Machucado",
-    "rank": "Field Marshal",
-    "vocation": "Elite Knight",
-    "level": 1061,
-    "previousLevel": 1060,
-    "baselineLevel": 1060,
-    "baselineDate": "2026-11-19",
-    "levelGain": 1,
-    "snapshotDate": "2026-11-20",
-    "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "offline",
-    "skillHighlights": {
-      "sword": {
-        "rank": 18,
-        "value": 125,
-        "label": "Sword Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "sword",
-      "label": "Sword Fighting",
-      "rank": 18,
-      "value": 125
     },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
@@ -206,7 +206,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "distance": {
         "rank": 13,
@@ -431,7 +431,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 192,
@@ -487,7 +487,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "sword": {
         "rank": 124,
@@ -576,7 +576,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "magic": {
         "rank": 91,
@@ -604,7 +604,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 107,
@@ -761,7 +761,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-20",
     "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 231,
@@ -1845,39 +1845,6 @@
     "status": "offline",
     "skillHighlights": {},
     "primaryHighscore": null,
-    "primarySkillTrend": "none",
-    "primarySkillTrendDate": null
-  },
-  {
-    "name": "All Time Loow",
-    "rank": "Provisional Soul",
-    "vocation": "Elite Knight",
-    "level": 191,
-    "previousLevel": 190,
-    "baselineLevel": 190,
-    "baselineDate": "2026-11-19",
-    "levelGain": 1,
-    "snapshotDate": "2026-11-20",
-    "snapshotAt": "2026-11-20T10:16:55.404Z",
-    "status": "online",
-    "skillHighlights": {
-      "axe": {
-        "rank": 771,
-        "value": 100,
-        "label": "Axe Fighting"
-      },
-      "sword": {
-        "rank": 615,
-        "value": 105,
-        "label": "Sword Fighting"
-      }
-    },
-    "primaryHighscore": {
-      "category": "sword",
-      "label": "Sword Fighting",
-      "rank": 615,
-      "value": 105
-    },
     "primarySkillTrend": "none",
     "primarySkillTrendDate": null
   },

@@ -548,7 +548,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-26",
     "snapshotAt": "2026-11-26T11:16:40.866Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 10,
@@ -609,7 +609,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-26",
     "snapshotAt": "2026-11-26T11:16:40.866Z",
-    "status": "online",
+    "status": "offline",
     "skillHighlights": {
       "axe": {
         "rank": 93,
@@ -766,7 +766,7 @@
     "levelGain": 2,
     "snapshotDate": "2026-11-26",
     "snapshotAt": "2026-11-26T11:16:40.866Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 232,

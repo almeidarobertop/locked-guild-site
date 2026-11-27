@@ -431,7 +431,7 @@
     "levelGain": 0,
     "snapshotDate": "2026-11-27",
     "snapshotAt": "2026-11-27T11:10:39.881Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "magic": {
         "rank": 170,
@@ -766,7 +766,7 @@
     "levelGain": 1,
     "snapshotDate": "2026-11-27",
     "snapshotAt": "2026-11-27T11:10:39.881Z",
-    "status": "offline",
+    "status": "online",
     "skillHighlights": {
       "axe": {
         "rank": 230,
@@ -960,7 +960,7 @@
   {
     "name": "Wapaakalypse",
     "rank": "Primal Summoner",
-    "vocation": "Master Sorcerer",
+    "vocation": "Sorcerer",
     "level": 452,
     "previousLevel": 452,
     "baselineLevel": 452,
